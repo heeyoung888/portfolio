@@ -203,8 +203,7 @@ h2{
     top: 230px;
 }
 .profile .inner ul li:nth-child(5){
-    left: 95%;
-    transform: translateX(-95%);
+    left: 1700px;
     top: -300px;
 }
 
