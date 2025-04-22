@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hee company</title>
+    <!-- Locomotive Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <!-- getting started > 
+    Use Swiper from CDN -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!-- 내꺼보다 위에 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- 내꺼보다 위에 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+    <!-- 제이쿼리 기반이기 때문에 제이쿼리 밑에 내꺼보다 위에 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/common.js" defer></script>
+</head>
+
+<body>
+    <div class="wrap" data-scroll-container>
+        <header id="header">
+            <h1><a href="#">
+                   
+                <img src="./img/logo.png" alt=""></a><!--  -->
+            </h1>
+            <nav class="">
+                <div class="nav_bg"></div>
+                <ul class="gnb">
+                    <li><a href="#">models</a>
+                        <ul>
+                            <li><a href="#">Sedan</a></li>
+                            <li><a href="#">SUV</a></li>
+                            <li><a href="#">Hatchback</a></li>
+                            <li><a href="#">Coupe</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">online</a>
+                        <ul>
+                            <li><a href="#">온라인 구매 가이드</a></li>
+                            <li><a href="#">온라인 라이브 상담</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">services</a>
+                        <ul>
+                            <li><a href="#">온라인 서비스 예약</a></li>
+                            <li><a href="#">보험상품</a></li>
+                            <li><a href="#">고장 및 손상지원</a></li>
+                            <li><a href="#">장기 렌터카 프로그램</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">brand</a>
+                        <ul>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">vision</a></li>
+                            <li><a href="#">promise</a></li>
+                            <li><a href="#">news & event</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="r_menu">
+                <div class="sel">
+                    <p><strong>KOR</strong><span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span></p>
+                    <ul>
+                        <li><a href="#"><strong>ENG</strong></a></li>
+                        <li><a href="#"><strong>JPN</strong></a></li>
+                    </ul>
+                </div><!-- //.sel -->
+            </div><!-- //.r_menu -->
+        </header>
+        <main>
+            <div class="custom_cursor"></div>
+            <section class="main_visual"><!-- 기준점 -->
+                <div class="main_slide_wrap swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide main1"><a href="#">
+                                <div class="tit">
+                                    <p>The new EQE SUV</p>
+                                    <h2>새롭게, 한계를 뛰어넘다</h2>
+                                </div>
+                            </a></li>
+                        <li class="swiper-slide main2"><a href="#">
+                                <div class="tit">
+                                    <p>luxury class</p>
+                                    <h2>프리미엄 세단의<br>
+                                        품격을 제시합니다</h2>
+                                </div>
+                            </a></li>
+                        <li class="swiper-slide main3"><a href="#">
+                                <div class="tit">
+                                    <p>
+                                        Mercedes-Benz<span>Innovation</span></p>
+                                    <h2>비전을 담은 혁신</h2>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div><!-- //.main_slide_wrap -->
+    
+                <!-- 커스텀 페이지네이션 -->
+                <div class="vertical-pagination">
+                    <!-- 현재 슬라이드 번호 -->
+                    <div class="num"><span class="swiper-pagination-current">01</span> / 03</div>
+    
+    
+                    <!-- 중앙 세로라인(진행도 표시) -->
+                    <div class="swiper-pagination-line"><!-- 흰 -->
+                        <!-- 실제로 채워질 부분 -->
+                        <div class="swiper-pagination-line-fill"></div><!-- 파랑 -->
+                    </div>
+    
+                    <!-- 위/아래 화살표(버튼) -->
+                    <div class="swiper-pagination-buttons">
+                        <span class="prev">▲</span>
+                        <span class="next">▼</span>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="txt_area">
+                <h2>
+                    <strong class="tit"><span>자동차</span>의 <span>시작</span>, 138년의 <span>혁신</span>으로</strong>
+                    <b class="tit"><span>모든 니즈</span>를<span>충족</span>시킵니다.</b>
+                    <em class="tit"><span>
+                        mercedes</span>benz</em>
+                </h2>
+            </section><!-- //.txt_area -->
+    
+            <section class="vision">
+                <div class="sticky">
+                    <div class="sticky_title">
+                        <div class="bg">vision</div>
+                        <ul class='list'>
+                            <li>
+                                우리는 끊임없이 과거, 현재 그리고 미래에 맞는 새로운 럭셔리 디자인을 선보이고 있습니다.
+                            </li>
+                            <li>
+                                디자인은 럭셔리 브랜드의 필수 요소입니다.
+                            </li>
+                        </ul>
+    
+                    </div>
+                    <div class="s_tit">
+                        <h2 class="">our value & vision</h2>
+                        <p>특별한 디자인 경험을 통해<br>
+                            세상을 더 편리하고 아름답게 만듭니다.
+                        </p>
+                    </div>
+                    <div class="sticky_con">
+                        <ul class="card_frame">
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>미래지향</h3>
+                                    <p>목적 있는 디자인을 통해 <br>지속가능성을 재정의합니다.</p>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>감각적 순수</h3>
+                                    <p>시대를 초월하는 아름다움을 지닌 <br>디자인을 유지합니다.</p>
+                                </div>
+                            </li>
+                            <li class="card">
+                                <div class="front"></div>
+                                <div class="back">
+                                    <div class="icon"></div>
+                                    <h3>움직임의 예술</h3>
+                                    <p>재규어를 연상시키는<br>역동적이고 과감한 디자인을 전달합니다.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="special_product">
+                <div class="s_tit">
+                    <h2 class="">
+                        mercedes benz service</h2>
+                    <p>벤츠에서 제공하는 다양한 상품과<br>
+                        서비스들을 확인하세요
+                    </p>
+                </div><!-- //.s_tit -->
+                <ul>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p1.jpg" alt=""></div>
+                        <div class="name">
+                            <strong>Our Models</strong>
+                            <p>당신의 라이프스타일을 완성하는 벤츠의 모든 모델, 한눈에 만나보세요. 세련된 디자인과 혁신적인 기술이 조화를 이루는 벤츠의 세계로 안내합니다.</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p2.jpg" alt=""></div>
+                        <div class="name">
+                            <strong>역동적인 디자인</strong>
+                            <p>벤츠는 시대를 초월한 우아함과 진보적인 아름다움으로, 보는 순간 마음을 사로잡는 디자인을 추구합니다.</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p3.jpg" alt=""></div>
+                        <div class="name">
+                            <strong>미래를 향한 지속 가능한 여정</strong>
+                            <p>벤츠는 혁신과 지속 가능성을 바탕으로, 모두를 위한 더 안전하고 친환경적인 모빌리티를 실현하는 것을 목표로 합니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p6.jpg" alt=""></div>
+                        <div class="name">
+                            <strong> 다양한 라이프스타일을 위한 선택</strong>
+                            <p>벤츠는 인기 모델뿐만 아니라 새로운 시도와 특별한 경험을 선사하는 다양한 차량으로 모든 이의 취향을 만족시킵니다.</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p5.jpg" alt=""></div>
+                        <div class="name">
+                            <strong>신뢰를 바탕으로 한 완벽한 주행</strong>
+                            <p> 벤츠는 철저한 안전 시스템과 탁월한 내구성을 통해 어떤 길에서도 변함없는 신뢰를 제공합니다.</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p8.jpg" alt=""></div>
+                        <div class="name">
+                            <strong>완벽을 향한 벤츠의 집념</strong>
+                            <p>벤츠는 모든 순간에 품질, 혁신, 책임감을 바탕으로 완벽을 추구하며, 고객의 삶을 더욱 가치 있게 만드는 것을 신념으로 삼고 있습니다.</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="1">
+                        <div class="img_box"><img src="img/p7.jpg" alt=""></div>
+                        <div class="name">
+                            <strong>연결된 미래, 벤츠의 인텔리전스</strong>
+                            <p>벤츠는 실시간 위치 정보부터 주행 분석까지, 정교한 내부 데이터 시스템으로 운전자에게 최적의 주행 경험을 제공합니다.</p>
+                        </div>
+                    </li>
+                    <li data-scroll data-scroll-speed="3">
+                        <div class="img_box"><img src="img/p4.jpg" alt=""></div>
+                        <div class="name">
+                            <strong>내일을 여는 새로운 벤츠</strong>
+                            <p>벤츠는 한발 앞선 기술력과 디자인으로, 이동의 새로운 패러다임을 제시할 차세대 모델들을 선보일 준비를 하고 있습니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="business">
+                <div class="s_tit">
+                    <h2>Our Projects</h2>
+                    <p>미래의 모빌리티를 위한 선구적인 <br>혁신이 준비되어 있습니다.</p>
+                    </p>
+                    <div class="btn">
+                        <span class="material-symbols-outlined prev">
+                            west
+                        </span>
+                        <span class="material-symbols-outlined next">
+                            east
+                        </span>
+                    </div>
+                </div><!-- //.s_tit -->
+    
+                <div class="slide swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b3.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <img src="img/logo.png" alt="프로젝트 서브로고">
+                                    <span>Intelligent Drive</span>
+                                    <h3>인텔리전트 드라이브를 <br>선택하는 이유</h3>
+                                    <p>최신 드라이빙 어시스턴스 시스템이 주변 환경을 모니터링합니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#제어장치</li>
+                                            <li>#센서</li>
+                                            <li>#데이터처리</li>
+                                            <li>#혁신적인 드라이빙</li>
+                                            <li>#사고예방</li>
+                                            <li>#디지털라이트</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b2.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <img src="img/logo.png" alt="프로젝트 서브로고">
+                                    <span>MBUX multimedia system</span>
+                                    <h3>MBUX 멀티미디어 시스템<br>기능 탑재</h3>
+                                    <p>인공 지능이 탑재된 매력적인 MBUX 멀티미디어 시스템을 만나보세요.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#MBUX</li>
+                                            <li>#작동법 조정</li>
+                                            <li>#하이라이트</li>
+                                            <li>#인포테인먼트</li>
+                                            <li>#어댑티브 시스템</li>
+                                            <li>#직관적인 운전 방식</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b1.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <img src="img/logo.png" alt="프로젝트 서브로고">
+                                    <span>Over-the-air 업데이트</span>
+                                    <h3>2세대 MBUX <br> 엔터테인먼트 업데이트</h3>
+                                    <p>MBUX 엔터테인먼트 시스템으로 나만의 맞춤형 공간을 연출해 보세요.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#Over-the-air</li>
+                                            <li>#디자인</li>
+                                            <li>#MBUX</li>
+                                            <li>#비주얼전략</li>
+                                            <li>#엔터테인먼트 시스템</li>
+                                            <li>#Dolby Atmos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b4.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <img src="img/logo.png" alt="프로젝트 서브로고">
+                                    <span>
+                                        design & concept</span>
+                                    <h3>미래에 오신 것을<br>환영합니다</h3>
+                                    <p>우리는 끊임없이 과거, 현재 그리고 미래에 맞는 새로운 럭셔리 디자인을 선보이고 있습니다.</p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#AMG SL</li>
+                                            <li>#현대적 감각</li>
+                                            <li>#걸윙(Gullwing)</li>
+                                            <li>#럭셔리브랜드</li>
+                                            <li>#X-팩터(X-Factor)</li>
+                                            <li>#새로운 디자인</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#">
+                                <div class="img_box"><img src="img/b5.jpg" alt=""></div>
+                                <div class="txt_box">
+                                    <img src="img/logo.png" alt="프로젝트 서브로고">
+                                    <span>PVISION EQXX</span>
+                                    <h3>럭셔리와 첨단 기술의 공존
+                                        <br>​Efficiency의 새로운 기준​</h3>
+                                    <p>메르세데스-벤츠의 VISION EQXX는 전기 자동차의 새로운 기준을 제시합니다. </p>
+                                    <div class="tag">
+                                        <ul>
+                                            <li>#친환경</li>
+                                            <li>#VISION EQXX</li>
+                                            <li>#공기역학적</li>
+                                            <li>#첨단기술</li>
+                                            <li>#공기저항 계수</li>
+                                            <li>#미래 혁신</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="vid">
+                <div class="s_tit">
+                    <h2 class="">138 years of<br>
+                        innovation</h2>
+                    <p>138년간의 개척 정신과 혁신을 이어 받아 <br>
+                        순수 전기 시대를 선도하는 메르세데스-벤츠는<br>
+                        단순 이동 수단이 아닌 그 이상을 제공합니다.<br>
+                        한 공간에서 만나 당신의 모든 니즈를 충족시킵니다.</p>
+                </div><!-- //.s_tit -->
+                <figure class="vid_box"><!-- 비디오 묶을 때에는 figure -->
+                    <video src="img/vid2.mp4" loop autoplay muted playsinline></video>
+                </figure>
+            </section>
+            <section class="trust">
+                <div class="s_tit">
+                    <h2>Mercedes-Benz
+                        AET 교육생 모집</h2>
+                    <p>Mercedes-Benz가 AET 교육으로
+                         <br>당신의 꿈과 함께합니다.</p>
+                </div>
+                <div class="con">
+                    <ul>
+                        <li class="sl1"><a href="#">
+                                <h3>Automotive Electric Traineeship</h3>
+                                <p>프로그램을 기반으로 앞으로 자동차 산업의 주력인 전기차 분야의 전문교육을 적용하여 전기차 수리 역량을 갖출 수 있도록 새롭게 개편한 프로그램 입니다.</p>
+                            </a></li>
+                        <li class="sl2"><a href="#">
+                                <h3>지원서 접수 방법 </h3>
+                                <p></p>
+                            </a></li>
+                        <li class="sl3"><a href="#">
+                                <h3>필수 체크 사항</h3>
+                                <p>지원서 제출과 채용 관련 문의는 각 딜러의 채용 담당자(e-mail)에게 문의 바랍니다. </p>
+                            </a></li>
+                    </ul>
+                </div>
+         </section>
+         <section class="news">
+            <div class="s_tit">
+                <h2>
+                    hot issue</h2>
+                <p>브랜드의 새로운 발걸음부터 글로벌 이슈까지,<br>벤츠의 최신 소식과 주요 뉴스를 한눈에 확인해보세요.</p>
+                <a href="#" class="more">View More &gt;</a>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="con swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t1.jpg" alt=""></div>
+                            <p class="txt">
+                                코리아 벤츠 - "최상위 드림카 2종 출시 예정"
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t2.jpg" alt=""></div>
+                            <p class="txt">
+                                전기차 화재 관련 주민들과의 만남 및 추가 지원 약속
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t3.jpg" alt=""></div>
+                            <p class="txt">
+                                메르세데스-벤츠 : 전기차 라인업 강화중, EQ 시리즈를 중심으로 다양한 모델을 출시
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t4.jpg" alt=""></div>
+                            <p class="txt">
+                                지속 가능한 모빌리티 추진! 재활용 소재 사용 등 친환경 정책 강화
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t5.jpg" alt=""></div>
+                            <p class="txt">
+                                AMG Experience, SUV Experience를 통해 특별한 경험 선사
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t6.jpg" alt=""></div>
+                            <p class="txt">
+                                다양한 드라이빙 프로그램을 통해 특별한 경험 제공
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t7.jpg" alt=""></div>
+                            <p class="txt">
+                                메르세데스-벤츠 스토어를 통해 온라인 차량 구매, 상담, 시승 신청 등 비대면 서비스 확대중
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide"><a href="#">
+                            <div class="img_box"><img src="img/t8.jpg" alt=""></div>
+                            <p class="txt">
+                                Zero Layer 홈 대시보드
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+         </section>
+        </main>
+        <footer>
+            <h3>Contact us</h3>
+            <p>Mercedes-Benz가
+                 <br>
+                   <span>당신의 꿈과</span>함께합니다.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
+
+<!-- playsinline: 팝업 방지 -->

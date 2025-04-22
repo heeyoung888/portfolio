@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="uxui 웹 디자이너 김희영의 포트폴리오 입니다">
+  <meta name="keywords" content="portfolio, uxui, webdesign">
+  <meta name="author" content="hee young Kim">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>portfolio</title>
+    <script src="https://kit.fontawesome.com/4514f2c7b8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><!-- 제이쿼리 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- 스와이퍼 css내꺼보다 위에 있어야 함 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script><!-- 가로스크롤? -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script><!-- 내가 동작을 제어할 내 자바스크립트 -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main_style.css">
+    
+</head>
+<body>
+    <div class="wrap">
+      <div class="main_visual">
+        <div class="inner">
+          <nav class="fade_up">
+            <ul class="menu">
+              <li><a href="#01">01 profile</a></li>
+              <li><a href="#02">02 project</a></li>
+              <li><a href="#03">03 skills</a></li>
+              <li><a href="#04">04 contact</a></li>
+            </ul>
+          </nav>
+          <div class="face_wrap fade_up" >
+            <svg id="face" data-name="face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513.1 571.1">
+              <path d="M223.1,69.3c1.7.4.5-1.8,1.6-2.1,4.9-1,8.7,8.1,9.9,12,5.4,17.9,5.3,24.8,15.5,41.5,22.1,36.2,40.2,50.7,84,56,8.2,1,14.2-3.1,20.2,6.8s8.3,29,12.8,40.9c3.7,4.1,9.9,6,13.5,9.7s4.4,7.9,7.5,9.5,2.7-1.4,5-3c11-7.3,38-7.6,49.3-.4,4.2,2.7,16.6,13.4,12.7,18.8h2.8c2.1,2.2-.4,19.5-1.1,23.2-1.4,7.3-4.8,13.1-6.9,19.5-1.6,2.6-10.6,6.8-12.6,8.4s.7,1.4-.6,2.9c-1.7,1.9-14.6,10.8-14.6,12.5l25.2,15.5c28.9,22.6,45.8,48.3,51.5,84.7,1.8,11.3-2,38.1,6.5,46,1.5,1.4,6.8,1.4,7.6,4.9s-2.2,10.7-4.9,12.8-3.8-.5-4.5,2.5c-14.9-7.7-16.4-21.2-17.1-36.7-.8-17.8,1.6-33.6-4.9-51.3-8.1-21.9-28.6-44.3-47.6-57.4-5.3-3.6-21.5-14.1-27.2-13.6s-15.4,3-20.9,4.1-.7.5-4.3,1c-8.6,1.1-11.8,1.6-16.9,9-4.9,7.2-12.3,19-18.6,25.4-1.4,1.4-5.6,3.4-5.8,3.8-.6,1,.1,2.8-.4,3.6s-7,5-8.9,6.9c-14.5,15-30.2,31.6-48.3,43.4-17.5,11.3-42.6,22.2-62.5,29.3s-35.7,8.8-54.7,10.6-3-.3-4.4-1l-.9,2.9c5.9,2.5,8.1,11.8,8.8,17.8,2.1,19.2.8,44.7-3.1,63.6-.9,4.6-4.1,16.5-9.4,17.5s-5.1-.9-5.9-1.8c-5.5-6.3,4.5-26.7,5.4-34.6,1.7-13.9,3.1-46.1-5.6-57.1-1.2-1.5-8.5-8.3-10-9-6.5-3.2-15-3-22.1-4.9C23.8,437.8,1.8,328.6,24.6,245.2c4.3-5.5,9.2-29.9,13-33s9.7,7,9.6,9.5-1.5,4.3-2.1,5.8c-14.8,39.1-19.7,69.5-13,112.4,2.4,15.2,7.1,33.2,13.7,47.3,10.3,21.7,24.9,37.3,45.1,50.9,5.2,3.5,28.1,13.1,33.9,14.1,49.3,8.6,85.6,1.9,130.1-20.8,30.4-15.5,56.7-40.2,79.8-65.2,8.2-8.8,14.4-20.8,21-29.9,2.2-3,5.6-7.8,9.2-8.9,9.2-2.7,21.9-2.9,31.5-5.5,10.9-2.9,29.5-15.5,36.7-24.3,8.9-10.8,18.3-28.7,9.1-41.7-2.5-3.5-9.6-7.4-13.8-8.5-4.6-1.2-11.1-.8-15.9.6-1.3.4-1.4,1.8-1.6,1.9-.6.2-1.7-.7-2.7-.2s-8.5,5.3-8.8,5.7c-.7.8,0,2.3-.2,2.8s-4.7-2.1-6.5,1.8c-4.4-4.2-4.6,1.4-6.4.1s0-1.2-.5-1.5c-.8-.5-1.9,0-2.6-1.1-3.1-4.2-.2-3.1-5.9-7.8s-15.2-11.5-19.3-18.7c-3.8-6.8-7.3-20.6-9.5-28.5-.8-2.9-2.7-15.9-4.3-16.8-1.5-1-3.2.2-4.5,0-29.7-4-48.8-2.5-73.4-25.1-17.6-16.3-30.7-37.9-37.1-60.9-1.4-5-3.5-27.1-6.6-28.4l-2.6.6c-1.9,2.2-.9,5.3-2,7.6s-5.6,9.5-7.1,11.9c-5.8,9.4-15.2,19.4-20.2,27.6s-3.1,6-4,7c-1.4,1.5-5.7,2.7-6.4,3.6-3.5,4.4-2.3,8.8-9.3,13.2s-3.1.2-3.7.7-.7,3.2-1.6,4.5c-1.4,2-12.2,11.9-14.1,12-2.8.2-6.3-3.5-6.5-6.2s3.5-7.5,5.5-9.5c18.2-18.2,36.3-37.7,50-60,4.8-7.8,8.9-20.8,13.6-27.4s3.2-3.7,4.4-3.5c6.3,5.1,5.3,8.6,4.6,16Z"/>
+              <path d="M255.9,10.5l3.3,13.7c-1.6,1.7-9.6-7.7-11.1-8.4-18.1-9.6-49.3-2-68.3-.5l-.6,2-3.9-1.9c0,3.7-4.2,2.2-6.3,3-7.3,2.7-16.3,4.9-23.5,7.8-14.6,5.9-27.6,15.2-39.9,24.5-17.1,12.9-29.7,25.2-44.1,40.9s-9.5,11.2-13,16.5c-15.8,24.1-37.2,60.2-35.2,90.6s2,6.4,1.6,8-3.5,6.1-4.7,6.1c-13-2.6-10.5-21.8-8.9-31.8,7.8-47.7,51.9-107.4,90.3-135.7,22.8-16.8,40.3-29.2,68.2-36.8,22.4-6.1,51.5-11,74.7-7.1,8.3,1.4,14.3,4.9,21.3,9.2Z"/>
+              <path d="M418.5,227.6c-1.3,1.2-1,3.2-3.4,3.2-10,0-10.4-4.4-7.7-12.8,5.8-18.5,16-26.4,16.8-49.2,1.5-44.3-12.6-71.3-44-101-15.1-14.3-33.7-24.2-54.8-29.2-12.9-3-25.1-1.6-38.2-1.3l.9-6.6c13.7-3.3,26.7-3.4,40.5-.4,39.6,8.6,67.3,31.7,89.4,64.6,15.2,22.7,19.4,52.9,18.3,79.8-.5,12.6-6,21.5-9.8,32.3-3.3,9.4,2.2,11-7.9,20.6Z"/>
+              <path d="M197.8,49.7c.3.3,1.6,3.8,2.9,4.5l.2,1.9c-2.5.2-2,2.6-3.1,3.9-13.7,16.2-27.3,32.4-41.3,47.1s-16.1,16.7-22.5,21.5-2.9.4-3.6.9c-1.1.9-3.9,5-4.6,5.3-2.8,1.5-3.8-1.5-4.9,5.1-5.9-.3-6.6,3.8-10.2,7.2-8.6,8.1-22.5,17.6-33.3,23.9s-16.5,9.9-20.2,10.7-4.9-8.5-3.9-9.5,1.8,0,2.4-.4c9.9-8.2,22.8-15.3,33.6-24,32.8-26.4,62.6-52,89.8-85.2,4-4.9,10.7-20.8,18.7-13.1Z"/>
+              <path d="M446.9,522c-4.2,2.5-15.2-3.5-18.8-6.2-18.5-14.2-30.7-46.1-32-69-.6-10.1,1.3-20.6,1-31-.4-15.2-1.9-29.7-8.8-42.2-10.7-19.3,10-16.2,13.3-5.3,1,3.2,1.9,5.7,2.9,9,5.4,16.6,5.2,38,5.5,55.5,0,3.5-1.9,9.5-1.7,11.9,1.8,22.4,9.1,44.1,25.7,60.2,4.8,4.7,9.9,6.1,15.6,9.5,1.9,1.4-1.9,7.3-2.7,7.8Z"/>
+              <path d="M233.5,352.9c1.3,1.7,4.3,2.8,3.1,6.3s-4.2,6.1-5.1,6.9c-10.3,10.4-49.1,20.9-63.7,19.8-1.8-.1-3.3-1.4-5.1-1.7l-1.1,2.1c-8-2.7-21.1-5.7-27.7-11.1s-3.8-7.9-7.8-9.6l2.2-5.3c4.2-.4,9-.7,12.8,1.4s10.9,10.3,17.6,11.4,18.8-.4,23.8-1.1,13.9-4.3,20.5-6.5,7-.5,12.7-4.8,10-11.8,13.3-12.2c2.1-.1,3.2,2.7,4.4,4.2Z"/>
+              <path d="M300.5,122.9c2.2,3.2,6.2,5.1,8.6,7.9,1.9,2.2,2.9,5.7,5,8,7.4,8.2,25.3,22.3,35.7,25.3,6.8,2,9.2-3.7,12.3-2.3,5,2.3,3.8,9.1,2.9,13.4-6.4,3.8-8.7.6-13.8-.5-30.2-6.5-55-33.8-67.2-61.7s-4.6-9.8-4.8-10.4c-1.7-5.8-.6-13.9,6-7.8,9.1,8.4,9.7,19.8,15.4,28.1Z"/>
+              <path d="M456.5,494.9c3.8,3.6,18.9,8.4,16.2,14.3-3.5,7.7-17.3-1.1-21.5-4.4-20-16-27.1-49.7-28-74-.2-4.9-1.1-16.4,4.8-18.3.6-.2,4.7,0,5.2.3,4.4,2.4.3,4.7.2,6.9-.2,2.9,2.5,13.8,2.9,18.1.9,9.2.3,17.5,3.5,26.5,3.1,8.7,10.1,24.6,16.8,30.7Z"/>
+              <path d="M281.8,447.6c7.5,6.3,7.4,26.5,9.5,36,1.8,7.9,9.4,24.2,14.3,30.7,5.5,7.1,18.5,13.7,12.3,23.9-5.8.7-9.4.7-13.4-3.8-18.2-20.4-22.4-40.7-26.7-66.3s-7.8-20.4.9-21.5c1.2,0,2.1.3,3,1.1Z"/>
+              <path d="M165.9,273.5c.3.2,4,4.6,4.3,5.1,2.2,4.6.4,3.3-.7,5s-.2,2.1-.5,2.4c-.7.6-2.6-.2-3.6.4s-6.7,7.9-9,9.7-6.8,2-6.3,5.5,8,7.7,10.6,8.6c4.4,1.4,23.2.5,19.5,8.2s-4.7,2.2-7.3,2.8-.2,1.8-2.1,2.1c-4.3.6-14.2-1.9-18.3-3.9-3.2-1.5-13.7-10.4-14.3-13.7s1-9.6,3-12,7-7.8,9.4-10.1,11.8-12.2,15.4-10.1Z"/>
+              <path d="M249.8,260c-.8.9-3,1.5-4.2,1.8-16.8,3.2-11-17.2-6.7-26.2,6.7-14,21.2-5.2,17.7,8.7-.5,2-5.7,14.4-6.8,15.7Z"/>
+              <path d="M142.4,228.7c-2.3,3.2-8,18.5-11.8,18.4-1.7-1.9-5.2-3.3-6.5-5.2-4.3-6.3,1.2-28.6,9.8-31.4,6,0,15.4,11.2,11.3,16.4s-2.1.9-2.7,1.8Z"/>
+            </svg>
+            <img src="./img/bannerimg.png" alt="bannerimg" class="face_img">
+          </div>
+          <h2 class="fade_up">portfolio</h2>
+          <h3 class="fade_up">kim hee young</h3>
+        </div><!-- //.inner -->
+      </div><!-- //.main_visual -->
+
+      <section class="profile" id="01">
+        <div class="inner">
+          <div class="con">
+            <!-- <h2>
+                <p>P</p><p>R</p><p>O</p><p>F</p><p>I</p><p>L</p><p>E</p>
+              </h2> -->
+              <h2 class="title-animation">
+                <img src="./img/title1.png" alt="title image1">
+                <img src="./img/title2.png" alt="title image2">
+                <img src="./img/title3.png" alt="title image3">
+                <img src="./img/title4.png" alt="title image4">
+              </h2>
+              <ul>
+                <li class="float_up"><img src="./img/clip1.png" alt="clipboard"></li>
+                <li class="float_up"><img src="./img/clip2.png" alt="clipboard2"></li>
+                <li class="float_up"><img src="./img/prophoto.png" alt="profilephoto"></li>
+                <li class="float_up"><img src="./img/memo1.png" alt="introduce">
+                  <div class="text_box">
+                    <span class="typing_txt"><span class="cursor"></span></span>
+                  </div>
+                </li>
+                <li class="float_up"><img src="./img/point.png" alt="point"></li>
+              </ul>
+          </div><!-- //.con -->
+        </div><!-- //.inner -->
+      </section><!-- //.profile -->
+
+      <section class="project" id="02">
+        <div class="inner">
+          <div class="con">
+            <h2>PROJECT LIST</h2>
+            <ul>
+              <li data-aos="zoom-in" data-aos-delay="200"><a href="#"><span>pro1</span><img src="./img/pro1.png" alt="project1"><img src="./img/stroke.png" alt="stroke" class="wiggle">
+                <p>app disign<br>
+                team project</p></a></li>
+              <li data-aos="zoom-in" data-aos-delay="600"><a href="https://www.figma.com/proto/nDS4LLW1pwFu0KRU2hDnFY/%EA%B9%80%ED%9D%AC%EC%98%81?page-id=1227%3A350&node-id=1227-360&viewport=419%2C241%2C0.1&t=NIXAgPDwz5rk5tv0-1&scaling=min-zoom&content-scaling=fixed"><span>pro2</span><img src="./img/pro2.png" alt="project2"><img src="./img/twinkle.png" alt="twinkle" class="blink">
+                <p>반응형 디자인<br>
+                individual project
+              </p></a></li>
+              <li data-aos="zoom-in" data-aos-delay="800"><a href="#"><span>pro3</span><img src="./img/pro3.png" alt="project3"><img src="./img/stroke2.png" alt="stroke2" class="bounce">
+                <p>
+                고정형 디자인<br>
+                individual projects
+              </p></a></li>
+              <li data-aos="zoom-in" data-aos-delay="1100"><a href="./company/index.html"><span>pro4</span><img src="./img/pro4.png" alt="project4"><img src="./img/stroke3.png" alt="stroke3" class="wiggle2">
+                <p>
+                  clonecoding<br>
+                  benz
+                </p></a></li>
+              <li data-aos="zoom-in" data-aos-delay="1300"><a href="#"><span>pro5</span><img src="./img/pro5.png" alt="project5">
+                <p>
+                  team project 02<br>
+                  ai chatbot
+                </p></a></li>
+                <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+                <script>
+                  AOS.init();
+                </script>
+            </ul>
+          </div><!-- //.con -->
+        </div><!-- //.inner -->
+      </section><!-- //.project -->
+
+      
+        <section class="skills" id="03">
+          <div class="inner">
+            <h2>SKILLS</h2>
+            <div class=" swiper swiper_mySwiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="./img/css.png" alt="css">
+                </li>
+                <li class="swiper-slide"><img src="./img/html.png" alt="html">
+                </li>
+                <li class="swiper-slide"><img src="./img/figma.png" alt="figma">
+                </li>
+                <li class="swiper-slide"><img src="./img/photo.png" alt="photo">
+                </li>
+                <li class="swiper-slide"><img src="./img/ill.png" alt="ill">
+                </li>
+              </ul>
+            </div><!-- //.swiper_mySwiper -->
+          </div><!-- //.inner -->
+        </section><!-- //.skills -->
+
+      
+      <section class="contact" id="04">
+        <div class="inner">
+          <div class="con">
+            <h2>CONTACT US</h2>
+            <ul>
+              <li><img src="./img/memo2.png" alt="memo"></li>
+              <li><img src="./img/film.png" alt="film"></li>
+              <li class="gif-frame">
+                <img src="./img/cam.png" alt="cam frame" class="frame">
+                <img src="./img/video.gif" alt="gif" class="inner-gif">
+              </li>
+              <li><img src="./img/photo1.png" alt="photo"></li>
+              <li><img src="./img/photo2.png" alt="photo"></li>
+              <li><img src="./img/photo3.png" alt="photo"></li>
+              <li><img src="./img/txt.png" alt="txt"></li>
+              <li><img src="./img/txt2.png" alt="txt"></li>
+              <li><img src="./img/txt3.png" alt="txt"></li>
+              <li><img src="./img/qr.png" alt="qr"></li>
+            </ul>
+          </div><!-- //.con -->
+        </div><!-- //.inner -->
+      </section><!-- //.contact -->
+
+    </div><!-- //.wrap -->
+      
+</body>
+</html>
