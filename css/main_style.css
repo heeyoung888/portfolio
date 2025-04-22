@@ -193,8 +193,8 @@ h2{
     top: 100px;
 }
 .profile .inner ul li:nth-child(3){
-    left: 55%;
-    transform: translateX(-55%);
+    left: 60%;
+    transform: translateX(-60%);
     top: 400px;
     z-index: 100;
 }
