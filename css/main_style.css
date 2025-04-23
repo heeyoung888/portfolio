@@ -447,8 +447,7 @@ h2{
     display: flex;
   }
   .swiper-slide {
-    width: auto; 
-    height: auto;
+    width: 300px; 
     flex-shrink: 0;
   }
   .skills .swiper_mySwiper {
@@ -483,6 +482,24 @@ h2{
   .zoomed-content {
     transform-origin: top left;
   }
+  .scroll-bar {
+    width: 50%;
+    height: 6px;
+    background: rgba(200, 200, 200, 0.3);
+    border-radius: 3px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .scroll-thumb {
+    height: 100%;
+    background: #666;
+    border-radius: 3px;
+    transition: all 0.3s;
+  }
+  
+
 
 /* contact */
 .contact{

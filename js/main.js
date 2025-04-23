@@ -161,22 +161,109 @@ gsap.utils.toArray('.main_visual .fade_up').forEach((elem) => {
   
 
   // === Swiper 슬라이드 ===
+  imagesLoaded(document.querySelector('.swiper_mySwiper'), () => {
+    const swiper = new Swiper(".swiper_mySwiper", {
+      loop: false,
+      autoplay: false,
+      slidesPerView: 3,
+      spaceBetween: 20,
+      grabCursor: false,
+      simulateTouch: true,
+      touchRatio: 1,
+  
+      on: {
+        init: function () {
+          updateScrollThumb(this);
+        },
+        slideChangeTransitionEnd: function () {
+          updateScrollThumb(this);
+        }
+      }
+    });
+  
+    function updateScrollThumb(swiper) {
+      const thumb = document.querySelector('.scroll-thumb');
+      const wrapper = swiper.wrapperEl;
+      const container = swiper.el;
+  
+      const wrapperWidth = wrapper.scrollWidth;
+      const containerWidth = container.clientWidth;
+  
+      const maxScroll = wrapperWidth - containerWidth;
+      const currentScroll = Math.abs(swiper.translate);
+  
+      const ratio = maxScroll > 0 ? currentScroll / maxScroll : 0;
+  
+      const thumbWidthPercent = (containerWidth / wrapperWidth) * 100;
+      const maxTranslate = 100 - thumbWidthPercent;
+      const translateX = Math.min(ratio * maxTranslate, maxTranslate);
+  
+      thumb.style.width = `${thumbWidthPercent}%`;
+      thumb.style.transform = `translateX(${translateX}%)`;
+    }
+  });
+  // 모든 이미지가 로드되었는지 확인하는 헬퍼 함수
+function imagesLoaded(container, callback) {
+  const images = container.querySelectorAll('img');
+  let loadedCount = 0;
+  const total = images.length;
+
+  images.forEach(img => {
+    if (img.complete) {
+      loadedCount++;
+      if (loadedCount === total) callback();
+    } else {
+      img.addEventListener('load', () => {
+        loadedCount++;
+        if (loadedCount === total) callback();
+      });
+    }
+  });
+}
+
+// 이미지 로딩 완료 후 Swiper 실행
+imagesLoaded(document.querySelector('.swiper_mySwiper'), () => {
   const swiper = new Swiper(".swiper_mySwiper", {
     loop: false,
     autoplay: false,
-    slidesPerView: 3.1,
+    slidesPerView: 3,
     spaceBetween: 20,
     grabCursor: false,
     simulateTouch: true,
     touchRatio: 1,
-  
+
     on: {
-      slideChangeTransitionEnd: () => {
-        // 슬라이드 전환이 끝날 때마다 확대 콘텐츠 갱신
-        zoomed.innerHTML = skillsSection.innerHTML;
+      init: function () {
+        updateScrollThumb(this);
+      },
+      slideChangeTransitionEnd: function () {
+        updateScrollThumb(this);
       }
     }
   });
+
+  function updateScrollThumb(swiper) {
+    const thumb = document.querySelector('.scroll-thumb');
+    const wrapper = swiper.wrapperEl;
+    const container = swiper.el;
+
+    const wrapperWidth = wrapper.scrollWidth;
+    const containerWidth = container.clientWidth;
+
+    const maxScroll = wrapperWidth - containerWidth;
+    const currentScroll = Math.abs(swiper.translate);
+
+    const ratio = maxScroll > 0 ? currentScroll / maxScroll : 0;
+
+    const thumbWidthPercent = (containerWidth / wrapperWidth) * 100;
+    const maxTranslate = 100 - thumbWidthPercent;
+    const translateX = ratio * maxTranslate;
+
+    thumb.style.width = `${thumbWidthPercent}%`;
+    thumb.style.transform = `translateX(${translateX}%)`;
+  }
+});
+
 
   // === 돋보기 확대 효과 ===
   const skillsSection = document.querySelector('.skills');
@@ -195,6 +282,7 @@ gsap.utils.toArray('.main_visual .fade_up').forEach((elem) => {
   zoomed.style.width = `${skillsSection.offsetWidth}px`;
   zoomed.style.transformOrigin = 'top left';
 
+
   skillsSection.addEventListener('mousemove', (e) => {
     const rect = skillsSection.getBoundingClientRect();
     const offsetX = e.clientX - rect.left;
@@ -210,4 +298,6 @@ gsap.utils.toArray('.main_visual .fade_up').forEach((elem) => {
   skillsSection.addEventListener('mouseleave', () => {
     magnifier.style.display = 'none';
   });
+
+
 });
