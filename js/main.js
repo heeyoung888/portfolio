@@ -161,47 +161,46 @@ gsap.utils.toArray('.main_visual .fade_up').forEach((elem) => {
   
 
   // === Swiper 슬라이드 ===
-  imagesLoaded(document.querySelector('.swiper_mySwiper'), () => {
-    const swiper = new Swiper(".swiper_mySwiper", {
-      loop: false,
-      autoplay: false,
-      slidesPerView: 3,
-      spaceBetween: 20,
-      grabCursor: false,
-      simulateTouch: true,
-      touchRatio: 1,
+  const swiper = new Swiper(".swiper_mySwiper", {
+    loop: false,
+    autoplay: false,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    grabCursor: false,
+    simulateTouch: true,
+    touchRatio: 1,
   
-      on: {
-        init: function () {
-          updateScrollThumb(this);
-        },
-        slideChangeTransitionEnd: function () {
-          updateScrollThumb(this);
-        }
+    on: {
+      init: function () {
+        updateScrollThumb(this);
+      },
+      slideChangeTransitionEnd: function () {
+        updateScrollThumb(this);
       }
-    });
-  
-    function updateScrollThumb(swiper) {
-      const thumb = document.querySelector('.scroll-thumb');
-      const wrapper = swiper.wrapperEl;
-      const container = swiper.el;
-  
-      const wrapperWidth = wrapper.scrollWidth;
-      const containerWidth = container.clientWidth;
-  
-      const maxScroll = wrapperWidth - containerWidth;
-      const currentScroll = Math.abs(swiper.translate);
-  
-      const ratio = maxScroll > 0 ? currentScroll / maxScroll : 0;
-  
-      const thumbWidthPercent = (containerWidth / wrapperWidth) * 100;
-      const maxTranslate = 100 - thumbWidthPercent;
-      const translateX = Math.min(ratio * maxTranslate, maxTranslate);
-  
-      thumb.style.width = `${thumbWidthPercent}%`;
-      thumb.style.transform = `translateX(${translateX}%)`;
     }
   });
+  
+  function updateScrollThumb(swiper) {
+  const thumb = document.querySelector('.scroll-thumb');
+  const wrapper = swiper.wrapperEl;
+  const container = swiper.el;
+
+  const wrapperWidth = wrapper.scrollWidth;
+  const containerWidth = container.clientWidth;
+
+  const maxScroll = wrapperWidth - containerWidth;
+  const currentScroll = Math.abs(swiper.getTranslate ? swiper.getTranslate() : swiper.translate);
+
+  const ratio = maxScroll > 0 ? currentScroll / maxScroll : 0;
+
+  const thumbWidthPercent = (containerWidth / wrapperWidth) * 100;
+  const maxTranslate = 100 - thumbWidthPercent;
+  const translateX = Math.min(ratio * maxTranslate, maxTranslate);
+
+  thumb.style.width = `${thumbWidthPercent}%`;
+  thumb.style.transform = `translateX(${translateX}%)`;
+}
+  
   // 모든 이미지가 로드되었는지 확인하는 헬퍼 함수
 function imagesLoaded(container, callback) {
   const images = container.querySelectorAll('img');
