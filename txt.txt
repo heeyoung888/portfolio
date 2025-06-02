@@ -1,0 +1,80 @@
+01 profile  
+02 info
+03 project
+04 skills
+portfolio
+kim hee young
+PROFILE
+personality : 
+꾸준함, 자기반성적
+education :
+피그마, css, html 수료
+philosophy : 
+명확, 명료(포인트)
+KimHeeYoung
+1995.10.09
+
+project list ! 
+pro.01
+pro.02
+app disign(예시)
+team project
+반응형 디자인(예시)
+individual project
+pro.03
+고정형 디자인(예시)
+individual projects
+pro.04
+pro.05
+team project 01
+k-brand
+team project 02
+ai chatbot
+skills
+c
+s
+h
+t
+m
+f
+i
+p
+h
+i
+l
+l
+s
+l
+g
+m
+a
+o
+t
+o
+u
+t
+s
+h
+o
+p
+s
+layout, transform, 
+animation... 
+table, object,
+media, form...
+autolayout,
+wireframe...
+autolayout,
+wireframe...
+autolayout,
+wireframe...
+Contact us
+“design
+Responsive
+design”
+thank  you
+2024.03
+for watching
+2024.02
+my portfolio
+QR CODE
