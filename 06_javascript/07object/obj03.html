@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동차 객체 생성하기</title>
+</head>
+<body>
+    <p id="carname"></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+    <script>
+        let car = {
+            name : 'HeeCar',
+            speed : 50,
+            color: 'white',
+            start: function(){
+                return this.speed + 10;
+            }
+        }
+
+        document.getElementById('carname').textContent = car.name;/* br이 안먹음 html이 아니라 text이기 때문 */
+
+        //carcolor에 white [] = .으로 부르지 않기
+        document.getElementById('carcolor').textContent = car['color']
+        
+
+        //carspeed에 60 = 메서드 쓰기(star사용하기)
+        document.getElementById('carspeed').textContent = car.start();
+        
+
+    </script>
+</body>
+</html>

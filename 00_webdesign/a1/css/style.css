@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+/* reset 외우기-img까지*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 블릿 없애기 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* layout */
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #aaa;
+}
+header h1{width: 200px;
+float: left;
+}
+header h1 a{
+    display: block;
+    width: 100%; height: 100px;
+    box-sizing: border-box; /* padding-top을 넣으면 밑으로 약간 공간이 생기기 때문에 사이즈 조절 */
+    padding-top: 30px; 
+}
+header nav{/* float이 있기 때문에 마진이 잘 먹음 큰 엄마*/
+    width: 60%;
+    background: lightcoral;
+    float: right;
+    margin-top: 20px; margin-right: 20px;
+}
+header nav ul.gnb{
+    width: 100%;
+}/* ul안의 gnb만 소환 혹은 >ul : 범위 확인*/
+header nav ul.gnb>li{/* 기준점: float left가 있는 곳>포지션 걸기 */
+    width: 25%;
+    background: #ccc;
+    float: left;
+    text-align: center;
+    position: relative;
+}
+header nav ul.gnb>li>a{ /* a는 인라인이기 때문에 블록으로 바꿔줘야 사이즈가 먹음 */
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background: green;
+}
+header nav ul.gnb>li>ul.sub{/* 이동할 것 */
+    width: 100%;
+    position: absolute;
+    left: 0; top: 40px; /* 절대좌표로 이동 , a 높이값 40px에 맞춤*/
+    display: none; /* 영역 안보이게 하는 것 */
+}
+header nav ul.gnb>li>ul.sub>li{
+    width: 100%; height: 36px;
+    line-height: 36px;
+    background: red;
+}
+header nav ul.gnb>li>ul.sub>li>a{
+    display: block;
+}
+
+.main_visual {
+    width: 100%;
+    height: 300px;
+    background: #bbb;
+}
+
+.contents {width: 100%;
+height: 200px;
+background: #ccc;}
+/* background : 영역 보기 위해 표시 후 나중에 수정 가능 */
+/* 부모에게 height값이 걸려있을 경우 굳이 클리어 속성 쓰지 않기 - 원래안되지만 시험문제에 높이가 명시되어있기 때문에*/
+
+.contents .notic_gal{
+    width: 400px;
+    height: 100%;
+    background: red;
+    float: left;
+}
+.contents .banner{
+    width: 400px;
+    height: 100%;
+    background: green;
+    float: left;
+}
+.contents .go{
+    width: 400px;
+    height: 100%;
+    background: blue;
+    float: left;
+}
+
+footer {width: 100%;
+height: 100px;
+background: #ddd;}
+
+footer .logo{
+    width: 200px;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+footer .copy
+{
+    width: 700px;
+    height: 100%;
+    background: brown;
+    float: left;
+}
+footer .sns{
+    width: 300px;
+    height: 100%;
+    background: gold;
+    float: left;
+    }
+
+/* 큰 틀 잡고 큰 구조 먼저 잡기, html과 css 같은 위치에 작성해야 찾기 편함 태그 사용속성 이해*/
+/* 글자가 가운데로 안옴.. */

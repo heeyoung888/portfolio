@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcset 속성</title>
+</head>
+<body>
+<!-- w 서술자 사용하기 
+조건을 지정할 때 w를 사용하면 ‘파일 이름, 너비w’ 형식으로 이미지를 삽입함. (w는 이미지 파일의 너비)  -->
+    <img src="images/large.jpg" alt="신세경" srcset="images/small.png 320w, images/large.png 640w"><!-- 사진 바꾸기.확장자 일치시켜보기 -->
+    <!-- 화면에 맞춰서 이미지를 골라줌 -->
+
+     <!-- x는 장치의 픽셀 비율(pixel ratio)을 가리킴
+x값이 클수록 고화질의 이미지를 연결할 수 있다 -->
+<img src="images/large.jpg" alt="신세경" srcset="images/small.png 1x, images/large.png 2x"
+sizes="(max-width:600px) 1x, (max-width:1200px) 2x"
+>
+
+<picture>
+    <source srcset="images/small.png" media="(max-width:600px)">
+    <source srcset="images/large.jpg" media="(max-width:1200px)">
+    <img src="images/large.jpg" alt="sample">
+    <!-- 화면 줄이면 작은 사이즈로 바뀜 -->
+</picture>
+</body>
+</html>

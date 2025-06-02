@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+:root {
+    font-size: 20px;
+}
+
+/* layout */
+header {
+    width: 1360px;
+    margin: 0 auto;
+    background: #ccc;
+}
+
+header h1 {
+    float: left;
+    width: 360px;
+}
+
+header nav {
+    float: left;
+    width: 1000px;
+}
+
+header nav ul.gnb {
+    width: 100%;
+}
+
+header nav ul.gnb>li {
+    width: 20%;
+    background: lightcoral;
+    text-align: center;
+    float: left;
+    position: relative;
+    /* 기준 */
+}
+
+header nav ul.gnb>li>a {
+    display: block;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.2rem;
+}
+
+header nav ul.gnb>li>ul {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    /* 0 > 내리기 */
+    display: none;
+    /* 메뉴 숨기기 */
+}
+
+/* ul.sub */
+header nav ul.gnb>li:hover>ul {
+    display: block;
+    /* 블록은 블록으로 살려주기 */
+}
+
+header nav ul.gnb>li>ul>li {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.1rem;
+    background: yellow;
+}
+
+header nav ul.gnb>li>ul>li>a {
+    display: block;
+}
+
+.container {
+    width: 1360px;
+    margin: 0 auto;
+}
+
+.container main {
+    float: left;
+    width: 70%;
+
+}
+
+.container main .main_visual {
+    width: 100%;
+
+}
+
+.container main .main_visual ul {
+    width: 100%;
+}
+
+.container main .main_visual ul li {
+    width: 33.33%;
+    height: 500px;
+    background: red;
+    float: left;
+}
+
+.container main .main_visual ul li:nth-child(2) {
+    background: blue;
+}
+
+.container main .main_visual ul li a {
+    display: block;
+    height: 100%;
+    /* 블록이 세로까지 다 걸림 기존 : 컨텐츠만 */
+}
+
+.container main .notice {
+    width: 100%;
+}
+
+.container main .notice h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container main .notice ul {
+    width: 80%;
+    border: 1px solid #333;
+    margin: 0 auto;
+}
+
+.container main .notice ul li {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #333;
+}
+
+.container main .notice ul li:last-child {
+    border-bottom: 0;
+}
+
+.container main .notice ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    position: relative;
+}
+.container main .notice ul li a::before{
+    content: '';
+    display: block;
+    width: 10px; height: 10px; background: lightcoral;
+    border-radius: 50%;
+    position: absolute; left: 5px; top: 35px;
+}
+
+.container main .notice ul li a strong {
+    font-size: 1.1rem;
+    /* 루트를 기준으로 사이즈가 정해지고 있음 */
+}
+
+.container main .notice ul li a span {
+    float: right;
+    font-size: 0.8rem;
+}
+
+.container aside {
+    background: greenyellow;
+    float: right;
+    width: 29%;
+    height: 1000px;
+}
+
+footer {
+    background: lightgray;
+}
+footer .copy{width: 60%; height: 150px; background: lightcoral;  float: left;}
+footer .address{width: 39%; height: 160px; background: green; float: right;}/*  */

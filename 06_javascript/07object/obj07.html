@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미 생성된 객체에 속성 추가 및 삭제하기</title>
+</head>
+<body>
+    <p>[Hong's Car]</p>
+    <p id="hong1"></p>
+    <p id="hong2"></p>
+    <p id="hong3"></p>
+    <p id="hong4"></p>
+    <p>[Kim's Car]</p>
+    <p id="data1"></p>
+    <p id="data2"></p>
+    <p id="data3"></p>
+    <p id="data4"></p>
+
+    <script>
+        function Car(name,color,speed){
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.speedUp = function(){
+                return this.speed + 10;
+            }
+            this.speedDown = function(){
+                return this.speed - 10;
+            }
+        }
+        let HongCar = new Car('Sonata','white',100);
+        HongCar.price = '3천만원' //속성 추가
+        HongCar['price'] = '4천만원' //속성 변경
+
+        let KimCar = new Car('Jeep','black',70);
+        delete KimCar.color; //속성 삭제
+
+        let cname = document.getElementById('hong1');
+        let colname = document.getElementById('hong2');
+        let cspeed = document.getElementById('hong3');
+        let csprice = document.getElementById('hong4');
+        cname.textContent = `자동차 이름 : ${HongCar.name}`;
+        colname.textContent = `자동차 색상 : ${HongCar.color}`;
+        cspeed.textContent = `자동차 속도 : ${HongCar.speedUp()}`;
+        csprice.textContent = `자동차 가격 : ${HongCar.price}`;
+
+
+        let cname2 = document.getElementById('data1');
+        let colname2 = document.getElementById('data2');
+        let cspeed2 = document.getElementById('data3');
+        let cprice2 = document.getElementById('data4');
+        cname2.textContent = `자동차 이름 : ${KimCar.name}`;
+        colname2.textContent = `자동차 색상 : ${KimCar.color}`;
+        cspeed2.textContent = `자동차 속도 : ${KimCar.speedUp()}`;
+        cprice2.textContent = `자동차 가격 : ${KimCar.price}`;
+    </script>
+</body>
+</html>

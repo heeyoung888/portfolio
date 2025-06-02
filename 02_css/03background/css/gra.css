@@ -1,0 +1,26 @@
+@charset "uft-8";
+*{margin: 0; padding: 0;}
+div{
+    width: 500px;
+    height: 300px;
+    display: inline-block;
+    border:1px solid #ccc;
+    margin: 10px;
+}
+/* 피그마 */
+.gra1{
+    background: linear-gradient(128deg, #6F4747 0.16%, #7B6B6B 48.01%, #999 99.84%);
+}
+/* https://cssgradient.io/ */
+.gra2{
+    background: rgb(2,0,36);
+    background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(96,52,17,1) 35%, rgba(177,123,91,1) 73%, rgba(235,174,144,1) 100%);
+}
+.gra3{background: linear-gradient(180deg, #A9A79E 0.28%, #F0EFEB 48.01%, #352D2D 99.72%);}
+.gra4{background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(96,52,17,1) 28%, rgba(45,87,49,1) 71%, rgba(86,108,88,1) 100%);}
+.gra5{background: rgb(90,59,105);
+    background: linear-gradient(60deg, rgba(90,59,105,1) 2%, rgba(164,63,123,1) 28%, rgba(226,107,187,1) 71%, rgba(242,198,227,1) 100%);}
+.gra6{background: linear-gradient(180deg, #F8C80B 0.28%, #F8DF79 25.41%, #F9F0CC 48.01%, #F5E3B9 68.89%, #E5AB59 99.72%);}
+.gra7{background: rgb(128,97,105);
+    background: linear-gradient(60deg, rgba(128,97,105,1) 2%, rgba(177,131,143,1) 28%, rgba(106,70,79,1) 71%, rgba(74,49,55,1) 100%);}

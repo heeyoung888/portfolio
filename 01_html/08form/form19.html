@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>type 속성</legend>
+      <p>아이디 : <input type="text" placeholder="아이디를 입력하세요"></p>
+      <p>비밀번호 : <input type="password"></p>
+      <p>검색 : <input type="search" ></p>
+      <p>이메일 : <input type="email"></p>
+      <p>전화번호 : <input type="tel"></p>
+      <p>컬러선택: <input type="color" value="#cccccc"></p>
+      <p>수량 : <input type="number" min="1" max="10" value="1"></p>
+      <p>만족도 : <input type="range" min="1" max="10" value="1"></p>
+      <p>
+        <label>예 <input type="radio" name="res" value="yes" checked></label>
+        <label>아니오 <input type="radio" name="res" value="no"></label>
+      </p>
+      <p>
+        <label>html <input type="checkbox" value="html"></label>
+        <label>css <input type="checkbox" value="css"></label>
+      </p>
+      <p><input type="submit" value="전송"></p>
+      <p><input type="reset" value="취소"></p>
+      <p><input type="button" value="확인"></p>
+      <p><input type="image" src="./images/login.png" alt="login"></p>
+      <p><input type="file"></p>
+    </fieldset>
+  </form>
+</body>
+</html>
+
+<!-- p태그로 작업
+1. 인풋 : 텍스트, 플레이스홀더
+2. 인풋 : 패스워드
+3. 인풋 : 서치
+4. 이메일
+5. 텔
+
+7. 인풋 : number value:1 max:10 min:1
+8. 인풋 : range max:10 min:1
+9. <p><label>html</label><label>css</label></p> - 체크박스 - 인풋
+10. 버튼 아니고 인풋 : submit, reset, button
+11. 인풋 : image -->

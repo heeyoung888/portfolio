@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-origin</title>
+    <style>
+        div{width: 400px; height: 200px;
+            border: 15px dotted #ccc;
+            padding: 35px;
+            margin-bottom: 20px;
+            background-image: url(images/bg3.jpg);
+            background-repeat: no-repeat;}
+        .bg1{background-origin: padding-box;}/* 기본값 */
+        .bg2{background-origin: border-box;}
+        .bg3{background-origin: content-box;}
+    </style>
+</head>
+<body>
+    <div class="bg1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam veritatis ad necessitatibus blanditiis illo id nostrum odit aliquam unde iste, consectetur nam consequatur commodi accusantium quasi modi labore hic debitis.</div>
+    <div class="bg2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam veritatis ad necessitatibus blanditiis illo id nostrum odit aliquam unde iste, consectetur nam consequatur commodi accusantium quasi modi labore hic debitis.</div>
+    <div class="bg3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam veritatis ad necessitatibus blanditiis illo id nostrum odit aliquam unde iste, consectetur nam consequatur commodi accusantium quasi modi labore hic debitis.</div>
+</body>
+</html>
+
+    <!-- 
+    background clip : border박스가 기본값 : 배경색(?)
+     background origin : 패딩박스가 기본값 : 배경이미지(?)
+     -->

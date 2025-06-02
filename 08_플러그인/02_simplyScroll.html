@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simplyScroll</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .con1 {
+            background-color: beige;
+        }
+
+        .con2 {
+            background: #333;
+        }
+
+        .txtAniBox {
+            width: 100%;
+            height: 90vh;
+            color: #fff;
+            line-height: 1.2;
+            padding: 50px 0;
+            /* overflow: hidden; */
+            background: #ccc;
+        }
+
+        .txtAniBox .simply-scroll {
+            border-bottom: 1px solid #fff;
+            display: flex;
+            height: 33.33%;
+            cursor: pointer;
+        }
+
+        .simply-scroll .simply-scroll-clip {
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+        }
+
+        .txtAniBox ul {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            text-transform: uppercase;
+            transform-origin: left top;
+            height: 100%;
+        }
+
+        .txtAniBox ul li {
+            margin-right: 10vw;
+            font-size: 3rem;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.txtAni1').simplyScroll({
+                speed: 100,
+                // direction: 'backwards',
+                pauseOnHover: false,
+                frameRate: 10, 
+            });
+            $('.txtAni2').simplyScroll({
+                speed: 4,
+                continuous: true   // 끊김 없이 부드럽게 스크롤
+            })
+            $('.txtAni3').simplyScroll({
+                speed: 1,
+                // direction: 'backwards',
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <section class="con1">
+        <h2>제목1</h2>
+    </section>
+    <section class="con2">
+        <h2>제목2</h2>
+        <div class="txtAniBox">
+            <ul class="txtAni1">
+                <li>#txtAni11</li>
+                <li>#txtAni12</li>
+                <li>#txtAni13</li>
+                <li>#txtAni14</li>
+                <li>#txtAni15</li>
+                <li>#txtAni16</li>
+                <li>#txtAni17</li>
+                <li>#txtAni18</li>
+                <li>#txtAni19</li>
+                <li>#txtAni20</li>
+            </ul>
+            <ul class="txtAni2">
+                <li>#txtAni21</li>
+                <li>#txtAni22</li>
+                <li>#txtAni23</li>
+                <li>#txtAni24</li>
+                <li>#txtAni25</li>
+                <li>#txtAni26</li>
+                <li>#txtAni27</li>
+                <li>#txtAni28</li>
+                <li>#txtAni29</li>
+                <li>#txtAni30</li>
+            </ul>
+            <ul class="txtAni3">
+                <li>#텍스트애니31</li>
+                <li>#텍스트애니32</li>
+                <li>#텍스트애니33</li>
+                <li>#텍스트애니34</li>
+                <li>#텍스트애니35</li>
+                <li>#텍스트애니36</li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

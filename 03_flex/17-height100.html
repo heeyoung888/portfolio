@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .page{
+            display: flex;
+            flex-direction: column;/* 위로 올라간 것을 다시 정렬 */
+            height: 100vh;
+            background: greenyellow;
+        }
+        .content{
+            flex: 1 auto; /* 플렉스 아이템에게 플렉스 속성 줄 수 있음 */
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header flex-item">header</header>
+        <section class="content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptas tempora explicabo et sunt? Maxime tempore error, numquam laudantium ut illo doloremque quod, sint consectetur eum non distinctio fugit iusto aperiam vel facilis aspernatur quisquam illum consequuntur doloribus quibusdam quos. Natus quis dolore inventore, cum facere beatae animi officiis dolorem, quod quidem fugit, hic ipsum id molestias cumque ipsam debitis. Eos repellat voluptatum dicta porro distinctio reprehenderit enim numquam sed facere id, perferendis, nesciunt fugit nemo a sit. Vitae ea cupiditate odit reprehenderit alias, odio accusamus sequi quasi quas molestias, nemo eligendi minima nisi, ad porro qui aperiam animi voluptate.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod voluptas tempora explicabo et sunt? Maxime tempore error, numquam laudantium ut illo doloremque quod, sint consectetur eum non distinctio fugit iusto aperiam vel facilis aspernatur quisquam illum consequuntur doloribus quibusdam quos. Natus quis dolore inventore, cum facere beatae animi officiis dolorem, quod quidem fugit, hic ipsum id molestias cumque ipsam debitis. Eos repellat voluptatum dicta porro distinctio reprehenderit enim numquam sed facere id, perferendis, nesciunt fugit nemo a sit. Vitae ea cupiditate odit reprehenderit alias, odio accusamus sequi quasi quas molestias, nemo eligendi minima nisi, ad porro qui aperiam animi voluptate.
+        </section>
+        <footer class="footer flex-item">footer</footer>
+    </div> 
+</body>
+</html>

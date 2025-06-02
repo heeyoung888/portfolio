@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideUp</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>//가로 500 세로500 bgcolor blue 폰트 흰색, css메서드 사용하기
+            $(function(){
+                $('.box').css({
+                    width : 500,
+                    height : '500px',
+                    'background-color' : 'blue',
+                    color : '#fff',
+                }).slideUp(2000,'linear',function(){
+                    alert('hello');
+                });
+        });
+    </script>
+</head>
+<body>
+    <div class="box">box</div>
+</body>
+</html>
+
+<!-- 오브젝트({}) -->
+ <!-- linear : 가속도 없음 -->
+  <!-- ).slideUp(2000 = 2초 500 = 0.5초 -->

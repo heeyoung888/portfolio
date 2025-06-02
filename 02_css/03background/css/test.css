@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+/* 전체폰트 dohyeon
+    container : 가로500px /안쪽여백 10px
+                    border:5px dotted 파랑색
+                    배경색 rgba로 파랑색, 불투명도 20%  /위치 컨텐츠박스
+                    배경이미지 img01.png  사이즈 비율유지 꽉차게(cover) / center  
+    h1 : 굵기 노멀 , 글자사이즈 17px
+    p  : 글자사이즈 16px ,줄간격 글자크기의 1.6배    
+    b  : 나눔브러쉬스크립트체 , 굵기 노멀, 폰트컬러 원하는것  */
+
+    * {
+    margin: 0;
+    padding: 0;
+    }
+    body{
+        font-family: "Do Hyeon", serif;
+        }
+    .container{
+        width: 500px; padding: 10px;
+        border: 5px dotted #00f;
+        background:url(../images/img01.png) no-repeat center/cover;
+        background-clip: content-box;
+        background-color: rgba(0, 0, 225, 0.2);
+        }
+        /* 순서 유의하기 09html참고! 
+        background:url(../images/img01.png) no-repeat center/cover;
+        content-box; rgba(0, 0, 225, 0.2); 합쳐서 작성 가능 - 수업자료실 참고*/ 
+    h1{font-weight: normal; font-size: 17px;}
+    p{
+        font-size: 16px; line-height: 1.6;
+    }
+    b{font-family: "Nanum Brush Script", serif;
+        font-weight: normal;
+        color: black;}
+
+/* @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Brush+Script&display=swap'); */
+/* 전체폰트 dohyeon
+    container : 가로500px /안쪽여백 10px
+                    border:5px dotted 파랑색
+                    배경색 rgba로 파랑색, 불투명도 20%  /위치 컨텐츠박스
+                    배경이미지 img01.png  사이즈 비율유지 꽉차게(cover) / center  
+    h1 : 굵기 노멀 , 글자사이즈 17px
+    p  : 글자사이즈 16px ,줄간격 글자크기의 1.6배    
+    b  : 나눔브러쉬스크립트체 , 굵기 노멀, 폰트컬러 원하는것  */
+
+/* * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Do Hyeon", serif;
+}
+
+.container {
+  width: 500px;
+  padding: 10px;
+  border: 5px dotted #00f;
+  background: url(../images/img01.png) no-repeat center/cover content-box rgba(0, 0, 255, .2);
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 17px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+b {
+  font-family: "Nanum Brush Script", serif;
+  font-weight: normal;
+  color: #fff;
+} */

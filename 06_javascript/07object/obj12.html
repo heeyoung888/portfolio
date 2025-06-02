@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <script>
+        let userName = prompt('당신이 좋아하는 연예인은 누구입니까?');/* 유저가 쓴 이름이 저장됨 */
+        function addPlus(){
+            let h3 = document.createElement('h3');//요소 노드 생성
+            let txt = document.createTextNode(`좋아하는 연예인은 ${userName} 입니다`);//텍스트 노드 생성
+            h3.appendChild(txt); //요소노드와 텍스트 노드를 연결
+            document.body.appendChild(h3);
+            
+            let img = document.createElement('img');
+            img.src = 'https://i.namu.wiki/i/Xi0giaEmhS4t5L7HTkI0JV_Sb-3HuvRKVF5MD7UlEoQPG01Z2GskbG6xteMsS2MC9wSPX1W9GifLHwwVzDjRPw.webp';
+            img.alt = userName;
+            img.setAttribute('width',100);
+            document.body.appendChild(img);
+            //<h3> width 100 alt
+        }
+    </script>
+    <button type="button" id="btn" onclick="addPlus()">이름 및 이미지 출력</button>
+</body>
+</html>

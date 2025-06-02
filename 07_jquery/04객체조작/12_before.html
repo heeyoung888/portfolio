@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //선택한 요소의 다음 위치에 새 요소를 추가
+            $('#wrap p:eq(2)').after('<p>after</p>');
+            $('<p>insertAfter</p>').insertAfter('#wrap p:eq(1)');
+
+            //선택한 요소의 이전 위치에 새 요소를 추가
+            $('#wrap p:eq(1)').before('<p>before</p>');
+            $('<p>insertBefore</p>').insertBefore('#wrap p:eq(0)');
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        
+        <p>내용1</p>
+
+        <p>내용2</p>
+ 
+        <p>내용3</p>
+
+    </div>
+</body>
+</html>

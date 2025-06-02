@@ -1,0 +1,38 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'nanumsquarer'; 
+    src: url('../font/11zon_NanumSquareR.woff') format('woff'); 
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'gmarket1'; 
+    src: url('../font/GmarketSansTTFBold.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'gmarket2'; 
+    src: url('../font/GmarketSansTTFLight.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'nanumbarun1'; 
+    src: url('../font/11zon_NanumBarunGothicBold.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'nanumbarun2'; 
+    src: url('../font/11zon_NanumBarunGothic.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'jamsil'; 
+    src: url('../font/11zon_The\ Jamsil\ 2\ Light.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'nanumsquare1'; 
+    src: url('../font/11zon_NanumSquareEB.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'nanumsquare2'; 
+    src: url('../font/11zon_NanumSquareR.woff') format('woff'); 
+}
+@font-face {
+    font-family: 'boabaram'; 
+    src: url('../font/11zon_HSBombaram3.0_Thin.woff') format('woff'); 
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>변수의 범위</title>
+</head>
+<body>
+    <script>
+        //함수의 전역변수
+        var sum1 = 10; //전역변수
+        function add1(){
+            sum1 = 20; //전역변수 변경
+        }
+        add1();
+        console.log('전역' + sum1);//20
+
+        //함수의 지역변수
+        var sum2 = 30; //전역변수
+        function add2(){
+            var sum2 = 40; //자동 지역 변수
+            console.log('지역 sum2' + sum2);
+        }
+        add2();
+        console.log('전역sum2' + sum2)
+
+        //블록의 지역 변수
+        var num1 = 50; //전역변수
+        if(num1 == 50){
+            var num1 = 60; //전역변수
+        }
+        console.log(num1);
+
+        let num2 = 70; //전역변수
+        if(num2 == 70) {
+            let num2 = 80; //지역변수 : let은 재선언이 불가능함.
+            console.log(num2);
+        }
+        console.log(num2);
+    </script>
+</body>
+</html>
+
+<!--  -->

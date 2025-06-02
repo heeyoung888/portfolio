@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else 문</title>
+</head>
+<body>
+    <script>
+        /* 
+            prompt로 숫자를 두개를 받아와서
+            첫번째 숫자가 두번째 숫자보다 클때
+            "첫번째 숫자가 크군요"
+            아닐때에
+            "첫번째 숫자가 두번째 숫자보다 작거나 같군요"
+            document.write()로 출력
+
+            result : if else문 안에서 할당(값) 넣기
+        */
+       let num1 = Number(prompt('첫번째숫자 입력하세요'));
+       let num2 = prompt('두번째숫자 입력하세요');
+       num2 = Number(num2);
+       let result;
+       
+       if(num1 > num2){
+            result = "첫번째 숫자가 크군요"
+       }else{
+            result = "첫번째 숫자가 두번째 숫자보다 작거나 같군요"
+       }
+       document.write(result);
+    </script>
+</body>
+</html>

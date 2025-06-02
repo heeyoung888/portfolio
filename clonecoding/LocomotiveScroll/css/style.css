@@ -1,0 +1,216 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+html {overflow: hidden;}
+body{margin: 0; background: #fefefe; color: #333;} 
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+body.has-scroll-smooth {
+    overflow: visible;
+}
+
+[data-scroll-container] {
+    will-change: transform;
+}
+
+[data-scroll-section] {
+    position: relative;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid red;
+}
+.section1 img{
+    max-width: 600px;
+    border-radius: 20px;
+    margin-top: 60px;
+    box-shadow: 10px 15px 30px rgba(0,0,0,0.3);
+}
+
+.section2{
+    background: lightcoral;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.pin_wrapper{
+    display: flex;
+    width: 100%; height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.pin_box{
+    background: yellow;
+    transform-origin: center center;
+    padding: 80px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    width: 80%; height: 300px;
+}
+
+.rotate_card_wrapper{
+    perspective: 1200px;
+    display: flex;
+    justify-content: center;
+}
+.rotate_card{
+    position: relative;
+    transition: transform 1s;
+    width: 300px; height: 300px;
+    transform-style: preserve-3d;
+}
+.rotate_card div{
+    position: absolute;
+    width: 100%; height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center; align-items: center;
+    border-radius: 12px; font-size: 1.5rem;
+}
+.rotate_card .front{
+    background: #faf0d7;
+}
+.rotate_card .back{
+    background: blue;
+    transform: rotateY(180deg);
+}
+
+.section5 p{
+    opacity: 0;
+    transform: translateY(50px);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.scroll_x{
+    width: max-content; /* 내용의 너비에 맞춰 요소의 너비를 자동으로 설정 */
+    display: flex;
+    overflow-x: visible;/* 넘치면 보이게? */
+    gap: 20px;
+}
+.scroll_x .item{
+    min-width: 300px;
+    height: 200px;
+    background: rgb(99, 162, 99);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.typing_wrapper{
+    font-size: 1.5rem;
+    white-space: nowrap;
+    display: inline-block;
+}
+.typing_txt{
+    display: inline;
+}
+.cursor{
+    display: inline-block;
+    animation: blink 0.6s step-end infinite; /* 한번에 딱 한번만 변경되고 변경은 단계끝에 일어남 */
+}
+
+@keyframes blink {
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+.section8{
+    background: #fdfdfd;
+    padding: 5vh 5vw;
+}
+
+.section8 h2{
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.section8 .wrapper{
+    display: flex;
+    gap: 60px;
+}
+.section8 .info{
+    flex: 0 0 300px;/* 늘어나지 않고 줄어들지도 않음 */
+    position: relative;
+}
+.sticky_box{
+    background: #ff7096;
+    color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    font-size: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.projects{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.section8 .card{
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    height: 50vh;
+    align-content: center;
+}
+
+.section10 {
+    width: 100%;
+    height: 100vh;
+    background: pink;
+    position: relative;
+    border:10px solid red;
+    overflow: hidden;
+}
+
+/* 화면 위쪽 제목 */
+#title {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    z-index: 10;
+}
+
+/* 화면 아래쪽 저작권 문구 */
+#footer {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    z-index: 10;
+}
+
+.section10 canvas {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+ /*    z-index: 10; */
+    pointer-events: none; /* 텍스트 드래그 등 방해되지 않게 */
+}

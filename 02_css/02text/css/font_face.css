@@ -1,0 +1,11 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'trana';
+    src: local('trana'),
+    url('../font/trana.eot'),
+    url('../font/trana.woff') format('woff'),/* woff많이 사용 */
+    url('../font/trana.ttf') format('truetype');
+}
+
+p{font-size: 30px;}
+p.t_font{font-family: 'trana';}

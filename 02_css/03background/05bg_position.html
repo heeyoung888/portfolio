@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background position</title>
+    <style>
+        div{
+            margin-bottom: 20px;
+            }
+        button{
+            width: 140px; height: 50px;
+            background-color: rgb(0, 110, 255);
+            border: 1px solid rgb(0, 110, 255);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: bold;
+            background-image: url(images/light.png);
+            background-repeat: no-repeat;
+        }
+        #bg1{
+            background-position: 5px 7px;
+        /* 수평위치 수직위치 */
+        }
+        #bg2{
+            background-position: right center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="bg1" type="button">
+            IDEA
+        </button>
+    </div>
+
+    <div>
+        <button id="bg2" type="button">
+            IDEA
+        </button>
+    </div>
+</body>
+</html>

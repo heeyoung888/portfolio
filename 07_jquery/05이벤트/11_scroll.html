@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        body{width: 5000px; height: 1000px;}
+        #wrap{
+            position: fixed;
+            left: 10px; top: 10px;
+            background: yellow;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $(window).on('scroll',function(){
+                let sc_top = $(this).scrollTop();
+                let sc_left = $(this).scrollLeft();
+                /* console.log(sc_top,sc_left); */
+                $('.top').text(sc_top);
+                $('.left').html('<em>' + sc_left + '</em>')
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>scrollTop<span class="top">0</span></p>
+        <p>scrollLeft<span class="left">0</span></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인접 관계 선택자</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#list_1').parent().css('border','2px dashed #000');
+            $('#wrap ul').closest('li').css('background','yellow');
+            $('#wrap>li:nth-child(2)').next().css('color','red');
+            $('#wrap>li:nth-child(2)').prev('li').css('color','blue');
+        });
+    </script>
+</head>
+<body>
+    <h1>인접 관계 선택자</h1>
+    <ul id="wrap">
+        <li>리스트1
+            <ul>
+                <li id="list_1">리스트1-1</li>
+                <li>리스트1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+</body>
+</html>

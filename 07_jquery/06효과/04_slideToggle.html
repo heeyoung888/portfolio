@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.fam p').click(function(){
+                $('.fam ul').slideToggle();
+            });
+        });
+    </script>
+    <style>
+        *{
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        .fam{
+            width: 200px; height: 40px; text-align: center;
+            position: fixed; bottom: 100px; right: 50px; background: lavender;
+        }
+        .fam p{
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            line-height: 38px;
+        }
+        .fam ul{
+            width: 100%;
+            position: absolute;
+            left: 0; bottom: 40px;/* 슬라이드를 위로 올릴 때 바텀을 기준으로 잡음 */
+            display: none;
+        }
+        .fam ul li{
+            width: 100%;
+            height: 40px;
+            line-height: 38px;
+            border: 1px solid #ccc;
+            border-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="fam">
+        <p>패밀리 사이트</p>
+        <ul>
+            <li><a href="#">네이버</a></li>
+            <li><a href="#">구글</a></li>
+            <li><a href="#">카카오</a></li>
+        </ul>
+    </div>
+</body>
+</html>

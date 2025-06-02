@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        /* 주축 */
+        .flex-container{
+            display: flex; /* 부모에게 주는 속성 : 자식이 위로 올라갈 때 */ 
+            flex-direction: row;/* 기본값 : 아이템들이 행(가로)방향으로 배치 * 아이템 : 자식*/
+            flex-direction: column;/* 아이템들이 열(세로) 방향으로 배치 */
+            flex-direction: row-reverse; /* 아이템들이 역순으로 가로배치, flat right같음 */
+            flex-direction: column-reverse; /* 아이템들이 역순으로 세로배치 */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAA</div>
+        <div class="flex-item">BBB</div>
+        <div class="flex-item">CCC</div>
+    </div>
+</body>
+</html>

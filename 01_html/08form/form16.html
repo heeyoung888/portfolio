@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼</title>
+    <style>
+        #login_btn {
+            background-color: transparent; /* 배경색 투명 */
+            border: none; /* 보더없애기 */
+            cursor: pointer; /* 커서를 포인터로 */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text"> <br>
+        <input type="submit" value="전송">
+        <button type="submit">전송</button><!-- button은 닫는 태그가 있음 -->
+
+        <input type="reset" value="다시입력">
+        <button type="reset">다시입력</button>
+
+        <input type="button" value="새 탭 열기" onclick="window.open()">
+        <button type="button" onclick="window.open()">새 탭 열기</button>
+
+        <input type="image" src="images/login.png" alt="login">
+        <button type="submit" id="login_btn"><!-- button type안에는 이미지가 없음 그래서 별도로 태그 안에 넣음. / input은 단독태그, button은 닫는태그가 있음-->
+            <img src="images/login.png" alt="login">
+        </button>
+    </form>
+</body>
+</html>

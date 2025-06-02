@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지태그</title>
+</head>
+<body>
+    <!--
+        img 태그의 속성
+        src : 이미지 파일 경로
+              웹문서 파일의 위치를 기준으로 이미지 경로 지정(상대경로)
+        alt : 대체 텍스트 -->
+
+        <!-- images라는 하위폴더에 이미지 파일이 있다면 하위 폴더까지 같이 적용  -->
+    <img src="./images/01.webp" alt="신세경">
+    <img src="images/02.webp" alt="신세경">
+
+    <!-- html과 이미지 파일이 같은 폴더에 있다면 src 속성에 파일 이름만 적용 -->
+    <img src="./05.jpg" alt="신세경">
+    <img src="05.jpg" alt="신세경">
+
+    <!-- 웹 사이트에 있는 이미지도 주소를 알아내어 src 속성에 사용할 수 있다 - 절대경로 -->
+    <img src="https://file2.nocutnews.co.kr/newsroom/image/2024/12/20/202412201611039202_0.jpg" alt="">
+
+    <!-- 상위 폴더로 가기 ../  -->
+    <img src="../img/Untitled-1.gif" alt="움짤">
+
+    <img src="" alt="엑박">
+</body>
+</html>

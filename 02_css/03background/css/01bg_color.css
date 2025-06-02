@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Playwrite+AU+VIC+Guides&family=Rubik+Vinyl&family=Sixtyfour&display=swap');
+
+*{margin: 0; padding: 0;}
+body{background-color: blueviolet;}
+.container{
+    width:500px;
+    border:1px solid #fff;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 1. hsl / 2.rgb / 3.16진수/ 4.rgba  구글웹폰트 4개 */
+.ul1{
+    font-family: "Rubik Vinyl", serif; 
+    background-color: hsl(250,50%,50%);
+    }
+.ul2{
+    font-family: "Sixtyfour", serif;
+    background-color: rgb(255,0,0);
+    }
+.ul3{
+    font-family: "Playwrite AU VIC Guides", serif;
+    background-color: #eee
+    }
+    /* 16진수 : 피그마 혹은 포토샵 색상 사용 */
+    /* 오퍼시티는 글자까지 투명, 백그라운드만 투명도 조정하려면 alpha 속성활용하기 */
+.ul4{
+    font-family: "Diphylleia", serif;
+    background-color: rgba(255,0,0,.3);
+    }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('ul#menu1 li:nth-child(1)').css('background','#ff0');
+            //내용 1-1 백그라운드 ff0 nth-child
+
+            //메뉴1 짝수(내용1-2, 내용1-4) 보더 2px dashed #f00
+            //:nth-child(even) :nth-child(2n)
+            $('ul#menu1 li:odd').css('border','2px dashed #f00');
+
+            // 내용2-2  끝에서 두번째  bg #0ff nth
+            $('ul#menu2 li:nth-last-child(2)').css('background','#0ff');
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용 1-1</li>
+        <li>내용 1-2</li>
+        <li>내용 1-3</li>
+        <li>내용 1-4</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용 2-1</li>
+        <li>내용 2-2</li>
+        <li>내용 2-3</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소드를 호출하여 연산 결과 출력하기</title>
+</head>
+<body>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <script>
+        let obj = {
+            m1 : function(){
+                return 'hello world';
+            },
+            m2 : function(a){
+                let result = a;
+                return result;
+            },
+            m3 : function(a,b){
+                let result = a+b;
+                return result;
+            },
+        }
+        document.getElementById('msg1').innerHTML = 
+        obj.m1();
+
+        document.getElementById('msg2').innerHTML = 
+        obj.m2(100);
+
+        document.getElementById('msg3').innerHTML = 
+        obj.m3(100,200);/* 위에서 더하게 만들어놓음 */
+    </script>
+</body>
+</html>

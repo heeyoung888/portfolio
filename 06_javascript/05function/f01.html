@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <script>
+        let text1 = '함수 선언 전 표출';
+        let text2 = '함수 선언 후 표출';
+        printMsg(text1);
+
+        function printMsg(msg){//함수 선언
+        document.write('함수 호출 메세지 : ' + msg + '<br>');    
+        }
+        
+        printMsg(text2); //함수호출
+        printMsg('불러보자');
+    </script>
+</body>
+</html>

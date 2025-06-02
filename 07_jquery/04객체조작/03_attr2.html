@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let srcAttr = $('#sec_1 p img').attr('src');
+            //버튼을 클릭했을 때
+            $('.btn').click(function(){
+                //console.log(srcAttr);
+                $('#sec_1 p').css({
+                    width : 300,
+                    background : 'yellow',
+            }).find('img').attr({
+                width : 100,
+                src : srcAttr.replace('1.png','3.png'),
+                alt : '보'
+            }).removeAttr('border');
+            
+                //p css w 300 백그라운드 옐로우
+                //3.png 
+                //alt 보
+                //w 100 
+                //border 없애고
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1><strong>객체 조작 및 생성</strong></h1>
+    <section id="sec_1">
+        <h2>이미지 속성</h2>
+        <button type="button" class="btn">클릭</button>
+        <p>
+            <img src="img/img1.png" alt="가위" border="2">
+        </p>
+    </section>
+</body>
+</html>

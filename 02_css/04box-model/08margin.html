@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        div{
+            width: 200px; 
+            height: 100px; 
+            background: #0094ff;
+            text-align: center; 
+            line-height: 100px;
+        }
+        .box1{
+            /* 위 오른쪽 아래 왼쪽 */
+            margin: 30px 50px 30px 50px;
+            margin: 30px 50px; /* 위아래 왼쪽오른쪽 */
+        }
+        .box2{
+            margin: 30px 50px 60px 80px;
+        }
+        .box3{
+            margin: 30px 5px 50px 5px;
+            margin: 30px 5px 50px; /* 위 왼쪽오른쪽 아래 */
+        }
+        .box4{
+            margin: 30px 30px 30px 30px;
+            margin: 30px; /* 한꺼번에 */
+            margin-right: 50px; /* 다이렉트 */
+        }
+        /* 박스 간 마진이 곂칠 때 더 큰값이 먹힘 */
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+</body>
+</html>
+<!-- 위 오른쪽 아래 왼쪽
+ 위 아래 동일/ 오른쪽 왼쪽 동일 -->

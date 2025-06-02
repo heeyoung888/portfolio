@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소</title>
+    <style>
+        ul li{list-style: none; width: 100px;
+        padding-left: 10px; background: lavender;
+        position: relative;/* 기준점 */}
+        /* ul li::before{
+            content: '★';
+            color: blue;
+        }
+        ul li::after{
+            content: 'new';
+            background: red;
+            color: #fff;
+        } */
+        ul li::before{
+            content: '';
+            display: block;
+            width: 5px; height: 5px;
+            background: pink;
+            border-radius: 50%;
+            position: absolute;
+            left: 0; top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+</body>
+</html>

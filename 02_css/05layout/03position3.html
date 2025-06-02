@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 포지셔닝</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap{
+            width: 300px; height: 300px;
+            border: 1px solid #333;
+            margin: 0 auto;
+            position: relative; /* 부모: 포지션이 기본값(스태틱)이면 적용안됨,스태틱 외에는 자식에게 적용가능 */
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background: pink;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        #box1{right: 0; bottom: 0;}
+        #box2{right: 0; top: 0;}
+        #box3{left: 0; bottom: 0;}
+        #box4{left: 50%; top: 50%; margin-left: -25px; margin-top: -25px;} /* 만들어놓은 도형 기반 */
+        #box5{left: 0; top: 50px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box" id="box1">박스1</div>
+        <div class="box" id="box2">박스2</div>
+        <div class="box" id="box3">박스3</div>
+        <div class="box" id="box4">박스4</div>
+        <div class="box" id="box5">박스5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1~1000까지의 합</title>
+</head>
+<body>
+    <script>
+        let i = 1;
+        let sum = 0;
+        while(1){/* true : 빠져나가야 하는 경우 > break로 빠져나가기 */
+            sum += i;
+            i++;
+            if(i==1001) break;
+        }
+        document.write(`1~1000까지의 합 : ${sum}`);
+    </script>
+</body>
+</html>

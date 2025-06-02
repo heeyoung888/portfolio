@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        /* 리셋 세트 세가지 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        
+        body {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .wrap {
+            width: 1080px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            background: #aaa;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .nav ul {
+            height: 100%;
+        }
+
+        /* 부모에게 물려받기 */
+        .nav ul li {
+            width: 25%;
+            height: 100%;
+            background: red;
+            float: left;
+            border-right: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        /* ul에게 세로값 물려받기, 메뉴 올리기, 가로 사이즈 부족 시 밑으로 내려오는데 그 때 박스 사이징 활용*/
+        .nav ul li:last-child {
+            border-right: 0;
+        }
+
+        /* last-child 마지막 애를 부름 0:두께(px) 무력화 none:스타일(ex.solid) 무력화 */
+        .nav ul li a {
+            text-align: center;
+            display: block;
+            line-height: 100px;
+        }
+
+        .header {
+            background: #bbb;
+            width: 250px;
+            height: 500px;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+        .con1 {
+            background: #ccc;
+            width: 250px;
+            height: 500px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .con2 {
+            background: #ddd;
+            width: 560px;
+            height: 500px;
+            float: right;
+        }
+
+        .footer {
+            background: #eee;
+            height: 80px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="nav">
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+            </ul>
+        </div><!-- //.nav -->
+        <div class="header">header</div><!-- //.header -->
+        <div class="con1">con1</div><!-- //.con1 -->
+        <div class="con2">con2</div><!-- //.con2 -->
+        <div class="con3">con3</div><!-- //.con3 -->
+        <div class="footer">footer</div><!-- //.footer -->
+    </div><!-- //.wrap -->
+</body>
+
+</html>
+
+<!-- 바디 작성 > 내부 스타일 시트 작성 >  -->
+<!-- 블록 : 가로 사이즈 지정X : 100퍼센트로 적용됨 블록이기 때문에. -->

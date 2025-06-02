@@ -1,0 +1,261 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+body {
+  color: #666;
+}
+
+.container {
+  width: 1340px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: 10;
+}
+
+header .container {
+  height: 100%;
+  background: #0a9b97;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+header h1{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header nav{
+  width: 70%;
+}
+header nav .nav_bg{
+  width: 100%; height: 160px;
+  background: #f04467;
+  position: absolute;
+  left: 0; top: 100px;
+  display: none;
+}
+header nav ul.gnb{
+  width: 100%;
+  display: flex;
+}
+header nav ul.gnb>li{
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+header nav ul.gnb>li>a{
+  display: block;
+  width: 100%; height: 50px;
+  background: #f04467;
+  text-align: center;line-height: 50px;
+  color: #fff;
+}
+header nav ul.gnb>li:hover>a{
+  background: #0a9b97;
+}
+header nav ul.gnb>li>ul{
+  position: absolute;
+  left: 0; top: 50px;
+  width: 100%;
+  display: none;
+}
+header nav ul.gnb>li>ul>li{
+  width: 100%; height: 40px;line-height: 40px;
+  color: #fff;
+}
+header nav ul.gnb>li>ul>li:hover{
+  background: #0a9b97;
+}
+header nav ul.gnb>li>ul>li>a{
+  display: block;
+}
+.main_visual {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.main_visual ul.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main_visual ul.slide li {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.main_visual ul.slide li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.main_visual ul.slide li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main_visual .go {
+  position: relative;
+  background: rgba(10,155,151,0.5);
+  height: 120px;
+}
+
+.main_visual .go ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  line-height: 80px;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+
+.main_visual .go ul li img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  border:1px solid #0a9b97;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.banner .tit{
+  width: 70%;
+}
+.banner span{
+  font-size: 5rem;
+}
+.notice_gal {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.notice_gal article h2 {
+  width: 120px;
+  height: 50px;
+  background: #ccc;
+  text-align: center;
+  line-height: 50px;
+  font-weight: normal;
+  font-size: 18px;
+  float: left;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notice_gal article.on h2 {
+  background: #0a9b97;
+}
+
+.notice_gal article ul {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 50%;
+  height: 300px;
+  display: none;
+  border:1px solid #0a9b97;
+}
+
+.notice_gal article.on ul {
+  display: flex;
+}
+.notice_gal article.notice ul{
+  flex-direction: column;
+}
+.notice_gal article.notice ul li{
+  flex: 1;
+  border-bottom: 1px solid #0a9b97;
+}
+.notice_gal article.notice ul li a{
+  display: flex;
+  width: 100%; height: 100%;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+.notice_gal article.notice ul li a em{
+  font-style: normal;
+}
+.notice_gal article.notice ul li a span{
+  font-size: 13px;
+}
+.notice_gal article.gal ul{
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer {
+  height: 120px;
+  background: #0a9b97;
+  display: flex;
+  color: #fff;
+}
+footer .logo{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+footer .f_right{
+  flex: 1;
+  height: 100%;
+  border-left: 1px solid #fff;
+}
+footer .f_right .f_menu{
+  height: 40%;
+  border-bottom: 1px solid #fff;
+}
+footer .f_right .f_menu ul{display: flex;
+height: 100%; align-items: center;}
+footer .f_right .f_menu ul li{flex: 1; text-align: center; border-right: 1px solid #fff;}
+footer .f_right .f_menu ul li:last-child{
+  border-right: 0;
+}
+footer .f_right .copy{
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <script>
+        let song = new Array('신세경', '배수지', '송혜교', '김유정', '안소희');
+        function insertArr(){
+            for(let i in song){
+                song[i] = prompt(`좋아하는 연예인을 입력 하세요 ${Number(i)+1}`)
+            }
+        }
+
+        function printArr(){
+            insertArr();
+            for(let i in song){
+                alert(`배열데이터[${i}] : ${song[i]}`);
+            }
+        }
+        printArr();
+    </script>
+</body>
+</html>

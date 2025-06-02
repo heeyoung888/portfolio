@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 탐색 선택자</title>
+    <style>
+        *{margin: 5px;}
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){//add : 선택자 추가하는 것
+            $('#m1>div').add('#m1>p').css({
+                'border' : '2px solid red',
+            });
+            //.addBack : 이전에 선택자(?) 추가
+            $('#m2').children('p').addBack().css({
+                border:'3px solid orange',
+            });
+
+            $('#m3').find('em').css('border','1px dashed green');
+
+            if($('#m4').children().is('p')){
+                console.log('p 요소가 존재합니다')
+            }//is : 해당 요소가 있으면 트루, 없으면 펄스
+        });
+    </script>
+</head>
+<body>
+    <div id="m1">
+        <div>내용1_1</div>
+        <p>내용1_2</p>
+    </div>
+    <div id="m2">
+        <p>내용2</p>
+        <em>내용2-1</em>
+    </div>
+    <div id="m3">
+        <div>
+            <em>나도자식</em>
+        </div>
+        <span>내용3_1</span>
+        <em>내용3_2</em>
+    </div>
+    <div id="m4">
+        <p>내용4</p>
+    </div>
+</body>
+</html>

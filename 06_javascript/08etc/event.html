@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 이벤트 예제</title>
+    <style>
+        body{
+            margin: 20px;
+            height: 2000px;
+            width: 2000px;
+        }
+        button,input{
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        #dragItem{
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            text-align: center;
+            cursor: grab;
+            user-select: none; 
+            /* 요소안의 텍스트가 마우스로 드래그 되거나 더블클릭으로 선택되지 않게 합니다 */
+        }
+        #dropZone{
+            width: 200px; height: 200px;
+            background: lightgray;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">클릭하세요</button>
+    <button id="myButton2">클릭하세요</button>
+    <input type="text" id="myInput" placeholder="텍스트 입력">
+    <div id="dragItem" draggable="true">드래그 아이템</div>
+    <div id="dropZone">드롭 존 입니다</div>
+    <script>
+        //1.윈도우 이벤트
+        window.addEventListener('load',()=>{/* 로딩 되기전 : 바디에 없는 경우 꼭 기재(?) */
+            console.log('페이지 로드 완료');
+        });
+        window.addEventListener('resize',()=>{
+            //console.log('리사이즈 완료');
+            console.log('innerWidth : ' + window.innerWidth);/* 어느정도 창 크기가 리사이즈 되었는지 확인 가능 */
+            console.log('innerHeight : ' + window.innerHeight);
+        });
+        window.addEventListener('scroll',()=>{
+            //console.log('스크롤 중');
+            //스크롤 위치를 확인하고 싶다면 
+            console.log('scrollX'+window.scrollX);/* 윈도우에서는 스크롤X or y */
+            console.log('scrollY'+window.scrollY);
+
+            //문서 루트 기준으로 확인하려면
+            console.log(document.documentElement.scrollTop);
+        });
+
+        //2.마우스 이벤트
+        const button = document.getElementById('myButton');
+        const button2 = document.getElementById('myButton2');
+        button.addEventListener('click',()=>{/* 버튼 클릭했을 때의 상황을 함수에 집어넣음 */
+            alert('버튼 클릭됨');
+        })
+        button2.addEventListener('dblclick',()=>{
+            alert('더블 클릭됨');
+        })
+        button.addEventListener('mousedown',()=>{
+            console.log('마우스 눌림');
+        })
+        button.addEventListener('mouseup',()=>{
+            console.log('마우스 떼어짐');
+        })
+        button.addEventListener('mouseenter',()=>{
+            console.log('마우스가 버튼 위에 진입');
+        })
+        button.addEventListener('mouseleave',()=>{
+            console.log('마우스가 버튼을 벗어남');
+        })
+        button2.addEventListener('mousemove',(event)=>{
+            console.log(`마우스 이동 x=${event.clientX}, y=${event.clientY}`);
+        })
+
+        //3. 키보드 이벤트
+        /* document.addEventListener('keydown',(e)=>{
+            console.log('키 다운'+e.key);
+        })
+        document.addEventListener('keyup',(e)=>{
+            console.log('키 업'+e.key);
+        }) */
+
+
+        //4. 폼 이벤트
+        const inputField = document.getElementById('myInput');
+        inputField.addEventListener('focus',()=>{
+            console.log('입력필드 포커스 됨');
+        })
+        inputField.addEventListener('blur',()=>{
+            console.log('입력필드 포커스 해제');
+        })
+        inputField.addEventListener('change',()=>{
+            console.log('입력값 변경됨');
+        })
+        inputField.addEventListener('input',(e)=>{
+            console.log('입력중'+ e.target.value);
+        })
+
+        //5.드래그 드롭 이벤트
+        const dragItem = document.getElementById('dragItem');
+        const dropZone = document.getElementById('dropZone');
+
+        dragItem.addEventListener('dragstart',(e)=>{
+            e.dataTransfer.setData('text/plain','드래그가 된 아이템');
+            console.log('드래그 시작')
+        })
+
+        dropZone.addEventListener('dragover',(e)=>{
+            e.preventDefault();
+            console.log('드래그 중');
+        })
+
+        dropZone.addEventListener('drop',(e)=>{
+            /* 디폴트 시키기 : 내 이벤트만 먹게 만들기 */
+            e.preventDefault();
+            //데이터 가져오기
+            const data = e.dataTransfer.getData('text/plain');
+            console.log('드롭 완료 : '+ data);
+            //실제로 이동
+            dropZone.appendChild(dragItem);
+        })
+    </script>
+</body>
+</html>

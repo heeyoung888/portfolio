@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr() removeAttr()</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let srcVal = $('#sec_1 img').attr('src');
+            console.log(srcVal);
+            //$('#sec_1 img').attr('src','img/img2.png'); 하나 바꿀 때
+            $('#sec_1 img').attr({
+                width : 100,
+                src : srcVal.replace('1.png','2.png'),
+                alt : '바위'
+            }).removeAttr('border');
+        });
+    </script>
+</head>
+<body>
+    <h1><strong>객체 조작 및 생성</strong></h1>
+    <section id="sec_1">
+        <h2>이미지 속성</h2>
+        <p>
+            <img src="img/img1.png" alt="가위" border="2">
+        </p>
+    </section>
+</body>
+</html>

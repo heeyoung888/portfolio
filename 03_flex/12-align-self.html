@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container{
+            display: flex;
+            height: 100vh;
+            align-items: center;/* 부모에게 주는 속성 */
+        }
+        .flex-item:nth-child(2){
+            align-self: auto;/* 기본값, 부모를 그대로 따라감 */
+            align-self: stretch;
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+            align-self: baseline;/* 폰트 사이즈에 따라 위치 달라짐 */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAA</div>
+        <div class="flex-item">BBBBBB</div>
+        <div class="flex-item">CCCCCCCCCCC</div>
+    </div>
+</body>
+</html>

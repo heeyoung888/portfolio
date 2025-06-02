@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>발표 순서 정하기</title>
+</head>
+<body>
+    <script>
+        let uiuxClass = ['고은님','김영채','김예슬','김정이','김희영','노현지','박아인','신재이','신종현','안희정','윤채원','이나라','이충호','전지후','정혜림','최슬기','최이현','최지원','홍혜주','박소휘'];
+        let random = [];
+        for(let i=0; i<uiuxClass.length; i++){
+            random[i] = Math.floor(Math.random()*uiuxClass.length);
+            for(let j=0; j<i; j++){//중복제거
+                if(random[i]==random[j]){
+                    i--;
+                    break;
+                }
+            }
+        }
+
+        /* 이름으로 변환 */
+        function nameD(){
+            for(let i=0; i<uiuxClass.length; i++){
+                alert(`(${i+1}) ${uiuxClass[random[i]]}`);
+                document.write(`(${i+1}) ${uiuxClass[random[i]]}<br>`)
+            }
+        }
+    </script>
+
+    <button type="button" onclick="nameD()">랜덤 버튼</button>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="uxui 웹 디자이너 김희영의 포트폴리오 입니다">
+  <meta name="keywords" content="portfolio, uxui, webdesign">
+  <meta name="author" content="hee young Kim">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>portfolio1</title>
+    <script src="https://kit.fontawesome.com/4514f2c7b8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script><!-- 제이쿼리 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script><!-- 스와이퍼 css내꺼보다 위에 있어야 함 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script><!-- 가로스크롤? -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script><!-- 내가 동작을 제어할 내 자바스크립트 -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main_style.css">
+    
+</head>
+<body>
+    <div class="wrap">
+
+      <!-- main_visual -->
+      <div class="main_visual">
+        <div class="inner">
+          <nav data-aos="fade_up">
+            <ul class="menu">
+              <li><a href="#01">01 profile</a></li>
+              <li><a href="#02">02 project</a></li>
+              <li><a href="#03">03 skills</a></li>
+              <li><a href="#04">04 contact</a></li>
+            </ul>
+          </nav>
+            <img src="./img/bannerimg.png" alt="bannerimg"          class="face_img">
+          </div>
+          <h2 data-aos="fade_up">portfolio</h2>
+          <h3 data-aos="fade-up">kim hee young</h3>
+        </div><!-- //.inner -->
+      </div><!-- //.main_visual -->
+
+<!-- hamburger -->
+  <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="dropdown-menu" id="dropdownMenu">
+  <a href="#01">01 profile</a>
+  <a href="#02">02 project</a>
+  <a href="#03">03 skills</a>
+  <a href="#04">04 contact</a>
+</div>
+
+<!-- hamburger -->
+      <section class="profile" id="01">
+        <div class="inner">
+          <div class="con">
+            <!-- h2 -->
+              <h2 class="title-animation">
+                <img src="./img/title1.png" alt="title image1">
+                <img src="./img/title2.png" alt="title image2">
+                <img src="./img/title3.png" alt="title image3">
+                <img src="./img/title4.png" alt="title image4">
+              </h2>
+
+              <!-- profile.img -->
+              <ul>
+                <li class="float_up"><img src="./img/clip1.png" alt="clipboard"></li>
+                <li class="float_up"><img src="./img/clip2.png" alt="clipboard2"></li>
+                <li class="float_up" data-aos="zoom-in" data-aos-delay="600">
+                  <div class="img_box">
+                    <img src="./img/prophoto.png" alt="profilephoto" class="wiggle3">
+                  <img src="./img/sticker.png" alt="sticker" >
+                  <img src="./img/name.png" alt="name">
+                  <img src="./img/birth.png" alt="birth">
+                  </div>
+                </li>
+                <li class="float_up"><img src="./img/memo1.png" alt="introduce">
+                  <div class="text_box">
+                    <div class="line">
+                      <span class="fixed_txt">personality :</span><br>
+                      <span class="typing_txt" id="typing1"></span>
+                    </div>
+                    <div class="line">
+                      <span class="fixed_txt">philosophy :</span><br>
+                      <span class="typing_txt" id="typing3"></span>
+                    </div>
+                  </div>
+                </li>
+                <li class="float_up"><img src="./img/point.png" alt="point"></li>
+              </ul>
+          </div><!-- //.con -->
+        </div><!-- //.inner -->
+      </section><!-- //.profile -->
+
+      <!-- project -->
+      <section class="project" id="02">
+        <div class="inner">
+          <div class="con">
+            <h2>PROJECT LIST</h2>
+            <ul>
+              <li data-aos="zoom-in"><a href="#"><span>pro1</span><img src="./img/pro1.png" alt="project1"><img src="./img/stroke.png" alt="stroke" class="wiggle">
+                <div class="text_box">
+                <p>app disign</p> 
+                 <p>team project</p>
+                </div>
+              </a>
+                </li>
+                <li data-aos="zoom-in"><a href="https://www.figma.com/proto/nDS4LLW1pwFu0KRU2hDnFY/%EA%B9%80%ED%9D%AC%EC%98%81?page-id=1227%3A350&node-id=1227-360&viewport=81%2C524%2C0.13&t=yBRzdEMNXtp321Er-1&scaling=min-zoom&content-scaling=fixed" target="_blank"><span>pro2</span><img src="./img/pro2.png" alt="project2"><img src="./img/twinkle.png" alt="twinkle" class="blink">
+                  <div class="text_box">
+                    <p>아리따움</p>
+                    <p>renewal project</p>
+                </div>
+                </a></li>
+              <li data-aos="zoom-in"><a href="#"><span>pro3</span><img src="./img/pro3.png" alt="project3"><img src="./img/stroke2.png" alt="stroke2" class="bounce">
+                <div class="text_box">
+                  <p>page.hee</p>
+                  <p>individual projects</p>
+                </div>
+                </a></li>
+              <li data-aos="zoom-in"><a href="./company/index.html" target="_blank"><span>pro4</span><img src="./img/pro4.png" alt="project4"><img src="./img/stroke3.png" alt="stroke3" class="wiggle2">
+                <div class="text_box">
+                  <p>Mercedes</p>
+                  <p>Benz</p>
+                </div>
+                </a></li>
+              <li data-aos="zoom-in"><a href="#"><span>pro5</span><img src="./img/pro5.png" alt="project5">
+                <div class="text_box">
+                  <p>team project 02</p>
+                  <p>k-brand</p>
+                </div>
+                </a></li>
+                <li data-aos="zoom-in"><a href="#"><span>pro6</span><img src="./img/pro6.png" alt="project6">
+                  <div class="text_box">
+                    <p>team project 03</p>
+                    <p>ai chatbot</p>
+                  </div>
+                  </a></li>
+              
+              <!-- script -->
+                <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+                <script>
+                  AOS.init();
+                </script>
+            </ul>
+          </div><!-- //.con -->
+        </div><!-- //.inner -->
+      </section><!-- //.project -->
+
+      <!-- skills -->
+        <section class="skills" id="03">
+          <div class="inner">
+            <h2>SKILLS</h2>
+            <div class=" swiper swiper_mySwiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="./img/css.png" alt="css">
+                </li>
+                <li class="swiper-slide"><img src="./img/html.png" alt="html">
+                </li>
+                <li class="swiper-slide"><img src="./img/figma.png" alt="figma">
+                </li>
+                <li class="swiper-slide"><img src="./img/photo.png" alt="photo">
+                </li>
+                <li class="swiper-slide"><img src="./img/ill.png" alt="ill">
+                </li>
+              </ul>
+            </div><!-- //.swiper_mySwiper -->
+            <div class="scroll-bar">
+              <div class="scroll-thumb"></div>
+            </div>
+          </div><!-- //.inner -->
+        </section><!-- //.skills -->
+
+      <!-- contact -->
+      <section class="contact" id="04">
+        <div class="inner">
+          <div class="con">
+            <h2>CONTACT US</h2>
+            <ul>
+              <li><img src="./img/memo2.png" alt="memo"></li>
+              <li><img src="./img/film.png" alt="film"></li>
+              <li class="gif-frame">
+                <img src="./img/cam.png" alt="cam frame" class="frame">
+                <img src="./img/video.gif" alt="gif" class="inner-gif">
+              </li>
+              <li>
+                <img src="./img/photo1_2.png" alt="photo" class="wiggle4" id="clickphoto">
+              </li>
+              <li class="photo_wrapper">
+                <div class="photo_container">
+                  <div class="txt_box">
+                    <span>click me!</span>
+                  </div>
+                  <div class="camera-hover-effect">
+                    <img src="./img/photo2.png" alt="photo" class="camera">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <img src="./img/photo3.png" alt="photo">
+              </li>
+              <li>
+                <img src="./img/photo4.png" alt="photo">
+              </li>
+              <li>
+                <img src="./img/txt.png" alt="txt">
+              </li>
+              <li>
+                <img src="./img/txt2.png" alt="txt">
+              </li>
+              <li>
+                <img src="./img/txt3.png" alt="txt">
+              </li>
+              <li>
+                <img src="./img/qr.png" alt="qr">
+              </li>
+            </ul>
+          </div><!-- //.con -->
+        </div><!-- //.inner -->
+      </section><!-- //.contact -->
+
+      
+    </div><!-- //.wrap -->
+    <div class="image-modal" id="imageModal">
+      <div class="image-modal-content">
+        <img src="./img/camf2.png" alt="popup">
+      </div>
+    </div>
+
+    <!-- scroll-top-btn -->
+    <button class="scroll-top-btn" aria-label="Scroll to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+</body>
+</html>

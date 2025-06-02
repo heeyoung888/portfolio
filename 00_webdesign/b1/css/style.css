@@ -1,0 +1,171 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul{list-style: none;}
+a{color: inherit; text-decoration: none;}
+.container{
+    width: 1200px; margin: 0 auto;
+}
+header{
+    width: 100%; height: 100px; background: #aaa;
+    position: relative; /* z-index 주기 */
+    z-index: 10;
+}
+header .container{
+    display: flex; justify-content: space-between; 
+    height: 100%; /* align-items: center; = nav의 margin-top: 30px;과 동일*/
+}
+header h1{/* 여기를 먼저 잡아준 다음 a로 넘겨주기 */
+    height: 100%;
+} 
+header h1 a{/* 인라인 */
+    align-items: center;
+    height: 100%;
+    display: flex;
+}
+header nav{
+    width: 60%;
+/*     background: lavender; */
+    margin-right: 20px;
+    margin-top: 30px;
+}
+header nav ul.gnb{/* ul.gnb는 하나밖에 없기 때문에 꺽쇠 안해도 됨 */
+    display: flex;/* li들 위로 올리기 */
+}
+header nav ul.gnb>li{
+    flex: 1;/* li들이 1씩 균등하게 배분됨  */
+    position: relative;
+}
+header nav ul.gnb>li>a{/* 인라인이면 사이즈 안먹음, 메인메뉴 */
+    display: flex;/* a 여기밖에 없기 때문에 */
+    width: 100%;
+    height: 50px;
+    background: lawngreen;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul.gnb>li:hover>a{
+    background: palevioletred;
+    color: #fff;
+}
+header nav ul.gnb>li>ul.sub{
+    width: 100%;
+    height: 160px;
+    background: rebeccapurple;
+    position: absolute;/* 구조를 잡아주어야 나중에 문제가 안생김 */
+    left: 0; top: 50px;/* a만큼 내려주기 */
+    display: none;
+}
+
+header nav ul.gnb>li>ul.sub>li>a{
+    display: block;
+    width: 100%; height: 40px;
+    text-align: center; line-height: 40px;
+}
+header nav ul.gnb>li>ul.sub>li:hover{
+    background: palevioletred; color: #fff;
+}
+/* 컨테이너 사이즈 먹음 */
+.main_visual{
+    width: 100%; height: 300px; background: #bbb;
+    position: relative;/* 기준 */
+    overflow: hidden;/* 스크롤 안보이게 함 */
+}
+.main_visual ul.slide{
+    display: flex;/* li 위로 올리기 */
+    height: 100%; width: 100%;
+    position: absolute; left: 0; top: 0;
+}
+/* 구조 만들어놓은 후 자바스크립트 활용해서 움직이게 함 */
+.main_visual ul.slide li{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;/* 기본이 줄어드는 것이기 때문에 걸어줌 */
+    border: 10px solid red;
+}
+.main_visual ul.slide li a{}
+.contents{width: 100%; height: 200px; background: #ccc; display: flex;}
+.contents section{height: 100%; flex: 1;/* 가로값 */}/* 자식 사이즈 전부 포함됨 */
+.contents section h2{
+    width: 100px; height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: lightcoral;
+    border-radius: 10px 10px 0 0; color: #fff;
+    font-weight: normal; font-size: 18px;
+}
+.contents section.notice_gal{}
+.contents section.banner{}
+.contents section.banner a{/* 이미지 없어서 사이즈 주기 */
+    display: flex;
+    width: 100%; height: 170px;
+    background: lawngreen;
+}
+.contents section.go ul{
+    display: flex;/* 주축이 가로로 되어있음 */
+    width: 100%; height: 170px;/* 위의 값 참고하기 */
+    background: lemonchiffon;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contents section.go ul li{
+    width: 40%; height: 80%; background: lightcyan;
+}
+.contents section.go ul li a{
+    display: flex;/* span까지 포함하고 있는 주체이기 때문에 플렉스 먹임:이제 인라인이 아님, 그리고 정렬하려고 */
+    width: 100%; height: 100%;
+    flex-direction: column;/* 주축이 위 아래로 바뀜 */
+    justify-content: space-around;/* 주축 정렬 */
+    align-items: center;
+}
+.contents section.go ul li a span{
+    font-size: 18px;
+}
+footer{
+    width: 100%; height: 100px; background: #ddd;
+}
+footer .container{
+    display: flex;
+    height: 100%;
+}
+footer .logo{
+    width: 200px;
+    background: lavender;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .f_right{
+    flex: 1;
+    background: lawngreen;
+    display: flex;
+    flex-direction: column;
+}
+footer .f_right .f_menu{
+    background: #aaa;
+    flex: 1;
+    /* display: flex; *//* ul을 정렬시키기 위해 */
+    /* align-items: center; */
+}
+footer .f_right .f_menu ul{
+    display: flex; width: 100%;/* 플렉스 잘 먹으려면 사이즈 먹이기 */
+    height: 100%; align-items: center;
+}
+footer .f_right .f_menu ul li{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #fff; line-height: 1;/* 글씨 사이즈 만큼 먹음 */
+}
+footer .f_right .f_menu ul li:last-child{
+    border-right: 0;
+}
+footer .f_right .copy{
+    background: #bbb;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+/* 정렬 먼저하기
+누구한테 위치를 줄 것인지 
+어떤 것을 어떤 곳으로 이동할 것인지
+*/ 
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            border: 1px solid #000;
+            float: left;
+        }
+
+        div p {
+            width: 100%;
+            height: 100%;
+            background: lightcoral;
+            opacity: .3;
+            transition: .6s;
+        }
+        div:nth-child(1){
+            perspective: 50px;
+        }
+        div:nth-child(2){
+            perspective: 0;
+        }
+        div:nth-child(3){
+            perspective: 600px;
+        }
+        div:hover p{
+            transform: rotateX(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div><p></p></div>
+    <div><p></p></div>
+    <div><p></p></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+</head>
+<body>
+    <script>
+        let today = new Date();/* 변수 저장 */
+        let nowMonth = today.getMonth(); //0~11
+        let nowDate = today.getDate();
+        let nowDay = today.getDay();/* 0~6 일 ~ 토 */
+        let day;
+
+        function dayName(dayNum){/*  */
+            switch(dayNum){
+                case 0 : day = '일요일';
+                break;
+                case 1 : day = '월요일';
+                break;
+                case 2 : day = '화요일';
+                break;
+                case 3 : day = '수요일';
+                break;
+                case 4 : day = '목요일';
+                break;
+                case 5 : day = '금요일';
+                break;
+                case 6 : day = '토요일';
+                break; /* 빠져나옴 */
+            }
+            return day;/* 반환 */}
+            document.write('<h1>오늘 날짜 정보</h1>');
+            document.write('현재 월 :' + (nowMonth+1) +'<br>');
+            document.write('현재 일 :' + nowDate +'<br>');
+            document.write('현재 요일 :' + dayName(nowDay) +'<br>');/*  */
+
+            let worldCup = new Date(2002,4,31);
+            document.write('<h1>오늘 날짜 정보</h1>');
+            let theMonth = worldCup.getMonth();
+            let theDate = worldCup.getDate();
+            let theDay = worldCup.getDay(); //0~6
+
+            document.write('월드컵 날짜 : '
+                +(theMonth+1) + '월' + theDate + '일' + dayName(theDay)
+            )
+        
+    </script>
+</body>
+</html>

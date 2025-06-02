@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shift() unshift()</title>
+</head>
+<body>
+    <script>
+        let kdata = ['서울','부산'];
+
+        let p1 = kdata.unshift('청주','세종');/* 원래의 배열을 바꿈 */
+        console.log(p1); // 배열의 길이 4
+        console.log(kdata); //청주, 세종, 서울, 부산
+
+        let p2 = kdata.shift();/* 앞쪽을 뽑아냄 */
+        document.write(p2+'<br>');
+        document.write(kdata+'<br>');
+    </script>
+</body>
+</html>

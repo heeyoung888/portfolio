@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+/* click메소드 사용해서 btn1클릭했을때 내용1 컬러 #f00 */
+            $('.btn1').click(function(){
+                $(this).parent().next('p').css('color','#f00');
+            });
+            $('.btn1').click();
+            //$('이벤트대상').단독 이벤트 등록 메서드(); = 이벤트 강제 발생시키는 방법1
+
+            $('.btn2').on({
+                'mouseover focus' : function(){
+                    $(this).parent().next('p').css('color','blue');
+                }
+            });
+
+            $('.btn2').trigger('mouseover');
+            //이벤트 강제 발생시키는 방법2
+            //$('이벤트 대상').trigger('이벤트종류');
+        });
+    </script>
+</head>
+<body>
+    <p><button type="button" class="btn1">버튼1</button></p>
+    <p>내용1</p>
+    <p><button type="button" class="btn2">버튼2</button></p>
+    <p>내용2</p>
+</body>
+</html>

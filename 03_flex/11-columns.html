@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: column;/* 세로축 주축 */
+            height: 100vh;/* 100% 뷰포트높이 */
+        }
+        .flex-item{
+            flex: 1 1 auto;
+        }
+        /* 600이상 */
+        @media (min-width:600px) {
+        .flex-container{flex-direction: row; flex-wrap: wrap;}
+        .flex-item{width: 50%;}
+        }
+        /* 900이상 */
+        @media (min-width:900px) {
+            .flex-item{width: 30%;}
+         }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAAAAAA</div>
+        <div class="flex-item">BBB</div>
+        <div class="flex-item">CCCCCC</div>
+        <div class="flex-item">AAAAAAAAAAAAA</div>
+        <div class="flex-item">BBB</div>
+        <div class="flex-item">CCCCCC</div>
+        <div class="flex-item">AAAAAAAAAAAAA</div>
+        <div class="flex-item">BBB</div>
+        <div class="flex-item">CCCCCC</div>
+    </div>
+</body>
+
+</html>

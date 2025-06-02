@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연관 배열 생성</title>
+</head>
+<body>
+    <script>
+        /* 
+        let 변수명 = {
+            key1 : value1,
+            key2 : value2,
+            key3 : value3,
+            key4 : value4,
+            ...
+            }
+        */
+       let data = {
+        f0 : 100,
+        f1 : 200,
+       }
+       document.write(data.f0+'<br>');
+       document.write(data['f1']+'<br>');/* 키값은 무조건 스트링 */
+       data.f2 = 300; //데이터 저장 (반대로, 집어넣기)
+       data['f3'] = 400; //데이터 저장
+       
+       console.log(data['f2']);
+       console.log(data.f3);
+    </script>
+</body>
+</html>
+
+<!-- 오브젝트는 .찍고 부를 수 있음 -->

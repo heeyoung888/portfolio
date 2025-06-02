@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('div').width(150).height(150);
+            console.log('width : ' + $('div').width());
+            console.log('height : ' + $('div').height());
+            console.log('innerWidth : ' + $('div').innerWidth());
+            console.log('outerHeight : ' + $('div').outerHeight());
+            console.log('outerHeight(true) : ' + $('div').outerHeight(true));
+            //outerHeight(true) 마진까지 포함된 값
+        });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            padding: 20px;
+            margin: 20px;
+            background: #ff6600;
+            border: 2px solid #00f;
+        }
+    </style>
+</head>
+<body>
+    <div>내용</div>
+</body>
+</html>

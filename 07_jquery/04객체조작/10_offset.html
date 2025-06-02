@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset()</title><!-- 위의 공백(마진값)값을 구해줌-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){//선택자는 $붙이든 안붙이든 내가 알아보기 쉽게 작성해도 됨
+            let $txt1 = $('.txt_1 span');
+            let $txt2 = $('.txt_2 span');
+            let $box = $('.box');
+            let off_t = $box.offset().top ; //top 속성이기 때문에 괄호 쓰지 않음
+            let pos_t = $box.position().top;
+            $txt1.text(off_t);
+            $txt2.html(`<b>${pos_t}</b>`);
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        #box_wrap{
+            width: 300px; height: 200px; margin: 50px auto 0;
+            position: relative ;background: #ccc;
+        }
+        .box{
+            width: 50px; height: 50px; position: absolute; 
+            left: 100px; top: 50px; background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div id="box_wrap">
+        <p class="box">박스</p>
+    </div>
+    <p class="txt_1">절대 top 위치값 : <span></span></p>
+    <p class="txt_2">상대 top 위치값 : <span></span></p>
+</body>
+</html>

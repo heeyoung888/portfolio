@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade show</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#hide').click(function(){
+                $('img').hide();
+            });
+            $('#show').click(function(){
+                $('img').show();
+            });
+            $('#toggle').click(function(){
+                $('img').toggle();
+            });
+            $('#out').click(function(){
+                $('img').fadeOut(2000);
+            });
+            $('#in').click(function(){
+                $('img').fadeIn(2000);
+            });
+            $('#fadeToggle').click(function(){
+                $('img').fadeToggle();
+            });
+
+            //$('요소선택').fadeTo(효과소요시간,투명도,콜백함수)
+            $('#to50').click(function(){
+                $('img').fadeTo('slow',0.5);
+            })
+            $('#to10').click(function(){
+                $('img').fadeTo('fast',0.1);
+            })
+            $('#to100').click(function(){
+                $('img').fadeTo(1000,1.0);
+            })
+        });
+    </script>
+</head>
+<body>
+    <button type="button" id="hide">hide</button>
+    <button type="button" id="show">show</button>
+    <button type="button" id="toggle">toggle</button>
+    <button type="button" id="out">fadeOut</button>
+    <button type="button" id="in">fadeIn</button>
+    <button type="button" id="fadeToggle">fadeToggle</button>
+    <button type="button" id="to50">opacity 50%</button>
+    <button type="button" id="to10">opacity 90%</button>
+    <button type="button" id="to100">opacity 0%</button>
+    <p></p>
+    <img src="https://i.namu.wiki/i/6oqZQFN7Zju4x00ztofa9uUne2EP06Eh60cS7oJXMLlIJSfRUh0lKeeKJqNSFObEHBkmGrxXVEbMCFHhqIzm9Q.webp" alt="신세경">
+</body>
+</html>
+
+<!-- 무언가할 ㄹ때에는 반듣시 funtion -->

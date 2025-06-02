@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+</head>
+<body>
+    <script>
+        let age = Number(prompt('나이입력'));
+        let admissionFee = '';
+
+        if(age < 13 || age >=65){
+            admissionFee = '2,000원';
+        }else if(age >= 13 && age <=20){
+            admissionFee = '4,000원'
+        }else{ admissionFee = '6,000원'}
+        // age 13살 미만 이거나 (or) age 65세 이상 일때  2000원
+        //13~20  4000원
+        //그외 6000원
+
+        document.write(admissionFee);
+    </script>
+</body>
+</html>

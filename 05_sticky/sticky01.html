@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        header{
+            width: 100%; height: 80px; 
+            background: red;
+        }
+        .container{
+            width: 100%;
+            height: 1500px;
+            display: flex;
+            background: blue;
+        }
+        .container .contents{
+            width: 80%;
+            height: 1200px;
+            background: yellow;
+
+        }
+        .container aside{
+            width: 20%; height: 400px;
+            background: yellowgreen;
+            position: sticky; top: 50px;
+        }
+        footer{
+            width: 100%; height: 1000px;
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <div class="container">
+        <div class="contents">contents</div>
+        <aside>sidebar</aside>
+    </div><!-- //.container -->
+    <footer>footer</footer>
+</body>
+</html>

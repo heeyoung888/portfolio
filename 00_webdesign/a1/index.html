@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>just 쇼핑몰</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function(){
+            //네비게이션
+            $('nav ul.gnb > li').hover(function(){
+                $('ul.sub').stop().slideDown();
+            },function(){
+                $('ul.sub').stop().slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><a href="#"><img src="img/logo.png" alt="just 쇼핑몰"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">탑</a>
+                        <ul class="sub">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li><a href="#">아우터</a>
+                        <ul class="sub">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li><a href="#">팬츠</a>
+                        <ul class="sub">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                    <li><a href="#">악세서리</a>
+                        <ul class="sub">
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul><!-- //.sub -->
+                    </li>
+                </ul><!-- //.gnb -->
+            </nav>
+        </header>
+        <div class="main_visual">
+
+        </div><!-- //.main_visual -->
+        <div class="contents">
+            <div class="notic_gal">
+
+            </div><!-- //.notic_gal -->
+            <div class="banner">
+
+            </div><!-- //.banner -->
+            <div class="go">
+
+            </div><!-- //.go -->
+        </div><!-- //.contents -->
+        <footer>
+            <div class="logo">
+                <a href="#"><img src="img/logo_g.png" alt="just 쇼핑몰"></a>
+            </div><!-- //.logo -->
+            <div class="copy">
+
+            </div><!-- //.copy -->
+            <div class="sns">
+
+            </div><!-- //.sns -->
+        </footer>
+    </div><!-- //.wrap -->
+</body>
+</html>
+
+<!-- slide down : 나타나게 함 / up : 숨겨줌 -->

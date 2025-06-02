@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-size</title>
+    <style>
+        div{
+            background-image: url(images/bg4.jpg);
+            width: 500px; height: 500px;
+            border: 2px dotted #000;
+            margin-bottom: 20px;
+            background-repeat: no-repeat;
+        }
+        .bg1{background-size: auto;}/* 기본값 - 원본사이즈 */
+        .bg2{background-size: 200px 150px;}
+        .bg3{background-size: 60% 40%;}
+        .bg4{background-size: contain;}
+        /* 요소안에 배경 이미지가 다 들어오도록 확대/축소 : 여백생길 수 있음 */
+        .bg5{background-size: cover; background-position: center;}
+        /* 배경 이미지로 요소를 모두 덮도록 확대/축소 */
+        .bg6{background-size: 100% 100%;}
+
+    </style>
+</head>
+<body>
+    <!-- .bg$*6 -->
+    <div class="bg1"></div>
+    <div class="bg2"></div>
+    <div class="bg3"></div>
+    <div class="bg4"></div>
+    <div class="bg5"></div>
+    <div class="bg6"></div>
+</body>
+</html>

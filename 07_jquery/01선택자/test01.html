@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 다운로드 방식 연결</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script> //ready(function안에서 작업하면 밑에 적용할게 있어도 적용됨
+        $(document).ready(function(){
+            $('p').css({
+                color : 'red',
+                'background-color' : 'blue',
+                fontSize : '30px',
+            })
+        });/* document는 객체이기 때문에 스트링 타입으로 부르면 안됨 */
+    </script>
+</head>
+<body>
+    <p>jquery</p>
+    <p>study</p>
+</body>
+</html>

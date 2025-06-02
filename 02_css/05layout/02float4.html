@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow 속성을 이용한 크기 조정</title>
+    <style>
+        div{
+            border: 3px solid green;
+            padding: 5px;
+        }
+        p{float: left;}
+        img{display: block; float: right;}
+        .good{overflow: hidden; clear: both;} /* 넘치는 애 안보이게 하는 속성 */
+    </style>
+</head>
+<body>
+    <h1>overflow 속성을 이용한 크기 조정</h1>
+    <div>
+        <p>이미지와 함께 하고 싶은 내용</p>
+        <img src="https://i.namu.wiki/i/6oqZQFN7Zju4x00ztofa9uUne2EP06Eh60cS7oJXMLlIJSfRUh0lKeeKJqNSFObEHBkmGrxXVEbMCFHhqIzm9Q.webp" alt="신세경" width="245">
+        <!-- 이미지 태그 안에 쓰는 속성은 단위 안씀 ex)px -->
+    </div>
+</body>
+<div class="good">
+    <p id="second">
+        overflow 속성값을 auto로 주면 자동으로 컨테이너 요소의 크기도 함께 늘어납니다.<br>
+        이미지와 함께 하고 싶은 내용</p>
+    <img src="https://i.namu.wiki/i/6oqZQFN7Zju4x00ztofa9uUne2EP06Eh60cS7oJXMLlIJSfRUh0lKeeKJqNSFObEHBkmGrxXVEbMCFHhqIzm9Q.webp" alt="신세경" width="245">
+</div>
+</html>

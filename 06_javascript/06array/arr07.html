@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공백 데이터를 포함한 배열 연산하기</title>
+</head>
+<body>
+    <script>
+        let com =[95,88, ,72,68,99,82, ,78,85];//10명중 8명의 점수만 입력
+        let getAvg;
+
+        function printAvg(){
+            let sum = 0;
+            let n = com.length;
+            document.write(n+'명의 점수 입력 <br>');
+            for(let i=0; i<n ; i++){
+                sum += com[i];
+            }
+            return (sum/n);
+        }
+
+        document.write('평균 : <b>'+printAvg() + '</b>');
+    </script>
+</body>
+</html>

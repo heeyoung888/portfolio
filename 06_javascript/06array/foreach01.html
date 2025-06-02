@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach 메소드</title>
+</head>
+<body>
+    <script>
+        let city = ['서울','대구','대전','부산'];
+        city.forEach((item, index) => {
+            document.write(`배열데이터 [${index}] ${item} <br>`)
+        })
+
+        function printArr(item){
+            document.write(item + '<br>');
+        }
+        document.write('**************<br>');
+        city.forEach(printArr);
+    </script>
+</body>
+</html>

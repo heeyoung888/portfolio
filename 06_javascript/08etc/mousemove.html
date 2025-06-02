@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            cursor : none;
+        }
+        .custom_cursor{
+            position: fixed;
+            top: 0; left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            z-index: 9999;
+            transform: translate(-50%,-50%);
+            transition: transform 0.3s ease;
+            pointer-events: none;
+        }
+        .hover_effect{
+            margin: 100px;
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .hover_effect:hover{
+            background-color: yellow;
+        }
+
+        .hover_effect:hover ~ .custom_cursor{
+            transform: translate(-50%,-50%) scale(2);
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="hover_effect">Hover Me!</div>
+    <div class="custom_cursor"></div>
+
+    <script>
+        const cursor = document.querySelector('.custom_cursor');
+        
+        document.addEventListener('mousemove',(e)=>{
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        })
+    </script>
+</body>
+</html>

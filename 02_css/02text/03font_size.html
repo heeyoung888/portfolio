@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko"><!-- 가가장 엄마 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 크기</title>
+    <style>
+        html{font-size: 20px;}
+        /* :root{} */
+        .px40{font-size: 40px;}
+        .em4{font-size: 4em;}/* 상대크기 : 내 사이즈를 기준으로 4배 ex)40px에서 4배/*/
+        .rem{font-size: 4rem;}/* html=root(최상위)기준으로 4배 : 20px 기준 4배 */
+    </style>
+</head>
+<body>
+    <div class="px40"><!-- 가까이 있는 가장 엄마(더 우선시됨) -->
+        <p>기본 사이즈</p>
+        <p class="em4">4em</p>
+        <p class="rem4">4rem</p>
+    </div>
+</body>
+</html>

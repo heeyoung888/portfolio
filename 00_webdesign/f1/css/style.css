@@ -1,0 +1,140 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body {color: #666;}
+.container{width: 1340px; margin: 0 auto;}
+/* 컨테이너 부분 : 밑에있기 때문에 가로값 주면 깨질 수 있음, 
+컨테이너에 잘 먹혀있어서 안줘도됨 */ 
+
+header{
+  height: 100px; background: #aaa;
+}
+.con1{
+  width: 100%; height: 350px;
+  background: #bbb;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.con1 .main_visual{
+  width: 100%; height: 100%;
+  background:red;
+  position: absolute; left: 0; top: 0;
+}
+.con1 .go{
+  height: 90px;
+  background: blue;
+  position: relative;
+}
+.con2{
+  height: 500px; /* background: #ccc; */ 
+  display: flex;flex-direction: column;
+}
+.con2 .banner{
+  width: 100%;
+  flex: 1;
+  background: lavender;
+}
+.con2 .notice_gal{
+  width: 100%;
+  flex: 2;
+  /* background: lawngreen; */
+  position: relative;
+  padding-left: 20px;
+}
+
+.con2 .notice_gal article .on{}
+.con2 .notice_gal article h2{
+    float: left; width: 120px; height: 50px;
+    background: #fff; border-radius: 20px 20px 0 0;
+    font-size: 20px; font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.con2 .notice_gal article.on h2{
+    background: pink;
+}
+.con2 .notice_gal article ul{
+    width: 500px; height: 70%; 
+    /* 포지션을 줘야 세로값이 먹힘 */
+    /* background: #ccc; */
+    position: absolute;
+    left: 20px; top: 70px;
+    display: none;
+    border: 1px solid #ccc;
+}
+.con2 .notice_gal article.on ul{
+    display: flex;
+}
+.con2 .notice_gal article.notice ul{
+    flex-direction: column;
+}
+.con2 .notice_gal article.notice ul li{
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.con2 .notice_gal article.notice ul li:last-child{
+    border-bottom: 0;
+}
+.con2 .notice_gal article.notice ul li a{/* 인라인이기 때문에 플렉스 적용 */
+    display: flex; width: 100%; height: 100%;
+    align-items: center; font-size: 15px;/* 기본 16 */
+    padding: 0 10px;
+    justify-content: space-between;
+}
+.con2 .notice_gal article.notice ul li:hover a{background: #eee;}
+.con2 .notice_gal article.notice ul li a span{
+    font-size: 13px;
+}
+.con2 .notice_gal article.gal ul{
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer{height: 120px; background: #ddd; display: flex;}
+
+footer .logo{
+  width: 200px; height: 100%;
+  background: rebeccapurple;
+}
+footer .f_right{
+  flex: 1;
+  height: 100%;
+  background: lavender;
+  display: flex; flex-direction: column;
+}
+footer .f_right .f_menu{
+  width: 100%; height: 40%;
+  background: #aaa;
+  padding-left: 20px;
+}
+footer .f_right .f_menu ul{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+footer .f_right .f_menu ul li{
+  padding: 0 10px;
+  border-left: 1px solid #000;
+  line-height: 1;
+}
+footer .f_right .f_menu ul li:first-child{
+  padding-left: 0;
+  border-left: 0;
+}
+footer .f_right .copy{
+  width: 100%;
+  flex: 1;
+  background: #bbb;
+  padding-left: 20px;
+  display: flex; align-items: center;
+}
+/*
+기본값 축 : 가로 
+저스티파이: 주축 정렬
+얼라인: 교차축 정렬 
+어디에 속해있는 범위인지 확인하기
+*/

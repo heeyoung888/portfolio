@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹폼</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <label for="a">10초 남음</label>
+            <progress id="a" value="50" max="60"></progress>
+        </li>
+        <li>
+            <label for="b">진행율 30%</label>
+            <progress id="b" value="30" max="100"></progress>
+        </li>
+        <li>
+            <label for="c">사용량 64%</label>
+            <meter id="c" value="64" max="100" min="0"></meter>
+            <!-- 전체 100중에서 64만큼 차지 -->
+        </li>
+        <li>
+            <label for="d">점유율 0.8</label>
+            <meter id="d" value="0.8"></meter>
+            <!-- 맥스값 기본 1 -->
+             <!-- 전체 1기준으로 0.8만큼 차지 -->
+        </li>
+    </ul>
+</body>
+</html>

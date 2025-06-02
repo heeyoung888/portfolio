@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입 연산자</title>
+    <style>
+        table{border-collapse: collapse;}
+        table,td{border: 1px solid #ccc;}
+    </style>
+</head>
+<body>
+    <script>
+        let str1 = prompt('첫번째 값을 입력하세요');
+        let str2 = prompt('두번째 값을 입력하세요');
+
+        let table = '<table>';
+            table += '<tr>';
+                table += '<td>';
+                table += str1;
+                table += '</td>';
+                table += '<td>';
+                table += str2;
+                table += '</td>'
+                table += '</tr>';
+        table += '</table>';
+    document.write(table);
+    </script>
+</body>
+</html>

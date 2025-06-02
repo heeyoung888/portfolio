@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* 
+    폰트, 변수선언(컬러)///
+    body
+*/
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font-family: "East Sea Dokdo", sans-serif;
+    --main-font-family2: "Open Sans", sans-serif;
+    /* --swipe-color: #CDC2B8; */
+
+    --bg-color1: #F2E4CB;
+    --bg-color2: #E8E5E0;
+    --bg-color3: #FFFEF2;
+    
+    --fontcolor: #2F5E25;
+    --fontcolor2: #F6C905;
+
+}
+
+.inner {
+    width: 1730px;
+    margin: 0 auto;
+}

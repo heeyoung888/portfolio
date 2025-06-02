@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container{display: flex;}
+        /* flex-grow flex-shrink flex-basis */
+        .flex-item{
+            /* flex: 1 1 0; /* 자기영역(점유율)X*/
+            /* flex: 1; 위와 동일, 기억하기 */ 
+        }
+        .flex-item:nth-child(1){
+            /* flex: 1 1 auto; /*auto:내사이즈만큼 먹는것  */
+            /* flex: 1 auto; */ 
+            flex: 1; /* flex-basis : autoX 0이됨 */
+        }
+        .flex-item:nth-child(2){
+            /* flex: 3 1 auto; */
+            flex: 3;
+        }
+        .flex-item:nth-child(3){
+            /* flex: 1 1 auto */
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis id in repellat impedit enim hic,
+                quis tempore accusamus, aliquid quisquam culpa? Adipisci veritatis laudantium unde esse, id tenetur vel
+                minus?
+            </p>
+        </div>
+        <div class="flex-item">BB</div>
+        <div class="flex-item">CCCCCCCC</div>
+    </div>
+</body>
+</html>

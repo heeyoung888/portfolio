@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+        let b = 20;
+        let m = 30;
+        let n = 40;
+        let result;
+
+        result = (a>b) || (b>=m) || (m>n); //f || f || f
+        console.log(result); //f
+
+        result = (a>b) || (b>=m) || (m<n); //f || f || t
+        console.log(result); //t
+
+        result = (a<=b) && (b>=m) && (m<n); //t && f && t
+        console.log(result); //f
+
+        result = (a<=b) && (b<m) && (m<n); //t && t && t
+        console.log(result); //t
+
+        result = !result; // 트루가 아닌 것은 펄스 ! : 부정
+        console.log(result);
+    </script>
+</body>
+</html>

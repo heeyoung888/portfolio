@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideDown</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>//slide 아이디를 클릭했을때
+            //#panel slideDown()  5초
+        $(function(){
+                $('#slide').click(function(){
+                    $('#panel').slideDown(5000);
+                });
+
+                /* 요소가 나타날 때까지 걸리는 시간입니다. 단위는 1/1000초, 기본값은 400입니다.
+                fast나 slow로 정할 수 있습니다. fast는 200, slow는 600에 해당합니다. */
+
+                $('#panel').on('click',function(){
+                    $(this).slideUp('fast');
+                });
+
+                //아이디 flip을 클릭했을때
+                //panel slideToggle()  "slow"
+                $('#flip').click(function(){
+                    $('#panel').slideToggle('slow');
+                });
+               /*  $('#flip').on('click',function(){
+                    $('#panel').slideToggle('slow');
+                }) */
+
+
+                $('#stop').hover(function(){
+                    $('#panel').stop().slideDown();
+                },function(){
+                    $('#panel').stop().slideUp();
+                });
+        });
+    </script>
+    <style>
+        #slide,#panel,#flip{
+            padding: 5px;
+            text-align: center;
+            background: #e5eecc;
+            border:1px solid #c3c3c3;
+        }
+        #panel{
+            padding: 150px;
+            background: #ffff00;
+            display: none;
+        }
+        #stop{
+            position: absolute;
+            top:500px; left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="slide">
+        [오늘의 공지사항] <!-- 클릭 -->
+    </div>
+    <div id="panel"> <!-- 슬라이드 다운 5초 -->
+        오늘은 JQuery 프로그램을 학습합니다<br>
+        예제를 작성한 후 실행해보세요
+    </div>
+    <div id="flip">
+        Toggle Slide
+    </div>
+    <button type="button" id="stop">stop sliding</button>
+</body>
+</html>

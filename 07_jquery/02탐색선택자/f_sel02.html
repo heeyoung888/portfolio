@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('ul#menu li:even').css('color','red');//짝수
+            $('ul#menu li:odd').css('color','blue');//홀수
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>내용1</li><!-- 0 -->
+        <li>내용2</li><!-- 1 -->
+        <li>내용3</li><!-- 2 -->
+        <li>내용4</li><!-- 3 -->
+    </ul>
+</body>
+</html>

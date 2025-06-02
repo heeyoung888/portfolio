@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datalist</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>수강 과목을 신청하세요</legend>
+            <input type="text" list="choices"><!-- list와 choices연결 -->
+            <datalist id="choices"><!-- datalist 개념 알아보기 -->
+                <option value="gramar" label="문법"></option>
+                <option value="voca" label="어휘"></option>
+                <option value="speaking" label="회화"></option>
+                <option value="listening" label="리스닝"></option>
+                <option value="news" label="뉴스청취"></option>
+            </datalist>
+        </fieldset>
+        <textarea clos="60" rows="5"><!-- cols 가로 너비(자간 수) 조정, rows 세로 줄 개수 조정 가능 -->Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta rerum harum dolore laudantium debitis quasi vitae provident, saepe itaque ea, quis iusto corporis earum beatae unde rem odit voluptate consequuntur.</textarea><!-- 여러 줄 작성가능 -->
+    </form>
+</body>
+</html>

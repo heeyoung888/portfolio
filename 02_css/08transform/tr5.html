@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .photo {
+            margin-top: 50px;
+            margin-left: 100px;
+            transition: 1s;
+            transform-origin: left top;
+            /* 바뀌기 전에 주는게 좋음 */
+        }
+
+        .photo:hover {
+            transform: scale(1.5);
+            box-shadow: 5px 5px 3px #333;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/img01.jpg" alt="신세경" width="250" class="photo">
+</body>
+
+</html>

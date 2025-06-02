@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    
+    <script>
+        $(function(){
+    // 가로 100픽셀
+    $('.b1').click(function(){
+        $('img').animate({
+            width: 100
+        });
+    });
+
+    // 가로 200픽셀 3초
+    $('.b2').click(function(){
+        $('img').animate({
+            width: 200
+        }, 3000); 
+    });
+
+    // 가로 300픽셀, 세로 300픽셀 1초
+    $('.b3').click(function(){
+        $('img').animate({
+            width: 300,
+            height: 300
+        }, 1000,'linear',function(){
+            console.log('완료');
+        }); 
+    });
+});
+    </script>
+</head>
+<body>
+    <div class="css_pic">
+        <p>버튼을 누르면 그림의 크기가 바뀝니다</p>
+        <button type="button" class="b1">가로 100픽셀</button>
+        <button type="button" class="b2">가로 200픽셀</button>
+        <button type="button" class="b3">가로 300픽셀 세로300픽셀</button>
+    </div>
+    <img src="https://i.namu.wiki/i/6oqZQFN7Zju4x00ztofa9uUne2EP06Eh60cS7oJXMLlIJSfRUh0lKeeKJqNSFObEHBkmGrxXVEbMCFHhqIzm9Q.webp" alt="신세경">
+</body>
+</html>

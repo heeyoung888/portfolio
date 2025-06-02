@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass()</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <style>
+        .aqua {
+            background: #0ff;
+        }
+
+        .red {
+            background: #f00;
+        }
+
+        .green {
+            background: #0f0;
+        }
+
+        .yellow {
+            background: #ff0;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">내용1</p>
+    <p id="p2" class="red green blue">내용2</p>
+    <p id="p3">내용3</p>
+    <p id="p4" class="green">내용4</p>
+    <p id="p5" class="yellow">내용5</p>
+    <p id="p6"></p>
+    <p id="p7">글씨클릭</p>
+    <script>
+        $('#p1').addClass('aqua');
+        $('#p2').removeClass();
+        $('#p3').toggleClass('green'); //class가 없으면 추가
+        $('#p4').toggleClass('green'); //class가 있으면 제거
+        $('#p6').text($('#p5').hasClass('yellow') ); 
+        $('#p7').click(function(){
+            $(this).toggleClass('aqua');
+        }); 
+    </script>
+</body>
+</html>
+<!-- 자바스크립트에서 textcontent는 속성이기 ㄲ때문에 = dmf sjgdjdi gka
+ 위의 텍스트는 메서드 -->

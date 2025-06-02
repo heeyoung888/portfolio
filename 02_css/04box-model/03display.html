@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <style>
+        img{width: 200px; margin: 10px;}
+        div{
+            margin: 20px; 
+            border:1px solid #ccc;
+            border-radius: 5px;}
+        #block img{display: block;}
+        #block img:nth-child(2) {
+            display: none; 
+            /* visibility: hidden; */
+        }
+        /* display: none;만 살리면 숨겨지기만 함 : 반응형 웹사이트 시 크기 줄어들면 gnb가 사라지는 것과 같은 원리
+        visibility: hidden;만 살리면 사이에 공백이 생김 
+        */
+    
+        /* 블릿 없애고 폰트색상 검정색 */
+        ul{list-style: none;}
+        li{background: lavender; display: in;}
+        a{text-decoration: none; color: #000; background: gold;}
+        /* 글자가 어떤 태그에 해당되는지 고려하기 */
+    </style>
+</head>
+<body>
+    <div id="inline">
+        <img src="https://file.sportsseoul.com/news/cms/2024/09/06/news-p.v1.20240906.323754c1fa7d43aabc7f861ec5d0f843_P1.jpg" alt="신세경">
+        <img src="https://file.sportsseoul.com/news/cms/2024/09/06/news-p.v1.20240906.323754c1fa7d43aabc7f861ec5d0f843_P1.jpg" alt="신세경">
+        <img src="https://file.sportsseoul.com/news/cms/2024/09/06/news-p.v1.20240906.323754c1fa7d43aabc7f861ec5d0f843_P1.jpg" alt="신세경">
+    </div>
+</body>
+
+<div id="block">
+    <img src="https://file.sportsseoul.com/news/cms/2024/09/06/news-p.v1.20240906.323754c1fa7d43aabc7f861ec5d0f843_P1.jpg" alt="신세경">
+    <img src="https://file.sportsseoul.com/news/cms/2024/09/06/news-p.v1.20240906.323754c1fa7d43aabc7f861ec5d0f843_P1.jpg" alt="신세경">
+    <img src="https://file.sportsseoul.com/news/cms/2024/09/06/news-p.v1.20240906.323754c1fa7d43aabc7f861ec5d0f843_P1.jpg" alt="신세경">
+</div>
+
+<nav>
+    <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+</nav>
+</html>
+
+<!-- 이미지 : 인라인 -->
+ <!-- display : 인라인을 블록으로 블록을 인라인으로 바꿀 때 -->

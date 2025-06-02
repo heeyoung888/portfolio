@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열에 공백 데이터 포함하기</title>
+</head>
+<body>
+    <script>
+        let city = ['서울',  ,'부산',  , '인천']; //공백 리터럴 포함
+        for(let i in city){
+            document.write('배열데이터' + i + ':' + city[i]+'<br>');
+        }
+
+        document.write('*******<br>');
+        for(let i=0; i<city.length; i++){
+            document.write('배열데이터' + i + ':' + city[i]+'<br>'); 
+        }
+    </script>
+</body>
+</html>

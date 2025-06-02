@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border 속성</title>
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        .box1 {
+            border: 3px dashed lightblue;
+        }
+
+        .box2 {
+            border-top: 2px solid #ff0;
+            border-right: 3px dotted blue;
+            border-bottom: 5px dashed rgb(40, 95, 19);
+            border-left: 10px double red;
+        }
+
+        .box3 {
+            border-top: 3px solid #000;
+            border-right: 2px dotted blue;
+            border-bottom: 6px dashed rgb(20, 95, 10);
+            border-left: 1px double lemonchiffon;}
+
+        .box4 {
+            border: 3px dashed green;
+        }
+
+        .box5 {border: 2px solid #000}
+        /* 두께와 스타일은 필수값, 색상 안넣을 경우 글씨색과 동일하게 들어감 */
+    </style>
+</head>
+
+<body>
+    <h2>border 속성</h2>
+    <ul>
+        <li>테두리스타일과 두께 색상 등을 묶어서 표시</li>
+        <li>순서 상관없음</li>
+        <li><strong>border: 1px solid #ccc;</strong></li>
+    </ul>
+
+    <!-- .box${box$}*5 -->
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+</body>
+
+</html>

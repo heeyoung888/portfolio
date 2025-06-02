@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keydown</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            function keyEventFnc(e){
+                let direct = '';
+                //console.log(e.keyCode);
+                switch(e.keyCode){
+                    case 37 : direct = 'left'; break;
+                    case 38 : direct = 'top'; break;
+                    case 39 : direct = 'right'; break;
+                    case 40 : direct = 'bottom'; break;
+                }
+                if(direct){$('#user_id').val(direct);}
+            }
+
+            $(document).on('keydown',keyEventFnc)
+        });
+    </script>
+</head>
+<body>
+    <p><input type="text" name="user_id" id="user_id"></p>
+</body>
+</html>

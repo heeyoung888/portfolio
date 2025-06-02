@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포털사이트</title>
+</head>
+<body>
+    <script>
+        let psite = prompt('네이버, 다음, 구글 중 즐겨 사용하는 사이트는?');
+        //경고창 '보기중에 없는 사이트 입니다'
+        let urlAd;
+
+        // 
+  
+        switch(psite){
+            case '네이버' : urlAd ='https://www.naver.com/';
+            break;
+            case '다음' : urlAd ='https://www.daum.net/';
+            break;
+            case '구글' : urlAd ='https://www.google.com/';
+            break;
+            default : alert('보기중에 없는 사이트 입니다');
+        }
+        console.log(urlAd);
+        location.href = urlAd;
+    </script>
+</body>
+</html>

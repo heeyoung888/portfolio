@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자형 데이터를 숫자형으로 변환</title>
+</head>
+<body>
+    <script>
+        let num = '100';/* 문자 */
+        console.log(typeof num);
+        num = Number(num); /* 숫자로 변환후 다시 숫자에 넣음 */
+        console.log(typeof num);
+
+        let num2 = prompt('좋아하는 숫자를 적어주세요') /* 프롬프트로 받아오는 값은 무조건 스트링(문자) */
+        console.log(num2 + 1);
+
+        //num2를 숫자로 변환해서 1을더한다음 
+        //num3에 저장시키고 num3를 alert로 찍어주세요
+
+        let num3 = Number(num2) +1;
+        alert(num3);
+    </script>
+</body>
+</html>

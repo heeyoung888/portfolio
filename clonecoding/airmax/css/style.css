@@ -1,0 +1,255 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play:wght@400;700&display=swap');
+
+/* 
+font-family: "Monoton", serif;
+font-family: "Play", serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #bbb;
+    outline: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #111;
+}
+
+h1 {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
+/* 흐름에서 빠짐 */
+h1 img {
+    width: 280px;
+}
+
+.vid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0.9;
+}
+
+/* 비디오의 엄마에게만 사이즈를 준 것 */
+.vid video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 사이즈가 깨지지 않는 역할을 함 */
+}
+
+header {
+    /* 세로값 못가져오면 픽스드 */
+    width: 700px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -470px;
+    background: rgb(39, 51, 40);
+    background: linear-gradient(60deg, rgba(39, 51, 40, 1) 2%, rgba(89, 134, 83, 1) 28%, rgba(110, 161, 108, 1) 56%, rgba(89, 107, 87, 1) 82%, rgba(51, 74, 49, 1) 100%);
+    transform: skewX(-40deg);
+}
+/* 1depth */
+header ul#gnb{
+    width: 220px;
+    position: absolute;
+    right: 0; top: 150px;
+}
+header ul#gnb>li{
+    position: relative;/* 기준:블록이라서 사이즈 안주면 자동으로 위에꺼 받아옴 */
+}
+header ul#gnb>li>a{/* 메인 */
+    display: block;
+    width: 220px; height: 50px;
+    font: bold 18px/3 "Play", serif;
+    box-sizing: border-box;
+    padding-right: 40px;
+    text-align: right;
+    color: #fff;
+}
+header ul#gnb>li.on>a{
+    background: #111; color: #fff;
+}
+header ul#gnb em{transform: skewX(40deg);
+display: inline-block;/* 인라인에서 블록으로 바꾸어주었으나 위치는 그대로 */}
+/* 모든em */
+
+header ul#gnb em i{margin-right: 20px;}
+/* 2depth */
+header ul#gnb ul/* 서브 */{
+    position: absolute;/* 흐름에서 빠져나옴 */
+    left: 0; top: 0;
+    opacity: 0;
+    transition: .4s;
+}
+header ul#gnb>li:hover ul{
+    opacity: 0.8;
+    left: 205px;
+}
+header ul#gnb>li.on ul{
+    opacity: 0.8;
+    left: 205px;
+    top: -10px;
+}
+header ul#gnb ul a{
+    display: block;
+    width: 150px; height: 40px;
+    background: #222; color: #fff;
+    border-bottom: 1px solid #b9fb05;
+    padding-left: 50px;
+    margin-bottom: 3px;
+    font: bold 16px/2.5/* line height */ arial;
+    transition: .5s;
+}
+header ul#gnb ul a:hover{
+    background: #b9fb05;
+    color: #333;
+}
+header ul#gnb>li.on ul a{
+    background: #444;
+    color: #b9fb05;
+}
+/* sns */
+ul#sns{position: fixed; top: 60px; right: 50px;}
+ul#sns li{float: left; margin-left: 30px; }
+ul#sns li i{font-size: 25px; color: #b9fb05; opacity: .5;
+transform: scale(1)/* 기본값 */; transition: .5s;}
+ul#sns li i:hover{transform: scale(1.4); opacity: 1;}
+
+/* txtBox */
+.txtBox{
+    width: 340px; height: 280px; 
+    position: fixed; 
+    top: 200px; right: 70px; 
+    /* background: #ccc; */
+}
+.txtBox h2.txt{
+    position: absolute;/* 절대좌표로 이동 , 위(부모) 픽스드로 기준 */
+    top: 200px; right: 0;
+    font-size: 34px; color: #bbb;
+    letter-spacing: -2px; font-weight: normal;
+    font-family: "Play", serif;
+}
+.txtBox h2.txt b{
+    font: bold 34px arial;
+    color: #b9fb05;
+    margin-left: 20px;
+}
+.txtBox p.tit{
+    position: absolute;
+    top: 0; right: 0;
+    font-size: 160px; color: #b9fb05;
+    letter-spacing: -1px;
+    font-family: "Monoton", serif;
+}
+.txtBox p.tit em{
+    font-size: 50px;
+    color: #fff;
+    font-family: "Play", serif;
+}
+
+/* side */
+#side{
+    width: 800px; height: 100%;
+    position: fixed;/* 세로값 받아오려면 픽스드 */ bottom: 0; right: -800px;
+    background: #111; opacity: 0.5;
+    transform: skewX(-40deg);
+    transition: .5s;
+}
+#side:hover{
+    right: -500px;
+}
+
+#side .con{
+    width: 400px; height: 100%;
+    background: #000; position: absolute;/* 픽스드 기준으로 이동 */
+    left: 150px; bottom: 0;
+    padding: 10px; box-sizing: border-box;/* 패딩 주면 세로 가로값이 깨지기 때문에 보더박스 주기 */
+    transition: 1s;
+    }
+#side:hover .con{
+    left: 50px;
+
+}
+
+#side .con p{
+    width: 300px; height: 100px;
+    position: absolute;
+    left: 50px;
+    transform: translateX(200px);
+}
+#side .con p:nth-child(1){
+    bottom: 270px;
+    transition: .4s;
+}
+#side .con p:nth-child(2){
+    bottom: 160px;
+    transition: .8s;
+}
+#side .con p:nth-child(3){
+    bottom: 50px;
+    transition: 1.2s;/* .4s간격 */
+}
+
+#side:hover .con p{
+    transform: translateX(0);
+}
+
+#side .con p em{
+    color: #a0bd50;
+    display: inline-block;/* 인라인이여서 트랜스폼이 안먹히므로 인라인블록으로 바꾸고 적용하기*/
+    transform: skewX(40deg);
+    font: 16px/1.7/* line height */ arial;
+}
+#side .con p img{
+    width: 300px; height: 70px; opacity: 0.3;
+    transition: .5s;
+}
+#side .con p img:hover{
+    opacity: 1;
+}
+
+#side .btnContents{
+    width: 150px; height: 50px;
+    position: absolute; /* 부모 걸려있음 */
+    bottom: 40px; left: 100px;
+    color: #b9fb05;
+    transform: skewX(40deg);
+}
+#side:hover .btnContents{
+    left: 700px;/* 사이드의 가로값이 700px이기 때문에 사라짐 */
+}
+#side .btnContents i{
+    font-size: 60px;
+    position: absolute;
+    bottom: 0; right: 0;
+
+}
+#side .btnContents i:nth-child(1){animation: ani linear 1.5s 0s infinite;}
+#side .btnContents i:nth-child(2){animation: ani linear 1.5s 0.5s/* 딜레이 */ infinite;}
+#side .btnContents i:nth-child(3){animation: ani linear 1.5s 1s infinite;}
+
+@keyframes ani {
+    0%{right: 0; opacity: 1; transform: scale(1)/* 기본값 */;}
+    100%{right: 100px; opacity: 0; transform: scale(1.5);}
+}
+
+/* 여기 까지 하고? #side:hover .btnContents로 넘어가기 */

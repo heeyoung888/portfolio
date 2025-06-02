@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-item {
+            width: 400px;
+            height: 100px;
+            flex-shrink: 1; /* 기본값 , 얘는 반대로 줄어드는 속성 */
+        }
+        .flex-item:nth-child(1){
+            flex-shrink: 0;/* 줄어들지 않음 */
+        }
+        /* 
+        flex-shrink는 flex-grow와 쌍을 이루는 속성
+        flex-basis의 값보다 작아질 수 있는지를 결정하는 속성
+        일단 0보다 큰 값이 세팅이 되면 해당 아이템이 flex-basis보다 작아집니다.
+        기본 값이 1이기 때문에 따로 세팅하지 않아도 작아질 수 있음
+        */
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAAAAAAAAA</div>
+        <div class="flex-item">BBB</div>
+        <div class="flex-item">CCCCCCCCCCCCCCCC</div>
+    </div>
+</body>
+
+</html>

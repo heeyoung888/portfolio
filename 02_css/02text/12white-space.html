@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공백 처리 방법 지정</title>
+    <style>
+        p.a{white-space: nowrap;}/* 줄바꿈 없음(브라우저 크기 줄일 때) */
+        p.b{white-space: normal;}/* 공백을 하나로 처리, 기본값 */
+        p.c{white-space: pre;}/* 공백, 줄바꿈 다 보임 */
+    </style>
+</head>
+<body>
+    <h1>The white-space Property</h1>
+    <h2>white-space : nowrap : </h2>
+    <p class="a">
+
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+    </p>
+    <h2>white-space : normal : </h2>
+    <p class="b">
+        
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+    </p>
+    <h2>white-space : pre : </h2>
+    <p class="c">
+        
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+        This is some text.  This is some text.  This is some text.
+    </p>
+</body>
+</html>

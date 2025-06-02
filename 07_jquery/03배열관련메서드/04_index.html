@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){/* 둘 중에 편한 거 쓰기 */
+            let idxNum = $('li').index($('#list3'));
+            console.log(idxNum);
+            idxNum = $('#list3').index();
+            console.log(idxNum);
+        });
+    </script>
+</head>
+<body>
+    <h1>배열 관련 함수</h1>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li id="list3">내용3</li>
+        <li>내용4</li>
+    </ul>
+</body>
+</html>

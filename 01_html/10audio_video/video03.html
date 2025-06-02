@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 재생하기</title>
+    <style>
+        #container{position: relative;
+        z-index: 2;}
+        #bg{
+            width: auto; height: auto;
+            min-width: 100%; min-height: 100%;
+            position: fixed; left: 0; top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>FullVideo</h2>
+        <h1><a href="#">풀페이지 비디오</a></h1>
+    </div><!-- //#container -->
+    <video src="media/flame.mp4" id="bg" autoplay muted loop poster="images/flame.jpg"></video><!-- poster : 로딩중이거나 멈출경우 썸네일 사진이 뜸 -->
+</body>
+</html>

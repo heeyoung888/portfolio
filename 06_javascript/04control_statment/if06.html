@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+</head>
+<body>
+    <script>
+        /* 
+        prompt로 숫자를 받아서 이프문 사용해서 짝수일때 짝수 홀수일때 홀수
+        document.write로 출력
+        */
+       const i = 2; /* 2 대신 i 쓰기 */
+       let num = Number(prompt('당신이 좋아하는 숫자를 입력하세요')); //초기화
+       let result;//if문 안에서 할당
+       if(num % i === 0){
+           result = num + '은 짝수';
+        }else{
+            result = num + '는 홀수';
+        }
+
+        document.write(result);
+    </script>
+</body>
+</html>

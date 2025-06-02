@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof 연산자를 사용하여 데이터 타입 확인하기</title>
+</head>
+<body>
+    <script>
+        let num ; //변수 값을 안넣고 선언만함, 변수 값이 없음 undefined
+        let obj = null; //객체 속성값이 없음
+        console.log(typeof 100); //number
+        console.log(typeof 10.5); //number
+        console.log(typeof '홍길동'); //string
+        console.log(typeof true); //boolean
+        console.log(typeof [1,2,3]);//object - 배열 /* 객체타입 */
+        console.log(typeof {name : '홍길동', age : 23});//object - 객체 /* 객체타입 */
+        console.log(typeof num); //undefined /* 객체타입 */
+        console.log(typeof obj); //object
+    </script>
+</body>
+</html>

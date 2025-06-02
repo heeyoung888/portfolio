@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{background: aqua;}
+        .on{/* 액티브 없애고 온 넣기 */
+            background: red;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.wrap_1 p:first').text('내용1');
+            $('.wrap_1 p').eq(1).removeClass().addClass('on');
+            $('.wrap_1 p:eq(2) a').attr('href','http://naver.com');
+            $('.wrap_1 p:eq(3)').find('input').val('Korea');
+
+            //인덱스번호고려해서 애프터부터 하기
+            $('.wrap_2 p:eq(0)').after('<p>After(추가1)</p>'); 
+            /* $('.wrap_2 p').first().after('<p>After(추가1)</p>'); */
+
+            $('.wrap_2 p:eq(0)').before('<p>Before(추가1)</p>');
+            /* $('.wrap_2 p').first().after('<p>Before(추가1)</p>'); */
+
+            $('.wrap_3 div').prepend('<p>내용7이전</p>'); //wrap 안에 자식으로 속함
+            $('.wrap_3 div').append('<p>내용8이후</p>'); //wrap 안에 자식으로 속함
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap_1">
+        <p>텍스트1</p><!-- eq 및 first -->
+        <p class="active">내용2</p>
+        <p><a href="#">네이버</a></p><!-- href 바꾸기 -->
+        <p><input type="text" value="hello"></p><!-- val -->
+    </div>
+    <div class="wrap_2">
+        <p>내용5</p><!-- after 먼저하고 before하기 -->
+        <p>내용6</p>
+    </div>
+    <div class="wrap_3">
+        <div><!-- prepand uppand? -->
+            <p>내용7</p>
+            <p>내용8</p>
+        </div>
+    </div>
+</body>
+</html>

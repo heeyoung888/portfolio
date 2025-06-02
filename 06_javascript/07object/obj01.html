@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성만 가진 객체 만들기</title>
+</head>
+<body>
+    <p id="let1"></p>
+    <p id="let2"></p>
+    <p id="let3"></p>
+
+    <script>
+        let car = {
+            name : 'Sonata',
+            speed: 100,
+            color : 'white'
+        }
+
+        document.getElementById('let1').innerHTML = 
+        `자동차이름 : ${car.name}`;
+
+        document.getElementById('let2').innerHTML = 
+        `자동차속도 : ${car['speed']}`
+
+        document.getElementById('let3').innerHTML = 
+        '자동차 색상'+'<b>'+  car['color']   +'</b>';
+    </script>
+</body>
+</html>

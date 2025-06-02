@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서 객체 스타일 변경</title>
+</head>
+<body>
+    <script>
+        let chk = 0;
+        function textStyle(){
+            if(chk == 0){
+                document.getElementById('msg').style.color = 'blue';
+                document.getElementById('msg').style.fontSize = '30px';
+                document.getElementById('msg').style.fontStyle = 'italic';
+                chk++;
+            }else{
+                document.getElementById('msg').style.color = 'red';
+                document.getElementById('msg').style.fontSize = '50px';
+                document.getElementById('msg').style.fontStyle = 'normal';
+                chk = 0;
+            }
+        }
+
+        function textHidden(){
+            document.getElementById('msg').style.visibility = 'hidden';
+        }
+        function textVisible(){
+            document.getElementById('msg').style.visibility = 'visible';
+        }
+    </script>
+    <p id="msg">문서 객체 스타일 변경하기</p>
+    <input type="button" value="텍스트 스타일 변경" onclick="textStyle()">
+    <input type="button" value="텍스트 숨기기" onclick="textHidden()">
+    <input type="button" value="텍스트 보이기" onclick="textVisible()">
+</body>
+</html>

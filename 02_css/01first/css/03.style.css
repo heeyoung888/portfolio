@@ -1,0 +1,11 @@
+@charset "utf-8"; 
+h2 {
+    font-weight: normal;
+    background-color: brown;
+    color: #fff;
+}
+#container{
+    border:10px solid red;
+    background: lightblue;
+}
+/* 세미콜론 마무리 필수 */

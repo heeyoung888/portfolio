@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow</title>
+    <style>
+        div{
+            width: 100px; height: 100px;
+            margin: 15px;
+            border: 2px solid;
+            line-height: 100px; text-align: center;
+            display: inline-block;
+        }
+        /* box-shadow : 수평거리 수직거리 흐림정도 번짐정도 색상 (inset) 인셋 생략가능 */
+        .box1{box-shadow: 2px -2px 5px 0 violet;}
+        .box2{box-shadow: 5px 5px 15px 5px gray;}
+        .box3{box-shadow: 3px 3px 3px 3px rgb(95, 92, 97) inset;}
+        .box4{box-shadow: 5px 5px 5px 0 #000;}
+        .box5{box-shadow: 2px 2px 7px 0 green;}
+        .box6{box-shadow: 7px 10px 6px 2px #775555;}
+    </style>
+</head>
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+    <div class="box5">박스5</div>
+    <div class="box6">박스6</div>
+</body>
+</html>

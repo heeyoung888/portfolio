@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 프로그램 만들기</title>
+</head>
+<body>
+    <p>아이디 비밀번호 입력</p>
+    <script>
+        let userId = prompt('아이디를 입력하세요');
+        let pw ;
+        if(userId === 'admin'){//=== : string
+            pw = prompt('비밀번호를 입력하세요')
+            if(pw === 'admin12'){
+                location.href = 'login.html';
+            }else{
+                location.href = 'error.html';
+            }
+        }else{
+            location.href = 'error.html';
+        }
+    </script>
+</body>
+</html>

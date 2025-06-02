@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        div{width: 300px; height: 200px; margin: 20px; 
+        display: inline-block;}
+        .round{
+            border: 2px solid #f00;
+            border-radius: 20px;
+            border-radius: 10px 20px 30px 40px;
+            /* 왼쪽 오른쪽 오른쪽 밑 왼쪽 밑 */
+            border-top-left-radius: 0;
+        }
+        #bg{border-radius: 0 30px;
+        background: url(https://cdn.thebk.co.kr/news/photo/202205/202637_61865_2834.jpg) no-repeat center/cover;
+        border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="round"></div>
+    <div class="round" id="bg"></div>
+</body>
+</html>

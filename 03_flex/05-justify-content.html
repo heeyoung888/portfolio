@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        /* 주축 정렬 -세로(?)*/
+        .flex-container{
+            display: flex;
+            width: 80%; margin: 0 auto;
+            justify-content: flex-start; /* 기본값 : 아이템들을 시작점으로 정렬하는 것 */
+            justify-content: flex-end; /* 아이템들을 끝점으로 정렬하는 것 */
+            justify-content: center; /* 아이템들을 가운데로 정렬 */
+            justify-content: space-between; /* 아이템들의 사이에 균일한 간격 */
+            justify-content: space-around; /* 아이템들의 둘레에 균일한 간격 */
+            justify-content: space-evenly; /* 아이템들의 사이와 양 끝에 균일한 간격을 만들어 줌 */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAA</div>
+        <div class="flex-item">BBBBBB</div>
+        <div class="flex-item">CCCCCCCCCCC</div>
+    </div>
+</body>
+</html>

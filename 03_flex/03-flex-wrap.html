@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="default.css">
+    <style> /* 부모에게 속성을 준 후 다음에 넣는 것들 */
+        .flex-container{
+            display: flex;
+            width: 700px;
+            flex-wrap: nowrap; /* 기본값 - 줄바꿈을 하지 않습니다. 넘치면 빠져나감, 반대로 플롯레프트일 경우에는 넘쳐서 밑으로 내려감*/
+            flex-wrap: wrap; /* 줄바꿈을 합니다. float이나 inline-block으로 배치한 요소들과 비슷하게 동작, 자리가 없으면 밑으로 떨어짐 */
+            flex-wrap: wrap-reverse; /* 줄바꿈을 하는데 아이템을 역순으로 배치 */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAAAAAAAAAAAAAA</div>
+        <div class="flex-item">BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB</div>
+        <div class="flex-item">CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</div>
+    </div>
+</body>
+</html>

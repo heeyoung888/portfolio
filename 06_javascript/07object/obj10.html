@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 변수를 사용해 속성 값 설정하기</title>
+</head>
+<body>
+    <script>
+        function add(){
+            let img = document.createElement('img');
+            img.src = 'https://i.namu.wiki/i/6oqZQFN7Zju4x00ztofa9uUne2EP06Eh60cS7oJXMLlIJSfRUh0lKeeKJqNSFObEHBkmGrxXVEbMCFHhqIzm9Q.webp';
+            img.width = 100; 
+            img.height= 122;
+            img.alt='신세경';
+            document.body.appendChild(img);
+        }
+    </script>
+    <button type="button" onclick="add()">이미지 추가</button>
+</body>
+</html>

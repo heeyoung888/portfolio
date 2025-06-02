@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container{display: flex; flex-wrap: wrap;/* wrap 넘치는 거 밑으로 내려감 */}
+        .flex-item{flex: 1 1 auto;}
+        .flex-item:nth-child(1){width: 30%;}
+        .flex-item:nth-child(2){width: 60%;}
+        .flex-item:nth-child(3){width: 20%;}/* 80% 다 차지함 */
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis id in repellat impedit enim hic,
+                quis tempore accusamus, aliquid quisquam culpa? Adipisci veritatis laudantium unde esse, id tenetur vel
+                minus?
+            </p>
+        </div>
+        <div class="flex-item">BB</div>
+        <div class="flex-item">CCCCCCCC</div>
+    </div>
+</body>
+</html>
+<!-- /* 점유율X : width 값 안먹음 */ -->

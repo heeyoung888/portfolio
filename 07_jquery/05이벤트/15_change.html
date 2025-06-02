@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#rel_site').on('change',function(){
+                let thisTxt = $(this).val();
+                $('.txt').text(thisTxt);
+                location.href = 'http://' + thisTxt;
+            });
+        });
+    </script>
+</head>
+<body>
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="google.com">구글</option>
+        <option value="naver.com">네이버</option>
+        <option value="daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+</body>
+</html>

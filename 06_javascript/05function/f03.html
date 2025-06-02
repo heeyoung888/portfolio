@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무명함수</title>
+</head>
+<body>
+    <script>
+        let text1 = '함수 선언 전 호출 에러';
+        let text2 = '함수 선언 후 호출만 가능';/* 밑에 작성 */
+
+        //pringMsg(text1);
+        let pringMsg = function(msg){
+            document.write(`함수 호출 메시지 : ${msg}<br>`);
+        }
+
+        pringMsg(text2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 명령어</title>
+</head>
+<body>
+    <script>
+        // 출력 : alert ('출력 내용');
+        alert('자바스크립트');/* 경고창 */
+
+        // 출력 : html 문서에 직접 텍스트를 작성한다. 태그사용 가능
+        document.write('<h1>hello world</h1>');/* 바디안에 내용 */
+
+        // 출력 : 개발자도구(f12)의 console 탭에서 확인 할 수 있다.
+        console.log('자바스크립트 & 제이쿼리');
+
+        // 입력 : prompt('입력내용','입력내용 초기값-생략가능');
+        prompt('출력 페이지 수를 입력하세요','10');
+        prompt("문자를 입력하세요");
+
+        let str = prompt('이름을 입력하세요');
+        console.log(str);/* 변수에는 ''입력하면 변수가 아닌 글자로 인식됨 */
+
+        // 확인 confirm('확인내용');
+        confirm('정말 삭제하시겠습니까?');
+    </script>
+</body>
+</html>

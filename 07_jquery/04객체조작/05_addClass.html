@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .important {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.add').click(function(){
+                $('div').addClass('important').prevAll().addClass('blue');                
+            });
+            $('.remove').click(function(){
+                //$('div').removeClass('important').prevAll().removeClass('blue');
+                $('div,h1,h2,p').removeClass();
+            });
+            $('.toggle').click(function(){
+                $('div').toggleClass('important').prevAll().toggleClass('blue');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>HTML5</h1>
+    <h2>CSS3</h2>
+    <p>자바스크립트</p>
+    <div>제이쿼리</div>
+    <button class="add">CSS 적용</button>
+    <button class="remove">CSS 적용 해제</button>
+    <button class="toggle">CSS 적용 및 해제</button>
+</body>
+</html>

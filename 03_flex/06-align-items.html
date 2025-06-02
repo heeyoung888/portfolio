@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="default.css">
+    <style> /* 교차축 정렬 : 가로가 기본이지만 align-items :세로축 움직임*/
+        .flex-container{
+            display: flex; /* row가 기본값 */
+            width: 800px; height: 300px;
+            align-items: stretch; /* 아이템들이 교차축 방향으로 끝까지 쭈욱 늘어남 */
+            align-items: flex-end; /* 아이템들을 끝점으로 정렬 */
+            align-items: center; /* 아이템들을 가운데 정렬 */
+            align-items: baseline; /* 아이템들을 텍스트 베이스라인 기준으로 정렬 */
+            align-items: flex-start; /* 아이템들을 시작점으로 정렬 */
+        }
+        .flex-item:nth-child(1){font-size: 30px;}
+        .flex-item:nth-child(2){font-size: 12px;}
+        .flex-item:nth-child(3){font-size: 50px;}
+
+        .parent{
+            background: blue;
+            justify-content: center;
+            align-items: center;
+            /*  정렬
+            justify-content: center;
+            align-items: center; 
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAA</div>
+        <div class="flex-item">BBBBBB</div>
+        <div class="flex-item">CCCCCCCCCCC</div>
+    </div>
+
+    <div class="flex-container parent">
+        <div class="flex-item">CCCCCCCCCCC</div>
+    </div>
+</body>
+</html>

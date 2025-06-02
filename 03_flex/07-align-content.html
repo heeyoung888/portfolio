@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container{
+            display: flex;
+            width: 500px; height: 500px;
+            flex-wrap: wrap;/* align-content활용 */
+            align-content: flex-start;/* 두줄 이상일 때 */
+            align-content: stretch; /* 기본값 */
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-between; /* 두줄 이상 : 여백 지정 가능 */
+            align-content: space-around;
+            align-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">    
+        <div class="flex-item">AAAAAAAAAAAAAA</div>
+        <div class="flex-item">BBBBBB</div>
+        <div class="flex-item">CCCCCCCCCCCCCCCCCCCC</div>
+        <div class="flex-item">DDDDDDDDDDDDDDDDDDDDDDDDDDD</div>
+    </div>
+</body>
+</html>

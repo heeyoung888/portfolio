@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            display: inline-block;
+            border-width: 15px;
+            /* 테두리 굵기 */
+        }
+
+        .none {
+            border-style: none;
+        }
+
+        .hidden {
+            border-style: hidden;
+        }
+        /* none과 약간의 차이 있음. 드러나지 않는 것은 동일 */
+        .dashed {
+            border-style: dashed;
+            border-top-color: red;
+        }
+
+        .dotted {
+            border-style: dotted;
+            border-color: red green blue pink;
+            /* 순서 : 위 오른쪽 아래 왼쪽 : 마진 패딩 순서와 동일*/
+        }
+
+        .double {
+            border-style: double;
+            border-left-width: 50px;
+        }
+
+        .groove {
+            border-style: groove;
+        }
+
+        .inset {
+            border-style: inset;
+        }
+
+        .outset {
+            border-style: outset;
+        }
+
+        .ridge {
+            border-style: ridge;
+        }
+
+        .solid {
+            border-style: solid;
+            border-width: 2px 4px 6px 8px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="none">none</div>
+    <div class="hidden">hidden</div>
+    <div class="dashed">dashed</div>
+    <div class="dotted">dotted</div>
+    <div class="double">double</div>
+    <div class="groove">groove</div>
+    <div class="inset">inset</div>
+    <div class="outset">outset</div>
+    <div class="ridge">ridge</div>
+    <div class="solid">solid</div>
+</body>
+
+</html>

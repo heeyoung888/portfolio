@@ -1,0 +1,139 @@
+@charset "utf-8";
+@media screen and (max-width:1600px) {
+    .container {
+        width: 100%;
+    }
+
+    header .container {
+        width: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width:1344px) {
+    .convenience .container {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .convenience .container ul li {
+        width: 23%;
+    }
+
+    .convenience .container ul li img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:1284px) {
+    .container2 {
+        width: 95%;
+    }
+
+    .banner_all {
+        width: 90%;
+    }
+    .item1{width: 55%;}
+    .banner_right{width: 42%;}
+    .item2,.item3{width: 100%; height: 48%;}
+    .item4,.item5{display: none;}
+    .contactus{
+        height: 270px;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width:976px){
+    .mobility ul{
+        width: 95%;
+    }
+    footer .f_box ul li{
+        width: 33.33%;
+        padding: 0 10px;
+    }
+    footer .f_box ul li:nth-child(3){
+        border-right: 0;
+    }
+    footer .f_box ul li:nth-child(4),footer .f_box ul li:nth-child(5){
+        display: none;
+    }
+}
+@media screen and (max-width:800px) {
+    header .h_left {
+        display: block;
+    }
+
+    header h1 {
+        width: 100%;
+    }
+
+    header .h_right {
+        display: none;
+    }
+    header .mobile_nav {
+        top: 94px;
+    }
+    .convenience .container ul {
+        flex-wrap: wrap;
+    }
+    .convenience .container ul li {
+        width: 48%;
+    }
+    .banner_all {
+        width: 95%;
+        height: auto;
+        display: block;
+    }
+    .item{margin-bottom: 10px;}
+    .item1{width: 100%; height: 416px;}
+    .item1 h3{
+        margin-left: 20px;
+        padding-top: 30px;
+        text-align: left;
+    }
+    .banner_right{width: 100%; height: auto;}
+    .item2,.item3{width: 100%; height: 416px;}
+    .item4,.item5{display: block;width: 100%; height: 416px;}
+    .mobility ul{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .mobility ul li{
+        width: 49%;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    header {
+        height: 50px;
+    }
+
+    header .h_left button {
+        font-size: 20px;
+    }
+
+    header h1 a {
+        height: 49px;
+    }
+
+    header h1 a img {
+        height: 49px;
+        width: auto;
+    }
+    header .mobile_nav {
+        top: 50px;
+    }
+    .contactus{
+        height: 200px;
+        padding: 40px;
+    }
+    .contactus p{line-height: 30px;}
+    .contactus h2{font-size: 30px; margin-bottom: 10px; line-height: 2;}
+    footer .f_bottom .container2{
+        flex-direction: column;
+    }
+    footer .f_bottom .fb_right{
+        margin-top: 20px;
+    }
+}

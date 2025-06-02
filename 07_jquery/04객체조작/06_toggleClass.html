@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass removeClass toggleClass</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        header{
+            width: 100%; height: 80px;
+            background: #ccc;
+            display: flex;
+            padding-inline: 100px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header.on{
+            position: fixed;
+            left: 0; top: 0;
+            background: pink;
+        }
+        header h1{
+            font-size: 18px;
+        }
+        header nav{
+            width: 65%;
+        }
+        header nav ul{
+            display: flex;
+        }
+        header nav ul li{
+            flex: 1;
+            text-align: center;
+        }
+        header .right_icon ul{
+            display: flex;
+            font-size: 20px;
+            gap: 20px;
+        }
+        header .right_icon ul li.ham{
+            cursor: pointer;
+        }
+        .fa-xmark{font-size: 23px;}
+        section{
+            padding-top: 80px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .con1{
+            background: lavender;
+        }
+        .con2{
+            background: lawngreen;
+        }
+        .con3{
+            background: lemonchiffon;
+        }
+        .con4{
+            background: lightcoral;
+        }
+        section h2{
+            transform: translateY(100%);
+            transition: .6s;
+        }
+        section.on h2{
+            transform: translateY(0);
+            
+        }
+        section .circle{
+            width: 100px; height: 100px; background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 100px; top: 200px;
+            
+        }
+        section.on .circle{
+            animation: cAni 2s;
+        }
+        @keyframes cAni {
+            0%{left: 100px; top: 200px;}
+            25%{left: 200px; top: 250px;}
+            50%{left: 300px; top: 350px;}
+            75%{left: 400px; top: 450px;}
+            100%{left: 100px; top: 200px;}
+        }
+        .footer{
+            width: 100%;
+            height: 150px;
+            background: #333;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/4514f2c7b8.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let ht = $(window).height();
+            const sectionL = $('main section').length;
+            //console.log(ht);
+            $(window).scroll(function(){
+                let st = $(this).scrollTop();
+                //console.log(st);
+                if(st>=ht){
+                    $('header').addClass('on');
+                }else{
+                    $('header').removeClass('on');
+                }
+                for(let i=0; i<4; i++){
+                    if(st >= ht*i && st<ht*(i+1)){
+                        $('section').eq(i).addClass('on').siblings(),removeClass('on');
+                    }
+                }
+                
+            });
+            $('.ham').click(function(){
+                $(this).find('i').toggleClass('fa-bars').toggleClass('fa-xmark');
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <header class="">
+        <h1><a href="#">로고이미지(사이트이름)</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </nav>
+        <div class="right_icon">
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+                <li class="ham"><i class="fa-solid fa-bars"></i></li>
+                <!-- <li><i class="fa-solid fa-xmark"></i></li> -->
+            </ul>
+        </div><!-- //.right_icon -->
+    </header>
+    <main>
+        <section class="con1"><h2>제목입니다 con1</h2><div class="circle"></div></section>
+        <section class="con2"><h2>제목입니다 con2</h2><div class="circle"></div></section>
+        <section class="con3"><h2>제목입니다 con3</h2><div class="circle"></div></section>
+        <section class="con4"><h2>제목입니다 con4</h2><div class="circle"></div></section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

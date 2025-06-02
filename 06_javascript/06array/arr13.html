@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 데이터 접근 및 조작</title>
+</head>
+<body>
+    <script>
+        let arrData = [];
+        //arrData[0] = 1;
+        //arrData[99] = 100;
+        //배열 데이터 입력 함수
+        function insertArr(){
+            for(let i=0; i<=99; i++){
+                arrData[i] = i+1;
+            }
+            selectArr();
+        }
+
+        //배열 데이터 조회 함수
+        function selectArr(){
+            for(let i=0; i<arrData.length; i++){
+                document.write(arrData[i]+ ' ');
+            }
+            addArr();
+        }
+
+        //배열 데이터 덧셈 연산 함수
+        function addArr(){
+            let sum=0;
+            for(let i=0; i<arrData.length;i++){
+                sum += arrData[i];
+            }
+            document.write(`<p>배열 데이터 덧셈 연산 결과 : ${sum}</p>`);
+            document.write('<a href="arr13.html">돌아가기</a>')
+        }
+    </script>
+    <button type="button" onclick="insertArr()">배열 생성/조회</button>
+</body>
+</html>

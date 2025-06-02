@@ -1,0 +1,221 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{vertical-align: top;}
+body{color: #333;}
+.inner{width: 1340px; margin: 0 auto;}
+
+header{
+    width: 100%; height: 100px;
+    position: relative; z-index: 10; /* 외우기 */
+}
+header .inner{
+    height: 100%; background: #aaa;
+    display: flex; justify-content: space-between;
+    align-items: flex-end;
+}
+header h1{
+    height: 100%;
+    display: flex; 
+    align-items: center;
+}
+header nav{/* 부모에게 높이 안주는게 좋음 */
+    width: 70%; 
+}
+header nav .nav_bg{
+    width: 100%; height: 180px; background: #e31a40;
+    position: absolute; left: 0; top: 100px;/* 헤더가 100px이니까 */
+    display: none;
+}
+header nav ul.gnb{
+    width: 100%;
+    display: flex; color: #fff;/* 폰트컬러 상속됨 */
+}
+header nav ul.gnb>li{
+    flex: 1; text-align: center;
+    position: relative;
+}
+header nav ul.gnb>li>a{
+    width: 100%; height: 60px; 
+    line-height: 60px; display: block;
+    background: #e31a40;
+}
+header nav ul.gnb>li:hover>a{
+    background: #fff; color: #e31a40;
+}
+header nav ul.gnb>li>ul.sub{
+    width: 100%;
+    position: absolute;
+    left: 0; top: 70px; 
+    display: none;/* 나타나게 하는 건 자바스크립트 */
+}
+header nav ul.gnb>li>ul.sub>li{
+    width: 100%; height: 40px;/* ul에게 주는게 아님 */ line-height: 40px;
+}
+header nav ul.gnb>li>ul.sub>li:hover{
+    background: #fff; color: #e31a40;
+}
+header nav ul.gnb>li>ul.sub>li>a{
+    display: block;
+}
+.main_visual{
+    width: 100%; height: 350px; background: #bbb;
+    overflow: hidden; /* 기준점 */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.main_visual ul.slide{
+    position: absolute;
+    left: 0; top: 0;
+}
+.main_visual .go{
+    position: relative;
+}
+.main_visual .go ul{
+    width: 100%; 
+    height: 100px;
+    display: flex;
+    background: rgba(255, 255, 255, .6);
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main_visual .go ul li{
+    height: 100%;
+}
+.main_visual .go ul li a{
+    display: flex;
+    height: 100%;
+    align-items: center;/* 기본값 스트레치 */
+    gap: 10px;
+}
+main{
+    height: 550px; /* background: #ccc; */
+}
+main .con1 section.banner{
+    height: 200px; background: lightgoldenrodyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .con1 section.banner .tit{
+    flex-direction: column;
+    font-size: 12px;
+}
+main .con1 section.banner .gt{
+    font-size: 70px;
+    padding-left: 250px;
+}
+main .con2{
+    background: lightcoral;
+    display: flex;
+    height: calc(550px - 200px);
+}
+main .con2 section h2{
+    display: flex;
+    width: 100px; height: 40px;
+    background: skyblue; color: #fff;
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
+    align-items: center; 
+    font-size: 18px; font-weight: normal;
+    float: left; cursor: pointer;
+}
+main .con2 section.notice{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px;
+}
+main .con2 section.notice ul{
+    width: 600px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+}
+main .con2 section.notice ul li{
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    /* padding: 0 10px; */
+}
+main .con2 section.notice ul li:last-child{
+    border-bottom: none;
+}
+main .con2 section.notice ul li:hover a{
+    background: navy;
+    color: #fff;
+}
+main .con2 section.notice ul li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+main .con2 section.notice ul li a span{
+    font-size: 12px;
+}
+main .con2 section.gal{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px;
+}
+main .con2 section.gal>ul{
+    width: 600px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    border: 1px solid #ccc;
+    }
+main .con2 section.gal>ul>li{
+        transition: .6s;
+    }
+main .con2 section.gal>ul>li:hover{
+        opacity: 0.7;
+    }
+main .con2 section.gal>ul>li>a{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+main .con2 section.gal>ul>li>a>img{
+        width: 100px;
+        height: 100px;
+    }
+
+    footer{
+        width: 100%;
+        height: 100px;
+        /* background: #bbb; */
+        display: flex;
+    }
+    footer .logo{
+        width: 200px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    footer .copy{
+        display: flex;
+        flex:1; 
+        height: 100%;
+        background: skyblue;
+        align-items: center; justify-content: center;
+    }
+    footer .fam{
+        width: 300px;
+        height: 100%;
+        background: navy;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .fam select{
+        width: 200px; height: 50px;
+        border: 0;
+        background: #fff;
+        outline: 0;
+    }

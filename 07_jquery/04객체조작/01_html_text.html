@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html() 메서드</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let m1html = $('#m1').html();
+            console.log(m1html);
+            $('#m1').html('<em>html</em>');
+            $('#m2>div').html(function(){
+                return '<strong>'+ $(this).text() +'</strong>'
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="m1"><strong>Jquery</strong></div>
+    <div id="m2">
+        <div><em>html</em></div>
+        <div><em>css</em></div>
+        <div><em>javascript</em></div>
+    </div>
+</body>
+</html>

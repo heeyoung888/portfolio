@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+
+            $('.btn1').click(function(e){
+                e.preventDefault();
+                $('p.txt1').css({
+                    backgroundColor : '#ff0',
+                    color : '#fff', 
+                });
+            });
+            $('.btn2').click(function(){
+                $('p.txt2').css({
+                    'background' : '#0ff',
+                });
+                return false;/* 무력화 */
+            });
+
+            //btn2를 클릭했을 때 txt2의 bg : #0ff
+            
+            $('.btn3').dblclick(function(){
+                $('.txt3').css('background','#0f0');
+            });
+
+
+
+        }); //ready end
+    </script>
+</head>
+<body>
+    <p><a href="http://naver.com" class="btn1">버튼1</a></p>
+    <p class="txt1">내용1</p>
+    <p><a href="http://naver.com" class="btn2">버튼2</a></p>
+    <p class="txt2">내용2</p>
+    <p><button class="btn3" type="button">버튼3</button></p>
+    <p class="txt3">내용3</p>
+</body>
+</html>

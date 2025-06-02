@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+
+<body>
+    <script>
+        let city = []; //배열 변수 선언
+        city[0] = 'seoul';
+        city[1] = 'busan';
+        city[2] = 'incheon';
+        city[3] = 'mokpo';
+        city[4] = 'sejeong';
+
+        //printArr 함수만들어서 
+        function printArr() {
+            for (let i = 0; i < city.length; i++) {
+                document.write(`배열데이터 [${i}] : ${city[i]}<br>`);
+            }
+        }
+        //호출
+        printArr();
+    </script>
+</body>
+
+</html>

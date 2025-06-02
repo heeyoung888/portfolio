@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute()메소드를 사용해 속성 값 설정하기</title>
+</head>
+<body>
+    <script>
+        function imgAdd(){
+            let img = document.createElement('img');
+            img.setAttribute('src','https://i.namu.wiki/i/Xi0giaEmhS4t5L7HTkI0JV_Sb-3HuvRKVF5MD7UlEoQPG01Z2GskbG6xteMsS2MC9wSPX1W9GifLHwwVzDjRPw.webp');//속성, 속성값
+            img.setAttribute('alt','배수지');
+            img.setAttribute('width',100);
+            document.body.appendChild(img);
+        }
+    </script>
+    <button type="button" onclick="imgAdd()">이미지 추가</button>
+</body>
+</html>

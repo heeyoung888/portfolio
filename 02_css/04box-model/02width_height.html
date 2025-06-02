@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width title 속성</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .box1{
+            background: #ff6a00;
+            width: 400px; /* 고정너비 : 정해진 단위 */
+            height: 100px;
+            text-align: center; /* 한줄 일 때 */
+            line-height: 100px;
+        }
+        .box2{
+            background: #36b123;
+            width: 50%; /* 가변너비 : 브라우저 창 너비의 50%" */
+            /* height: 50%;  *//* height: 엄마가 있으면 엄마 요소(기준점)에서 퍼센트 적용 , 하지만 부모가 없을 경우 %가 안먹음*/
+        }
+        .box3{background: lawngreen; width: 100%; height: 80px;}/* 컨텐츠 내용 없음 */
+        .box4{background: pink;
+        width: 80%; 
+        height: 1000px;}
+        .box4 > .box4_1{
+            background: green; 
+            height: 50%;
+            width: 40%;
+            }
+    </style>
+</head>
+<body>
+    <h2>width title 속성</h2>
+    <p>실제 콘텐츠 영역의 크기 지정</p>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3"></div>
+    <div class="box4">
+        <div class="box4_1">박스4_1</div>
+    </div>
+</body>
+</html>

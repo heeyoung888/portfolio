@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐스캐이딩 스타일 시트(css)</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrap{
+            width: 1080px; 
+            background: #eee;
+            margin: 0 auto; /* 가운데정렬 */
+        }
+        ul,ol{list-style: none;}
+        #redfont{color: red;}
+        .bluefont{color: blue;}
+        p{color: yellow !important;}
+        /* 
+        스타일 우선 순위
+       !important > 인라인스타일 > id > calss > 태그 
+        */
+        .bgccc{background: aqua;}
+        body{font-size: 10px;}/* 제목태그는 태그 자체에 기본사이즈가 아닌 별도사이즈가 걸려있음(사이즈 맞추려면 리셋시키고 맞추기) */
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>캐스캐이딩 스타일 시트(css)</h1>
+        <div class="container">
+            <h2>캐스캐이딩의 의미</h2>
+            <ul>
+                <li>
+                    <strong>캐스캐이딩(Cascading) : </strong>
+                    <q>위에서 아래로 흐른다</q>는 뜻
+                </li>
+                <li>
+                    선택자에 여러 스타일이 적용될 때 스타일 충돌을 막기 위해
+                    <q>위에서 아래로 흐르며 적용되는</q> 방법을 선택
+                </li>
+            </ul>
+        </div><!-- //.container -->
+        <div class="container">
+            <h2 class="bgccc">캐스캐이딩 원칙</h2>
+            <ol>
+                <li><em>스타일 우선순위 </em>- 스타일 규칙의 중요도, 적용 범위에따라 우선순위가 결정되고 우선순위에 따라 위에서 아래로 흐르는 스타일 적용</li>
+                <li><em>스타일 상속 </em>- 태그들의 포함 관계에 따라 부모 요소의 스타일을 자식 요소로, 위에서 아래로 전달</li>
+            </ol>
+        </div><!-- //.container -->
+        <p class="bluefont" id="redfont" style="color: green;" >스타일 시트에서 캐스캐이딩은 가장 기본적인 개념이기 때문에 일반적으로 스타일시트는 캐스캐이딩 스타일시트(css)와 같은 의미로 사용됨</p>
+    </div><!-- //.wrap -->
+</body>
+</html>

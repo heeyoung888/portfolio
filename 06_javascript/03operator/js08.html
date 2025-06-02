@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 조건 연산자</title>
+</head>
+<body>
+    <script>
+       //prompt로 숫자를 받아와서
+        let num  = Number(prompt('숫자를 입력하세요'));
+        let result; num % 2; //퍼센트계산
+        //삼항 조건 연산자 사용
+        /* let comment =(result == 0) ? `${num}은(는 짝수 입니다)` : `${num}은(는 홀수 입니다)`; */
+        let comment =(result) ? `${num}은(는  홀수 입니다)` : `${num}은(는 짝수 입니다)`; /* 0 : 짝수 펄스 / 1 : 홀수 트루 */
+        //짝수이면 숫자가 짝수입니니다. 홀수이면 ~ 가 뜨는데
+        document.write('<h2>' + comment + '<h2>');
+        //h2태그로 뜨게
+    </script>
+</body>
+</html>

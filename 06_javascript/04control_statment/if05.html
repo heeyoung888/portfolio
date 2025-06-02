@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성별과 성년을 구분하는 프로그램 만들기</title>
+</head>
+<body>
+    <script>
+        let gender = prompt('당신의 성별을 대문자로 남자면 M, 여자면 F를 입력하세요');
+        let age = Number(prompt('당신의 나이를 입력하세요','20'));
+        let result;
+
+        if(gender == 'M' || gender == 'm'){
+            if(age>=19){
+                result = '남자 성인 입니다';
+            }else{
+                result = '남자 미성년자 입니다';
+            }
+        }else{
+            if(age>=19){
+                result = '여자 성인 입니다';
+            }else{
+                result = '여자 미성년자 입니다';
+            }
+        }
+
+        document.write(result);
+    </script>
+</body>
+</html>

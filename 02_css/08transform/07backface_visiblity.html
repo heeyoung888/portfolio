@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backface_visiblity</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            perspective: 1000px;
+            margin-left: 200px;
+        }
+
+        .container .card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 3s;
+            transform-origin: left center;
+            transform-style: preserve-3d;
+        }
+
+        .container:hover .card {
+            transform: rotateY(180deg);
+        }
+
+        .face {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .front {
+            background: red;
+        }
+
+        .back {
+            background: blue;
+            transform: rotateY(180deg);
+        }
+
+        .hidden {
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="front face">
+                front
+            </div><!-- //.face -->
+        </div><!-- //.card -->
+    </div><!-- //.container -->
+
+    <div class="container">
+        <div class="card">
+            <div class="front face hidden">
+                front
+            </div><!-- //.face -->
+        </div><!-- //.card -->
+    </div><!-- //.container -->
+
+    <div class="container">
+        <div class="card">
+            <div class="front face hidden">
+                front
+            </div><!-- //.face -->
+            <div class="back face hidden">
+                back
+            </div><!-- //.face -->
+        </div><!-- //.card -->
+    </div><!-- //.container -->
+</body>
+
+</html>

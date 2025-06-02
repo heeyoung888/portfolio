@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{
+            line-height: 1;
+        }
+        #wrap{height: 5000px; padding-top: 2000px;}
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            let topNum = $('h1').offset().top;
+            console.log(topNum);
+            $(window).scrollTop(topNum);
+            let sct = $(window).scrollTop();
+            console.log(sct);
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+    </div>
+</body>
+</html>

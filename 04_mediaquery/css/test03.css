@@ -1,0 +1,13 @@
+@charset "utf-8";
+p{color: yellow;}
+
+@media screen and (max-width:1024px) and (min-width:900px) {
+    p{color: red; width: 500px; background: yellow;}
+    body{background: green;}
+}
+@media screen and (max-width:768px) {
+    p{color: #fff;}
+    body{background: #333;}
+}
+
+/* 768이하일때 p폰트 컬러 흰색 바디 백그라운드 #333  */

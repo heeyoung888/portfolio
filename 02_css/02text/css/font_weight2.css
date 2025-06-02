@@ -1,0 +1,13 @@
+@charset "uft-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {font-family: "Roboto", serif;}
+.fw_1 {font-weight: 100;}
+.fw_2 {font-weight: 300;}
+.fw_3 {font-weight: 400;}
+.fw_4 {font-weight: 500;}
+.fw_5 {font-weight: 700;}
+.fw_6 {font-weight: 900;}
+
+
+/* css파일 만들기 > 링크연결 > 구글폰트 > 임폴트 > 스타일 빼고 복사 > 캐셋 밑에 복사 후 저장 > 태그걸고 스타일 적용하기 */

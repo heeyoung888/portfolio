@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 값 선택자</title><!-- 끝나는 애 -->
+    <style>
+        li a{
+            line-height: 30px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            padding-right: 25px;
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
+
+        /* 위 스타일의 백그라운드 속성 다 지워짐 */
+        li a[href $='hwp']{background: url(images/hwp_icon.gif);}
+
+        /* xls 로 끝나는  excel_icon.gif */
+        li a[href $='xls']{background: url(images/excel_icon.gif);}
+    </style>
+</head>
+<body>
+    <h3>회사 소개 파일 다운받기</h3>
+    <ul>
+        <li><a href="intro.hwp">hwp 파일</a></li>
+        <li><a href="intro.xls">엑셀 파일</a></li>
+    </ul>
+</body>
+</html>
+
+<!-- 이미지가 여러 개 나옴 .. -->

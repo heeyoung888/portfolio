@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스프레드 연산자</title>
+</head>
+<body>
+    <script>
+        let arrA = [1,2,3];
+        let arrB = [...arrA,4,5,6];
+        console.log(arrB);
+        let objA = {
+            a:1,
+            b:2,
+        }
+        let objB = {
+            ...objA,
+            c:3,
+            d:4
+        }
+        console.log(objB);
+
+        function func(a,b,c){
+            console.log(a,b,c);
+        }
+        func(...arrA);
+    </script>
+</body>
+</html>

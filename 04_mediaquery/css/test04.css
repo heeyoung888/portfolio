@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 100%;
+}
+
+.inner {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background: #aaa;
+}
+
+nav {
+  width: 100%;
+  height: 40px;
+  background: #bbb;
+}
+
+.main_visual {
+  width: 100%;
+  height: 300px;
+  background: yellow;
+}
+
+.contents {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contents .contents1 {
+  width: 50%;
+  height: 150px;
+  background: #ccc;
+}
+
+.contents .contents2 {
+  width: 50%;
+  height: 150px;
+  background: #ddd;
+}
+
+.contents .contents3 {
+  width: 50%;
+  height: 150px;
+  background: #eee;
+}
+
+.contents .contents4 {
+  width: 50%;
+  height: 150px;
+  background: rebeccapurple;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background: #aaa;
+}
+
+footer .inner {
+  display: flex;
+}
+
+footer .logo {
+  width: 30%;
+  height: 80px;
+  background: lavender;
+}
+
+footer .f_right {
+  width: 70%;
+  height: 80px;
+  background: #ddd;
+}
+
+footer .f_right .fam {
+  width: 100%;
+  height: 50%;
+  background: red;
+}
+
+footer .f_right .copy {
+  width: 100%;
+  height: 50%;
+  background: lawngreen;
+}
+
+@media all and (max-width:1279px) {
+  .wrap {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .main_visual {
+    height: 400px;
+  }
+
+  .contents {
+    display: block;
+  }
+
+  .contents .contents1 {
+    height: 300px;
+    float: left;
+  }
+
+  .contents .contents2 {
+    float: left;
+  }
+
+  .contents .contents3 {
+    float: left;
+  }
+
+  .contents .contents4 {
+    display: none;
+  }
+
+  footer .f_right .fam {
+    display: none;
+  }
+
+  footer .f_right .copy {
+    width: 100%;
+    height: 100%;
+    background: lawngreen;
+  }
+}
+
+@media all and (max-width:767px) {
+  .wrap {
+    width: 100%;
+  }
+
+  .main_visual {
+    height: 300px;
+  }
+
+  .contents .contents1,
+  .contents .contents2,
+  .contents .contents3 {
+    width: 100%;
+    height: 150px;
+    float: none;
+  }
+
+  .contents .contents4 {
+    width: 100%;
+    height: 150px;
+    display: block;
+  }
+
+  footer .f_right,
+  footer .logo {
+    display: none;
+  }
+
+  footer::after {
+    content: 'footer';
+  }
+}

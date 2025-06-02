@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표만들기</title>
+    <style>
+        table,th,td {
+            border: 1px solid #ccc; /* 표의 테두리 1px 회색 실선 */
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 10px; /* 셀 테두리와 내용 사이의 간격 (패딩) */
+            width: 80px; /* 셀 너비 */
+        }
+        thead,tfoot{
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>제주 특별자치도 학교 현황</caption>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>학교수</th>
+                <th>학급수</th>
+                <th>학생수</th>
+                <th>교원수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>유치원</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>초등학교</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>중학교</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>고등학교</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th>특수학교</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th>합계</th>
+            <td>5</td>
+            <td>10</td>
+            <td>15</td>
+            <td>20</td>
+        </tfoot>
+    </table>
+</body>
+
+</html>

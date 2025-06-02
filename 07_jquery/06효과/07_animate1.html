@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        $('#box').css({
+            width: '100px',
+            height: 100,
+            background: 'red',
+        }).click(function(){
+            $(this).animate({
+                width:300,
+                opacity : 0.5,
+            },300,function(){
+                $(this).animate({
+                    'margin-left' : '200px',
+                    opacity : 1,
+                },500);
+            })/* 기본 400이지만 바꾸고 싶을 때 넣어주기, animate : 오브젝트 반드시 들어가야 하고 나머지 애들은 넣어도 되고 안넣어도 됨 */
+        });
+    </script>
+</body>
+</html>
+<!-- 바디에 스크립트 작성 시 레디펀션 안씀 -->

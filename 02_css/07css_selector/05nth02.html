@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ntn-child</title>
+    <style>
+        :root{font-size: 20px;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        nav ul li{width: 120px; height: 30px; line-height: 30px; text-align: center; border: 1px solid #ccc; float: left;}
+        nav ul li:nth-child(odd){/* 홀수 2n+1 */
+            background: chocolate; color: #fff; font-size: 0.5rem;/* 20px의 반 크기 */
+        }
+        nav ul li:nth-child(even){/* 짝수 2n */
+            background: blue;
+            font-size: 1.5rem;
+        }
+        nav ul li:nth-last-child(2):hover{
+            background: red;
+        }
+        nav ul li:first-child{background: yellow;}
+        nav ul li:last-child:hover a{background: green;}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+            <li><a href="#">메뉴6</a></li>
+            <li><a href="#">메뉴7</a></li>
+            <li><a href="#">메뉴8</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

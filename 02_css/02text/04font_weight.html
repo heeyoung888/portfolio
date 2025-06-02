@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-weight</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        body{
+            font-family: "Noto Sans KR", serif;
+            font-size: 25px;
+        }
+        /* 자주쓰는 글꼴은 바디에 지정하여 상속받게 하기 */
+        h2,b,strong{
+            font-weight: normal;
+        }
+        h2{font-size: 25px; font-weight: 100;}
+        p{font-weight: 200;}
+        em{font-weight: 300;}
+        i{font-weight: 400;}/* 보통 레귤러 */
+        strong{font-weight: 500;}
+        b{font-weight: 600;}
+        span{font-weight: 700;}
+        div{font-weight: 800;}
+        address{font-weight: 900;}
+    </style>
+</head>
+<body>
+    <!-- 블록 -->
+    <h2>font-weight 속성</h2>
+    <p>글자 굵기를 조절하는 속성</p>
+    <!-- 인라인 -->
+    <em>em 태그 : 이탤릭체 강조 / </em>
+    <i>i 태그 : 이탤릭체 / </i>
+    <strong>strong 태그 : 굵은 글씨 강조 / </strong>
+    <b>b 태그 : 굵은글씨 / </b>
+    <span>span 태그 : 인라인 묶어줄 때</span>
+
+    <div>div 태그 : 블록 묶어줄 때</div>
+    <address>주소 넣을때 - 블록</address>
+</body>
+</html>

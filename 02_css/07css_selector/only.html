@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>only</title>
+    <style>
+        /* 부모 요소 안에 자식 요소가 유일하게 하나일 때 스타일 적용 */
+        ul li:only-child{color: hotpink;}
+        /* 자신이 유일한 요소일때 스타일 적용 */
+        ul li p:only-of-type{background: red;}
+    </style>
+</head>
+<body>
+    <ul><li>내용1</li></ul>
+
+    <ul>
+        <li><p>내용1</p><span>인라인</span></li><!-- 여기서 피 타입은 하나임 -->
+        <li><p>내용1</p><span>인라인</span></li>
+        <li><p>내용1</p><span>인라인</span></li>
+        <li><p>내용1</p><span>인라인</span></li>
+        <li><p>내용1</p><span>인라인</span></li>
+    </ul>
+</body>
+</html>

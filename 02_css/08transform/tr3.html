@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .tr1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+            border: 1px solid #000;
+            transition:all 2s 3s linear;
+        } /*범위 지정(생략하면 자동 all), 몇 초 동안, 몇초 딜레이(생략가능), 가속도(linear : 가속도X, ease 기본값) */
+
+        .tr1:hover {
+            width: 200px;
+            height: 200px;
+            background: aqua;
+            border: 2px solid green;
+            border-radius: 0;
+            transform: rotate(270deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tr1"></div>
+</body>
+
+</html>

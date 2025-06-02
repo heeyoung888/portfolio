@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .wrap {
+            width: 1000px;
+            height: 1000px;
+            background: rgba(0, 255, 255, .5);
+            position: absolute;
+            left: 0;
+            top: 0;
+            /* 절대좌표 */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: hotpink;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;/* 릴레티브 뿐만 아니라 앱솔루트도 기준 가능 */
+        }
+        .box1{left: 50px; top: 50px; background: red; z-index: 3;}/* 0 기본값, 숫자(값)가 높을수록 위로 올라옴  */
+        .box2{left: 60px; top: 60px; background: green;}
+        .box3{left: 70px; top: 70px; background: yellow; z-index: 2;}
+        .box4{left: 10px; top: 10px; background: lightcoral; z-index: -1;} /* 엄마(포지션걸려있음) 밑으로 깔림 . 웬만하면 X*/
+        .box5{left: 90px; top: 90px; background: rgb(198, 39, 213); z-index: 100;}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+</body>
+
+</html>
+
+<!-- z-index안했을 경우, 리스트 맨 마지막이 가장 앞에 옴 -->

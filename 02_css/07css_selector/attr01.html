@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 선택자</title>
+    <style>
+        ul{list-style: none;}
+        li{width: 120px; display: inline-block; margin: 10px;}
+        a{padding: 5px 20px; font-size: 14px; color: blue; text-decoration: none;}
+        a[href]{background: yellow;} /* a 안넣어도 됨 속성만 작성해도 됨 스페이스 주의-자식요소 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a>메인메뉴 : </a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
+    </ul>
+</body>
+</html>

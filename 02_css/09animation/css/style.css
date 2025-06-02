@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    /* 인라인 : 세로값 안먹어서 픽스드 먹이기 */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: url(../images/background.png) center center/cover;
+    overflow: hidden;/* 기차 : 넘치는애 안보이게하고 작업하기 , 주는게 좋음*/
+}
+
+.swing {
+    /* 블록 */
+    /* background: #ccc; */
+    position: absolute;
+    left: 850px;
+    top: 150px;
+}
+
+.swing img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.swing img:nth-child(2) {
+    /* 흐름에서 나오기 때문에 배경색 사라짐? */
+    animation: swingAni 2s infinite linear;
+    transform-origin: top center;
+}
+
+@keyframes swingAni {
+    0% {
+        transform: rotate(32deg);
+    }
+
+    50% {
+        transform: rotate(-32deg);
+    }
+
+    100% {
+        transform: rotate(32deg);
+    }
+}
+
+.viking {
+    position: absolute;
+    left: 400px;
+    top: 150px;
+    /* background: #ccc; > 이미지 고정시킨 후 지우기*/
+    z-index: 100;
+}
+
+.viking img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.viking.on img:nth-child(2){
+    transform-origin: top center;
+    animation: swingAni1 7s infinite;
+}
+@keyframes swingAni1{
+    0%{
+        transform: rotate(70deg);
+    }
+    50%{
+        transform: rotate(-70deg);
+    }
+    100%{
+        transform: rotate(70deg);
+    }
+}
+.train{
+    width: 425px; height: 152px;
+    background: url(../images/train.png);
+    position: absolute;
+    top: 400px; right: -425px;
+    animation: trainAni 15s infinite linear;/*  */
+}
+@keyframes trainAni{
+    0%{right: -425%;}
+    100%{right: 100%;}
+}
+
+.seat2{
+    width: 130px; height: 130px;
+    background: url(../images/seat2.png);
+    position: absolute;
+    right: 300px; top: 650px;
+    animation: seat2 6s alternate infinite;
+}
+@keyframes seat2{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-350px);}
+}
+.machine{
+    position: absolute;
+    top: 140px;
+    right: 800px;
+    background: #ccc;
+}
+.machine img.leg{
+    position: absolute;
+    left: 135px;
+    top: 200px;
+
+}
+.machine .rotate{
+    width: 385px; height: 385px;
+    background: url(../images/wheel.png);
+    position: absolute;
+    left: 0; top: 0;
+    animation: rotateAni 20s linear infinite;
+}
+@keyframes rotateAni{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+.machine .rotate img{
+    position: absolute;
+    animation: imgAni 20s linear infinite;
+    transform-origin: top;
+}
+@keyframes imgAni{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(-360deg);}
+}
+.machine .rotate .s1{left: 155px; top:10px;}
+.machine .rotate .s2{left: 254px; top:33px;}
+.machine .rotate .s3{left: 320px; top:102px;}
+.machine .rotate .s4{left: 64px; top:35px;}
+.machine .rotate .s5{left: -4px; top:102px;}
+.machine .rotate .s6{left: -25px; top:193px;}
+.machine .rotate .s7{left: 2px; top:285px;}
+.machine .rotate .s8{left: 62px;top:347px;}
+.machine .rotate .s9{left: 162px; top:377px;}
+.machine .rotate .s10{left: 266px; top:344px;}
+.machine .rotate .s11{left: 331px; top:274px;}
+.machine .rotate .s12{left: 346px; top:193px;}
+
+/* 기차 속도가 빠름 */

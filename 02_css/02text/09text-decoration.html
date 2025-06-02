@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-decoration 속성</title>
+    <style>
+        .alink{margin: 20px;}
+        .alink a{
+            text-decoration: none;
+            color: rgb(0,0,0)
+        }
+        table{
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        /* border-collapse 두 줄을 한줄로 바꿔줌*/
+        th,td{border: 1px solid #ccc; height: 100px;}
+        /* 셀 */
+        #none{text-decoration: none;}
+        #underline{text-decoration: underline}
+        #overline{text-decoration: overline}
+        #line-through{text-decoration: line-through;}
+    </style>
+</head>
+<body>
+    <h2>text-decoration 속성</h2>
+    <p>텍스트에 밑줄을 긋거나 가로지르는 줄 표시</p>
+    <p>텍스트 링크의 밑줄을 없앨 때도 사용</p>
+    <div class="alink">
+        <a href="http://naver.com" target="_blank">네이버 바로가기</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>속성값</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>none</td>
+                <td id="none">밑줄을 표시하지 않습니다</td>
+            </tr>
+            <tr>
+                <td>underline</td>
+                <td id="underline">밑줄을 표시합니다</td>
+            </tr>
+            <tr>
+                <td>overline</td>
+                <td id="overline">영역 위로 선을 그립니다</td>
+            </tr>
+            <tr>
+                <td>line-through</td>
+                <td id="line-through">영역을 가로지르는 선(취소 선)을 그립니다</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<!-- 속성 값	설명
+none	밑줄을 표시하지 않습니다
+underline	밑줄을 표시합니다
+overline	영역 위로 선을 그립니다
+line-through	영역을 가로지르는 선(취소 선)을 그립니다 -->

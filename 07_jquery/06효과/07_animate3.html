@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            //btn1을 클릭했을때
+            //txt1 margin-left 500 font-size 30 ---2초동안 , 가속도없이(linear)
+            //끝나고나서 alert 모션완료
+            $('.btn1').click(function(){
+                $('.txt1').animate({marginLeft : 500, fontSize:30},2000,'linear',function(){alert('모션완료')})
+            });
+            $('.btn2').click(function(){
+                $('.txt2').animate({
+                    marginLeft : '+=50'
+                },500)
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><button class="btn1">버튼1</button></p>
+    <span class="txt1">500px 이동</span>
+    <p><button class="btn2">버튼2</button></p>
+    <span class="txt2">50px씩 이동</span>
+</body>
+</html>

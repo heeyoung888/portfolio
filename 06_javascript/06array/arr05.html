@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+
+<body>
+    <script>
+        let arr = [];
+        //for문 입력 ['송중기1'~'송중기5']
+        //arr[0] = '송중기1'
+        //arr[1] = '송중기2'
+        //arr[2] = '송중기3'
+        //arr[3] = '송중기4'
+        //arr[4] = '송중기5'
+        for (let i = 0; i < 5; i++) {
+            arr[i] = `송중기${i + 1}`;
+        }
+
+
+        //print() 함수만드셔서 콘솔로
+        //배열데이터[0] : 송중기1 
+        let print = () => {
+            for(let i in arr) {
+                console.log(`배열데이터[${i}] : ${arr[i]}`);
+            }
+        }
+
+        print();
+
+    </script>
+</body>
+
+</html>

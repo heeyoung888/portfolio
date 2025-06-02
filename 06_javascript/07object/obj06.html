@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수</title><!-- 객체 생성 -->
+</head>
+<body>
+    <p>[Hong's Car]</p>
+    <p id="carname"></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+    <p>[Kim's Car]</p>
+    <p id="carname2"></p>
+    <p id="carcolor2"></p>
+    <p id="carspeed2"></p>
+
+    <script>//생성자 함수 : 앞을 대문자
+        function Car(name,color,speed){
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.speedUp = function(){
+                return this.speed + 10;
+            }
+            this.speedDown = function(){
+                return this.speed - 10;
+            }
+        }
+        let hongCar = new Car('Sonata','blue',100);/* 새로운 객체 생성 */
+        document.getElementById('carname').textContent = '자동차 이름 : ' + hongCar.name;
+        document.getElementById('carcolor').textContent = '자동차 색상 : ' + hongCar.color;
+        document.getElementById('carspeed').textContent = '자동차 속도 : ' + hongCar.speedUp();
+
+        let kimCar = new Car('Jeep','red',70);
+        document.getElementById('carname2').textContent = '자동차 이름 : ' + kimCar.name;
+        document.getElementById('carcolor2').textContent = '자동차 색상 : ' + kimCar.color;
+        document.getElementById('carspeed2').textContent = '자동차 속도 : ' + kimCar.speedDown();
+    </script>
+</body>
+</html>

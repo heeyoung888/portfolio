@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .modal{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.5);
+            left: 0; top: 0;
+        }
+        .modal .modal_inner{
+            width: 500px; height: 500px; background: #fff;
+            position: absolute; /* 기준점 모달 */
+            /* left: 50%; top: 50%;
+            /* margin-left: -250px; margin-top: -250px; */
+            /* transform: translate(-50%,-50%); */ 
+            /*position: absolute; 세트 외우기  */
+            top: 0; left: 50%; transform: translate(-50%);/* 가운데 정렬 */
+        }
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal_inner">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae optio quis laudantium perferendis voluptates? Perferendis temporibus adipisci eligendi iusto aut numquam a voluptatibus eaque accusamus ullam, hic tempora, laboriosam officiis.
+        </div><!-- //.modal_inner -->
+    </div><!-- //.modal -->
+
+    <header><a href="#">logo</a></header>
+</body>
+</html>

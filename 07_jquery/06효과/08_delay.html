@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.txt1').animate({marginLeft:300},1000);
+            $('.txt2').delay(3000).animate({marginLeft:300},1000);
+            $('.btn1').click(moveElement);
+            function moveElement(){
+                $('.txt3').animate({marginLeft:'+=50px'},500);
+                $('.txt4').animate({marginLeft:'+=50px'},500).stop();
+                $('.txt5').animate({marginLeft:'+=50px'},500).stop(true,true);
+            }
+        });
+    </script>
+</head>
+<body>
+    <p class="txt1">효과1</p>
+    <p class="txt2">효과2<br>delay(3000)</p>
+    <p><button class="btn1">50px 전진</button></p>
+    <p class="txt3">효과3</p>
+    <p class="txt4">효과4<br>stop()</p>
+    <p class="txt5">효과5<br>stop(true,true)</p>
+</body>
+</html>

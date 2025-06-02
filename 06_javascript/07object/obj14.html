@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체</title>
+</head>
+<body>
+   <script>
+    let str = 'Javascript';
+    console.log(str.charAt(3));/* 3번째 글짜 */
+    console.log(str.indexOf('a'));/* 처음으로 발견되는 인덱스 */
+    console.log(str.indexOf('k')); // -1 없다는 것
+    console.log(str.lastIndexOf('a'));
+    console.log(str.includes('script'));
+    console.log(str.includes('aaa'));
+
+    str = 'http//naver.com';
+    console.log(str.substring(0,4));//0에서 4번인덱스까지인데 4번 전까지! // start인덱스, end인덱스 이전까지
+    console.log(str.substr(6,5)) //start인덱스, count(개수) : 카운트 개수 안넣으면 끝까지
+    //splice, slice와 동일
+
+    str = ' removeblank';
+    console.log(str.trim());//trim : 띄어쓰기 없앰
+    str = 'LowerCase';
+    console.log(str.toLowerCase());//toLowerCase : 대문자에서 소문자로 바꿔줌
+    console.log(str.toUpperCase());//toUpperCase : 소문자에서 대문자로 바꿔줌
+   </script> 
+</body>
+</html>

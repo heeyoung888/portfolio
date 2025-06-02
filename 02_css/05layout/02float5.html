@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{color: inherit; text-decoration: none;}
+
+        .wrap{width: 1000px; margin: 0 auto;}
+        .header{width: 100%; height: 200px; background: green;}  /* 부모가 height값을 가지고 있으면 float을 사용해도 잘 구조가 잡힘, 하지만 대부분 부모요소에 height값 적용 안함 */
+        .header h1{float: left; width: 200px; height: 94px; background: #ccc; margin-top: 50px;}
+        .header .nav{float: right; width: 60%; background: lavender; padding-top: 50px;}
+        .header .nav ul{width: 100%; height: 94px; line-height: 94px;}
+        .header .nav ul li{
+            float: left;
+            width: 25%; height: 100%;
+            background: yellowgreen;
+        }
+       
+        .header,
+        .con1,
+        .aside,
+        .footer{
+            border: 3px solid #333;
+            box-sizing: border-box; /*  */
+            font-size: 30px;
+            text-align: center;
+        }
+        .contents{
+            width: 100%;
+            background: lightcoral;
+            /* overflow: hidden; */
+        }/* 부모 */
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .contents .con1{width: 300px; height: 500px;
+        background: lawngreen; float: left;}
+        .contents .aside{width: 690px; height: 600px;
+        background:  hotpink; float: right;}
+        .footer{background: #ccc;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1><a href="#">로고</a></h1>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                </ul>
+            </div><!-- //.nav (닫음표시)-->
+        </div><!-- //.header -->
+        <div class="contents clearfix"> <!--clearfix 복붙하여 사용하면 float사용하지 않아도 깨지지 않음  -->
+            <div class="con1">con1</div>
+            <div class="aside">aside</div>
+        </div><!-- //.contents -->
+        <div class="footer">footer
+            
+        </div><!-- //.footer -->
+    </div><!-- //.wrap -->
+</body>
+</html>

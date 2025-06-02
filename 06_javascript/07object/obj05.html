@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자 함수를 이용하는 방법</title>
+</head>
+<body>
+    <p id="carname"></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+
+    <script>
+        let car = new Object(); //객체 생성
+        car.name = 'Sonata'; //속성 정의
+        car.speed = 100;
+        car.color = 'red';
+        car.speedUp = function(){ //메소드 정의
+            return this.speed + 10;
+        }
+
+        let carname = document.getElementById('carname');
+        let carcolor = document.getElementById('carcolor');
+        let carspeed = document.getElementById('carspeed');
+
+        carname.textContent = `자동차 이름 : ${car.name}`;
+        //carcolor -> 자동차 색상 : blue
+        car.color = 'blue';
+        carcolor.innerHTML = `자동차 색상 : <b>${car.color}</b>`;
+        //carspeed -> 자동차 속도 : 110
+        carspeed.textContent = '자동차 속도 :' + car.speedUp();
+    </script>
+</body>
+</html>

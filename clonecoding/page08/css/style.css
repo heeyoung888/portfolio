@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* px유지가능, 패딩 탑을 넣어도 깨지지 않음 */
+    /*  */
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.inner{
+    width: 1180px; margin: 0 auto;
+}
+
+/* header */
+header{
+    width: 100%; border-bottom: 1px solid #ddd; /* 121px */
+}
+
+header .inner{height: 120px; position: relative;} /* relative: 흐름 유지하면서 기준 잡기 */
+header .inner h1{
+    position: absolute; /* 흐름에서 빠져나옴:자식에게 float을 걸어도 클리어 픽스 안해도 됨 */
+    left: 0; bottom: 15px;
+}
+header .inner h1 a{
+    font: bold 24px/1/* line height 24 */ 'arial';
+    color: #444;
+}
+header .inner nav{
+    position: absolute;
+    right: 0; bottom: 0;
+}
+header .inner nav ul#gnb li{
+    float: left;
+}
+header .inner nav ul#gnb li a{
+    display: block;
+    font: bold 15px/1 'arial';
+    color: #555;
+    padding: 20px 40px;
+}
+header .inner nav ul#gnb li a:hover{
+    background: #555;
+    color: #fff;
+}
+header .inner ul.utill{
+    position: absolute;
+    right: 30px; top: 20px;
+}/* ul자체가utill 그래서 띄어쓰기 하지 않기 띄어쓰기 하면 자식임 */
+
+header .inner ul.utill li{
+    float: left;
+}
+header .inner ul.utill li a{
+    color: #999; display: block; font: 12px/1 'arial';
+    padding: 0 10px;
+}
+
+/* figure */
+figure{
+    width: 100%; 
+    height: calc(100vh - 121px);
+    background: #000;
+    position: relative;
+    padding-top: 250px;
+}
+figure video{
+    position: absolute;
+    width: 100%; height: 100%;
+    opacity: 0.3; left: 0; top: 0; object-fit: cover;
+}
+figure .inner{
+    position: relative; /* 흐름과 z-index 값을 유지하기 위해 */
+}
+figure .inner h2{
+    font: normal 120px/1 'arial';
+    color: #fff;
+    margin-bottom: 20px;
+    }
+figure .inner p{
+    font: 16px/1.4 'arial';
+    color: #888;
+    margin-bottom: 60px;
+}
+figure .inner a{
+    display: block;
+    width: 400px;
+    height: 30px;
+    border: 1px solid #bbb;
+    color: #fff;
+    text-align: center;/* 가로가운데 정렬 */
+    font: bold 11px/28px 'arial';
+    transition: .5s;
+}
+figure .inner a:hover{
+    background: #fff;
+    color: #555;
+}
+
+/* section */
+section{/* 부모에게 세로값안주는게 좋음 */
+    width: 100%;
+    padding: 200px 0;
+}
+section h2{
+    font: bold 24px/1 'arial';
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+section .wrap{width: 100%;}
+section .wrap::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section .wrap article{
+    width: 280px; 
+    float: left;
+    margin-right: 20px;
+}
+section .wrap article:last-child{
+    margin-right: 0;
+}
+section .wrap article .pic{/* 이미지의 엄마 */
+    width: 100%; height: 120px;
+    overflow: hidden;
+}
+section .wrap article .pic img{
+    width: 100%; height: 100%;
+    object-fit: cover; /* pic프레임 안에 이미지를 꽉 채움(사이즈에 맞춰서) */
+    transition: .6s;
+}
+section .wrap article:hover .pic img{
+    transform: scale(1.2);
+}
+section .wrap article h3{
+    margin-bottom: 10px;
+}
+section .wrap article h3 a{
+    font: bold 16px/1 'arial';
+    color: #555;
+}
+section .wrap article p{
+    font: 14px/1.4 'arial';
+    color: #777;
+}
+
+/* footer */
+footer{
+    width: 100%; 
+    padding: 100px 0;
+    border-top: 1px solid #888;
+    background: #333;
+}
+footer .upper{
+    width: 100%;
+    border-bottom: 1px solid #777;
+    padding-bottom: 20px;
+}
+footer .upper::after{/* 위 어퍼가 플롯없어서 얘한테 먹임 */
+    content: '';
+    display: block;
+    clear: both;
+}
+footer .upper .logo{
+    float: left;
+    font: bold 24px/1 'arial';
+    color: #666;
+}
+footer .upper ul{
+    float: right; /* 부모 플롯먹고있음 */
+}
+footer .upper ul li{
+    float: left;
+    margin-left: 20px;
+}
+footer .upper ul li a{
+    font: bold 14px/1 'arial';
+    color: #666;
+}
+
+footer .lower{
+    padding-top: 20px;
+    width: 100%; /* 블록이라 안줘도 먹긴함 */
+}
+footer .lower address{
+    width: 100%;
+    font: 12px/1.3 'arial';
+    color: #777; 
+    margin-bottom: 20px;
+}
+footer .lower p{
+    font: 12px/1 'arial';
+    color: #777;
+}
+
+/* 
+float : 나 자신을 움직이기 위해 사용
+flex : 내가 아닌 자식을 배치하기 위해 사용 
+*/

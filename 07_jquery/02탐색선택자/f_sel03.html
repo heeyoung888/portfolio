@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인덱스 탐색 선택자</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+            $('ul#menu li').eq(2).css('background','red');
+            $('ul#menu li:lt(2)').css('background','blue'); //~인덱스번호보다 작은 애들
+            $('ul#menu li:gt(2)').css('background','yellow');//인덱스번호보다 큰 애들
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul id="menu">
+        <li>내용1</li><!-- 0 -->
+        <li>내용2</li><!-- 1 -->
+        <li>내용3</li><!-- 2 -->
+        <li>내용4</li><!-- 3 -->
+        <li>내용5</li><!-- 4 -->
+    </ul>
+</body>
+</html>
+<!-- .eq : 인덱스 번호 탐색기
+&lt;< 
+&gt;> 
+-->

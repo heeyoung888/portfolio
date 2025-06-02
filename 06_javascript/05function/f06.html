@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반환값</title>
+</head>
+<body>
+    <script>
+        let result;
+        function add(name,n){
+            document.write(`${name}학생이 1부터 ${n}까지 덧셈 수행`);
+            let sum = 0;
+            for(let i=1; i<=n; i++){
+                sum +=i ;
+            }
+            return sum;/* 내보내기 */
+        }
+        result = add('신세경',50);
+        document.write('결과 : ' + result+'<br>');
+        document.write('결과 : ' + add('강호동',100)+'<br>');
+    </script>
+</body>
+</html>

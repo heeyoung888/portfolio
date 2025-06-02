@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* layout */
+/* 왜 100vh? > 모든 기기 적합? > 스크롤부분까지 계산됨 !
+100% > 부모에게 받아옴*/
+.wrap{
+    width: 100%;
+    height: 100vh;
+    background: red;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    width: 100%;
+    /* height: calc(100vh - 120px); */
+    background: #ccc;
+    flex: 1;
+    display: flex;
+}
+
+main header{
+    width: 200px;
+    height: 100%;
+    background: lightblue;
+}
+
+main .contents{
+    width: 400px;
+    height: 100%;
+    background: lightcoral;
+}
+
+main .main_visual{
+    flex: 1;
+    /* width: calc(100% - 200px - 400px); */
+    height: 100%;
+    background: lightcyan;
+}
+
+footer{
+    width: 100%;
+    height: 120px;
+    background: #ddd;
+    display: flex;
+}
+
+footer .logo {
+    width: 200px;
+    height: 100%;
+    background: lavender;
+}
+
+footer .f_right {
+    flex: 1;
+    height: 100%;
+    background: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .f_right .f_menu {
+    width: 100%;
+    height: 40px;
+    background: lightgreen;
+    padding-left: 20px;
+}
+
+footer .f_right .f_menu ul {
+    display: flex;
+    align-items: center;
+    /* 교차축 정렬 */
+    height: 100%;
+    /* 정렬의 기준점 */
+}
+
+footer .f_right .f_menu ul li {
+    padding: 0 10px;
+    border-left: 1px solid #000;
+    line-height: 1; 
+}
+
+footer .f_right .f_menu ul li:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+footer .f_right .f_menu ul li a {}
+
+footer .f_right .f_copy {
+    width: 100%;
+    flex: 1;
+    background: red;
+    padding-left: 20px;
+}
+
+/* flex : 엄마한테 줌 
+교차축 정렬 align*/
+
+/* section:주제가 있을 때
+div : 의미가 없음 */

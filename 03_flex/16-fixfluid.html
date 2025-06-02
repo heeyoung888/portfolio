@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container{display: flex;}/* 위로 올라감 */
+        .flex-item:nth-child(1){
+            width: 150px;
+            flex-shrink: 0;/* 가운데만 줄어들게 됨 */
+        }
+        .flex-item:nth-child(2){
+            flex-grow: 1;/* 마지막에(3번째) 작성: 다 가져가게 함 */
+        }
+        .flex-item:nth-child(3){
+            width: 200px;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, accusamus!</div>
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, accusamus!</div>
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, accusamus!</div>
+    </div>
+</body>
+</html>
