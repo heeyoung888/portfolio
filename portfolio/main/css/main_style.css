@@ -84,6 +84,7 @@ main_visual
   top: 300px;
 }
 
+
 /* hamburger */
 
 .hamburger {
@@ -176,13 +177,13 @@ main_visual
 Profile Section Layout 
 ============================= */
 .profile {
-  height: 2100px;
-  background-image: url(../img/bg3.png);
-  background-size: 1730px 2100px;
+  /* height: 2100px; */
+  background-image: url(../img/bg2.png);
+  background-size: 2200px 2000px;;
 }
 
 .profile .inner {
-  height: 2000px;
+  height: 1900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,7 +228,9 @@ Profile Section Layout
 }
 
 /* 위치 조정 */
-.profile .inner ul li:nth-child(1) {}
+.profile .inner ul li:nth-child(1) {
+  
+}
 
 .profile .inner ul li:nth-child(2) {
   left: 850px;
@@ -384,7 +387,7 @@ Profile Section Layout
 .project .inner .con ul li:nth-child(2) {
   position: absolute;
   top: 150px;
-  right: -50px;
+  right: 50px;
 }
 
 .project .inner .con ul li:nth-child(2) img:nth-of-type(2) {
@@ -412,19 +415,14 @@ Profile Section Layout
 
 .project .inner .con ul li:nth-child(4) img:nth-of-type(2) {
   position: absolute;
-  left: -400px;
-  bottom: -50px;
+  left: -500px;
+  bottom: -150px;
 }
 
 .project .inner .con ul li:nth-child(5) {
   position: absolute;
   left: 100px;
   top: 1700px;
-}
-.project .inner .con ul li:nth-child(6){
-  position: absolute;
-  left: 900px;
-  top: 2200px;
 }
 
 /* TEXT SPAN POSITIONING */
@@ -436,10 +434,9 @@ Profile Section Layout
 
 /* .project .inner .con ul li:nth-child(1) span { top: 0px; } */
 .project .inner .con ul li:nth-child(2) span { top: 100px; }
-.project .inner .con ul li:nth-child(3) span { top: 80px; }
+.project .inner .con ul li:nth-child(3) span { top: 20px; }
 .project .inner .con ul li:nth-child(4) span { top: 80px; left: 40px; }
 .project .inner .con ul li:nth-child(5) span { top: 50px; }
-.project .inner .con ul li:nth-child(6) span { top: 50px; }
 
 /* TEXT BOX STYLING */
 .project .inner .con ul li .text_box {
@@ -462,11 +459,10 @@ Profile Section Layout
 }
 
 .project .inner .con ul li:nth-child(1) p { left: 100px; bottom: 160px; }
-.project .inner .con ul li:nth-child(2) p { left: 70px; bottom: 220px; }
-.project .inner .con ul li:nth-child(3) p { left: 400px; bottom: 440px; }
-.project .inner .con ul li:nth-child(4) p { left: 200px; bottom: 300px; }
+.project .inner .con ul li:nth-child(2) p { left: 70px; bottom: 200px; }
+.project .inner .con ul li:nth-child(3) p { left: 400px; bottom: 350px; }
+.project .inner .con ul li:nth-child(4) p { left: 300px; bottom: 150px; }
 .project .inner .con ul li:nth-child(5) p { left: 100px; bottom: 200px; }
-.project .inner .con ul li:nth-child(6) p { left: 250px; bottom: 250px; }
 
 /* ANIMATIONS */
 .wiggle:hover {
@@ -593,8 +589,14 @@ Profile Section Layout
 /* =============================
 contact - Section Layout 
 ============================= */
+
+.contact.shrink {
+  height: 1000px; /* 원하는 초기 축소 높이 */
+  overflow: hidden;
+}
+
 .contact {
-  height: 1800px;
+  height: 1850px;
   background-image: url(../img/bg3.png);
   background-size: 1730px 1900px;
   overflow: hidden;
@@ -613,7 +615,7 @@ contact - Section Layout
   height: 2200px;
 }
 .contact .inner .con h2{
-  padding-top: 200px;
+  padding-top: 150px;
 }
 
 
@@ -709,8 +711,8 @@ contact - Section Layout
 }
 .contact .inner .con ul li:nth-child(5) .txt_box{
   position: absolute;
-  left: 800px;
-  top: 170px;
+  left: 1100px;
+  top: 50px;
   animation: nod 1.2s infinite ease-in-out;
   transform-origin: center bottom;
 }
@@ -725,11 +727,12 @@ contact - Section Layout
 .contact .inner .con ul li:nth-child(5) .txt_box span{
   font-size: 50px;
   font-family: var(--main-font-family);
+  color: #bd1d14;
 }
 .contact .inner .con ul li:nth-child(5) img {
   position: absolute;
   left: 50%;
-  top: 250px;
+  top: 120px;
   margin-left: -350px;
   z-index: 1000;
   width: 700px;
@@ -792,6 +795,7 @@ contact - Section Layout
   left: 50px;
   top: 1150px;
 }
+
 
 /* contact - GIF Frame Styling */
 .gif-frame {

@@ -333,6 +333,9 @@ skillsItems.forEach((item) => {
 
 
 // === CONTACT 인터랙션 ===
+const contactSection = document.querySelector('.contact');  // 👈 반드시 필요
+contactSection.classList.add('shrink');
+
 const listItems = document.querySelectorAll('.contact .con ul li');
 const parentUl = document.querySelector('.contact .con ul');
 const triggerItem = listItems[4]; // 5번째 li (index 4)
@@ -383,6 +386,7 @@ triggerItem.addEventListener('click', () => {
       li.style.setProperty('--delay', `${delay}ms`);
     });
 
+    contactSection.classList.remove('shrink');
     parentUl.classList.add('active');
   }, 150);
 });
