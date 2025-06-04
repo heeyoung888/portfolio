@@ -27,7 +27,7 @@ main_visual
 ============================= */
 
 .main_visual {
-  height: 1100px;
+  height: 1000px;
   background-color: #F2E4CB;
   position: relative;
 }
@@ -36,7 +36,7 @@ main_visual
   position: absolute;
   font-size: 350px;
   left: 50%;
-  bottom: 190px;
+  bottom: 100px;
   margin-left: -470px;
   color: var(--fontcolor);
 }
@@ -45,14 +45,14 @@ main_visual
   position: absolute;
   font-size: 130px;
   left: 50%;
-  bottom: 160px;
+  bottom: 80px;
   margin-left: -269px;
   color: var(--fontcolor2);
 }
 .main_visual .face_img {
   position: absolute;
   left: 38%;
-  bottom: 30%;
+  bottom: 25%;
 }
 
 .main_visual nav {
@@ -177,13 +177,13 @@ main_visual
 Profile Section Layout 
 ============================= */
 .profile {
-  /* height: 2100px; */
-  background-image: url(../img/bg2.png);
-  background-size: 2200px 2000px;;
+  height: 2000px;
+  background-image: url(../img/bg1.png);
+  background-size: 100% 100%;
 }
 
 .profile .inner {
-  height: 1900px;
+  height: 1800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -346,12 +346,13 @@ Profile Section Layout
    PROJECT SECTION LAYOUT
 ============================= */
 .project {
-  height: 3600px;
+  height: 3300px;
   background: linear-gradient(#F2E4CB,#E8E5E0 50%,#F2E4CB);
 }
 
 .project .inner {
-  height: 3400px;
+  padding-top: 100px;
+  height: 3200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -397,20 +398,20 @@ Profile Section Layout
 
 .project .inner .con ul li:nth-child(3) {
   position: absolute;
-  top: 800px;
+  top: 950px;
   left: 50px;
 }
 
 .project .inner .con ul li:nth-child(3) img:nth-of-type(2) {
   position: absolute;
   left: 400px;
-  top: -100px;
+  top: -200px;
 }
 
 .project .inner .con ul li:nth-child(4) {
   position: absolute;
-  left: 900px;
-  top: 1300px;
+  left: 1000px;
+  top: 1400px;
 }
 
 .project .inner .con ul li:nth-child(4) img:nth-of-type(2) {
@@ -422,7 +423,7 @@ Profile Section Layout
 .project .inner .con ul li:nth-child(5) {
   position: absolute;
   left: 100px;
-  top: 1700px;
+  top: 1850px;
 }
 
 /* TEXT SPAN POSITIONING */
@@ -597,7 +598,7 @@ contact - Section Layout
 
 .contact {
   height: 1850px;
-  background-image: url(../img/bg3.png);
+  background-image: url(../img/bg1.png);
   background-size: 1730px 1900px;
   overflow: hidden;
 }
