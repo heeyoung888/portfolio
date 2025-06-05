@@ -120,6 +120,7 @@ main_visual
   display: none;
   flex-direction: column;
   padding: 10px 20px;
+  font-family: var(--main-font-family);
 }
 
 .dropdown-menu.active {
@@ -391,11 +392,6 @@ Profile Section Layout
   right: 50px;
 }
 
-.project .inner .con ul li:nth-child(2) img:nth-of-type(2) {
-  position: absolute;
-  right: 100px;
-}
-
 .project .inner .con ul li:nth-child(3) {
   position: absolute;
   top: 950px;
@@ -477,14 +473,6 @@ Profile Section Layout
   25% { transform: rotate(5deg); }
   50% { transform: rotate(-5deg); }
   75% { transform: rotate(5deg); }
-}
-
-.project .inner .con ul li:nth-child(2):hover .blink {
-  animation: blinkFade 1s infinite ease-in-out;
-}
-@keyframes blinkFade {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
 }
 
 .project .inner .con ul li:nth-child(3):hover .bounce {
