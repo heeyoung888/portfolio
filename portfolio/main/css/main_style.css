@@ -381,9 +381,13 @@ Profile Section Layout
 }
 
 /* PROJECT LIST ITEM POSITIONS */
+.project .inner .con ul li:nth-child(1){
+  
+}
 .project .inner .con ul li:nth-child(1) img:nth-of-type(2) {
   position: absolute;
   left: 50px;
+  bottom: 150px;
 }
 
 .project .inner .con ul li:nth-child(2) {
