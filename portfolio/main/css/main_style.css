@@ -425,6 +425,9 @@ Profile Section Layout
   left: 100px;
   top: 1850px;
 }
+.project .inner .con ul li:nth-child(5):hover{
+  transform: scale(1.05);
+}
 
 /* TEXT SPAN POSITIONING */
 .project .inner .con ul li span {
