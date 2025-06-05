@@ -186,6 +186,7 @@ header .container nav ul.gnb li::after {/* 글자색도 바꾸기 */
     font-weight: 700;
     padding-bottom: 100px;
 }
+
 .best .container ul {
     display: flex;
     position: relative;
