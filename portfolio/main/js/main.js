@@ -73,41 +73,46 @@ document.querySelectorAll('.dropdown-menu a').forEach(link => {
 
   // === 프로필 타이핑 ===
 
+
+// 타이핑으로 등장할 '한글' 텍스트만!
 const texts = [
   "꾸준함, 자기반성적",
   "명확, 명료(포인트)"
 ];
 
-function startTyping() {
-  const typingElements = [
-    document.getElementById('typing1'),
-    document.getElementById('typing3')
-  ];
+const typingElements = [
+  document.getElementById('typing1'),
+  document.getElementById('typing3')
+];
 
-  if (!typingElements[0] || !typingElements[1]) {
-    // 요소가 아직 안 만들어졌으면 재시도
-    setTimeout(startTyping, 100);
-    return;
-  }
+let isTyping = false;
+
+function startTyping() {
+  if (isTyping) return;
+  isTyping = true;
 
   let lineIndex = 0;
   let charIndex = 0;
 
   function typeLine() {
-    if (lineIndex >= texts.length) return;
+    if (lineIndex >= texts.length) {
+      isTyping = false;
+      return;
+    }
 
     const currentLine = texts[lineIndex];
     const currentElement = typingElements[lineIndex];
 
-    const typingInterval = setInterval(() => {
+    const typingInter = setInterval(() => {
       if (charIndex < currentLine.length) {
-        currentElement.textContent += currentLine[charIndex];
+        const char = currentLine[charIndex];
+        currentElement.insertAdjacentText('beforeend', char);
         charIndex++;
       } else {
-        clearInterval(typingInterval);
+        clearInterval(typingInter);
         lineIndex++;
         charIndex = 0;
-        setTimeout(typeLine, 500);
+        setTimeout(typeLine, 500); // 다음 줄 타이핑 시작
       }
     }, 65);
   }
@@ -115,21 +120,16 @@ function startTyping() {
   typeLine();
 }
 
-// 화면에 등장할 때 실행
-const observer1 = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      startTyping();
-      observer1.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.4 });
+  const observer1 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startTyping();
+        observer1.unobserve(entry.target); 
+      }
+    });
+  }, { threshold: 0.4 });
 
-const profileSection = document.querySelector('.profile');
-if (profileSection) {
-  observer1.observe(profileSection);
-}
-
+  observer1.observe(document.querySelector('.profile'));
 
   gsap.registerPlugin(ScrollTrigger);
 

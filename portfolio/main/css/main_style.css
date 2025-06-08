@@ -60,7 +60,7 @@ main_visual
 .main_visual .face_img {
   position: absolute;
   left: 52%;
-  top: 30vh;
+  top: 20vh;
   transform: translateX(-50%);
 }
 
@@ -207,8 +207,8 @@ Profile Section Layout
 .profile {
   position: relative;
   height: auto;
-  min-height: 1800px; /* 필요한 만큼 충분히 크게 설정 */
-   padding: 30vh 0 10vh; /* 위 아래 여백 확보 */
+  max-height: 2000px; /* 필요한 만큼 충분히 크게 설정 */
+  padding: 20vh 0 10vh; /* 위 아래 여백 확보 */
   background-image: url(../img/bg1.png);
   background-size: auto 100%;  /* 세로는 100%로, 가로는 자동 비율 */
   background-position: top center;
@@ -216,7 +216,7 @@ Profile Section Layout
 }
 
 .profile .inner {
-  max-width: 1500px;
+  max-width: 1800px;
   width: 100%;
   margin: 0 auto;
   padding: 0 5vw;
@@ -225,7 +225,7 @@ Profile Section Layout
 
 .profile .inner .con {
   position: relative;
-  min-height: 1300px;  /* 자식 요소들이 안 밀리게 */
+  min-height: 1500px;  /* 자식 요소들이 안 밀리게 */
   overflow: visible;
 }
 
@@ -251,7 +251,6 @@ Profile Section Layout
 /* Profile Items Layout */
 .profile .inner ul {
   position: relative;
-  /* margin-top: 5vh; */
   /* height: 1100px; */
 }
 
@@ -267,7 +266,7 @@ Profile Section Layout
 
 .profile .inner ul li:nth-child(1) img{
   width: 60vw;
-  max-width: 1000px;
+  max-width: 800px;
 }
 .profile .inner ul li:nth-child(2) {
   left: 48%;
@@ -301,7 +300,7 @@ Profile Section Layout
 
 .profile .inner ul li:nth-child(5) {
   left: 75%;
-  top: -150px;
+  top: -180px;
   transform: translateX(-50%);
 }
 .profile .inner ul li:nth-child(5) img {
@@ -402,128 +401,180 @@ Profile Section Layout
    PROJECT SECTION LAYOUT
 ============================= */
 .project {
-  height: 3300px;
-  background: linear-gradient(#F2E4CB,#E8E5E0 50%,#F2E4CB);
+  min-height: 3300px;
+  background: linear-gradient(#F2E4CB, #E8E5E0 50%, #F2E4CB);
+  padding-top: 10vh;
 }
 
 .project .inner {
-  padding-top: 100px;
-  height: 3200px;
+  height: auto;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .project .inner .con {
+  position: relative;
   width: 100%;
-  height: 3000px;
+  min-height: 3000px;
 }
 
 .project .inner .con h2 {
-  padding-bottom: 200px;
+  padding-bottom: 10vh;
+  font-size: clamp(60px, 8vw, 150px);
 }
 
 .project .inner .con ul {
   font-family: "Inter", sans-serif;
   font-style: italic;
-  font-size: 50px;
+  font-size: clamp(24px, 3.5vw, 50px);
   position: relative;
 }
 
+/* 각각 li 위치 퍼센트 기반 */
 .project .inner .con ul li {
-  padding-left: 30px;
+  position: absolute;
+  padding-left: 2vw;
 }
 
-/* PROJECT LIST ITEM POSITIONS */
-.project .inner .con ul li:nth-child(1){
-  
+/* === 위치 기반 === */
+.project .inner .con ul li:nth-child(1) {
+  position: absolute;
+  top: 5vh;
 }
 .project .inner .con ul li:nth-child(1) img:nth-of-type(2) {
-  position: absolute;
-  left: 50px;
-  bottom: 150px;
+  left: 3vw;
+  bottom: 12vh;
 }
 
 .project .inner .con ul li:nth-child(2) {
   position: absolute;
-  top: 150px;
-  right: 50px;
+  top: 40vh;
+  left: 45vw;
 }
-
 .project .inner .con ul li:nth-child(3) {
   position: absolute;
-  top: 950px;
-  left: 50px;
+  top: 120vh;
+  left: -3vw;
 }
-
 .project .inner .con ul li:nth-child(3) img:nth-of-type(2) {
   position: absolute;
-  left: 400px;
-  top: -200px;
+  left: 20vw;
+  top: -20vh;
+  max-width: 500px;
 }
 
 .project .inner .con ul li:nth-child(4) {
   position: absolute;
-  left: 1000px;
-  top: 1400px;
+  top: 180vh;
+  left: 50vw;
 }
-
 .project .inner .con ul li:nth-child(4) img:nth-of-type(2) {
-  position: absolute;
-  left: -500px;
-  bottom: -150px;
+   position: absolute;
+  left: -18vw;
+  bottom: -5vh;
+  width: 100vw;
+  max-width: 1000px;
+  height: auto;
 }
 
 .project .inner .con ul li:nth-child(5) {
   position: absolute;
-  left: 100px;
-  top: 1850px;
-}
-.project .inner .con ul li:nth-child(5):hover{
-  transform: scale(1.05);
+  top: 220vh;
+  left: 5vw;
 }
 
-/* TEXT SPAN POSITIONING */
-.project .inner .con ul li span {
-  text-decoration: underline;
+/* hover */
+.project-item {
+  position: relative;
+  display: block;
+}
+
+.img-wrap {
+  position: relative;
+  display: block;
+}
+
+.overlay {
   position: absolute;
-  left: 100px;
-}
-
-/* .project .inner .con ul li:nth-child(1) span { top: 0px; } */
-.project .inner .con ul li:nth-child(2) span { top: 100px; }
-.project .inner .con ul li:nth-child(3) span { top: 20px; }
-.project .inner .con ul li:nth-child(4) span { top: 80px; left: 40px; }
-.project .inner .con ul li:nth-child(5) span { top: 50px; }
-
-/* TEXT BOX STYLING */
-.project .inner .con ul li .text_box {
-  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+.overlay .btn {
+  background-color: transparent;                     /* 기본 배경 없음 */
+  color: #fff;                                       /* 기본 글씨 흰색 */
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.8);         /* 기본 흰 테두리 */
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--main-font-family);
+  transition: all 0.3s ease;
+  box-shadow: none;
 }
 
+.overlay .btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);         /* 배경 70% 밝기 */
+  color: #111;                                       /* 글씨색: 검정 */                              /* 테두리색: 검정 */
+  /* transform 제거해서 떠오르지 않게 함 */
+}
+
+.project-item:hover img {
+  filter: brightness(50%) blur(1px);
+}
+.project-item:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
+  
+}
+/* 텍스트 말풍선 위치 */
+.project .inner .con ul li .text_box{
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 왼쪽 정렬 */
+  position: relative;
+}
 .project .inner .con ul li p {
-  text-align: center;
   font-family: var(--main-font-family);
-  font-size: 70px;
+  font-size: clamp(28px, 4vw, 70px);
   color: #fff;
   position: relative;
   background-color: #EB5B25;
-  padding: 10px 20px;
+  padding: 1vh 2vw;
   border-radius: 30px;
   display: inline-block;
+
 }
 
-.project .inner .con ul li:nth-child(1) p { left: 100px; bottom: 160px; }
-.project .inner .con ul li:nth-child(2) p { left: 70px; bottom: 200px; }
-.project .inner .con ul li:nth-child(3) p { left: 400px; bottom: 350px; }
-.project .inner .con ul li:nth-child(4) p { left: 300px; bottom: 150px; }
-.project .inner .con ul li:nth-child(5) p { left: 100px; bottom: 200px; }
+.project .inner .con ul li:nth-child(1) p { left: 5vw; bottom: 10vh; }
+.project .inner .con ul li:nth-child(2) p { left: 4vw; bottom: 14vh; }
+.project .inner .con ul li:nth-child(3) p { left: 15vw; bottom: 40vh; }
+.project .inner .con ul li:nth-child(4) p { left: 5vw; bottom: 12vh; }
+.project .inner .con ul li:nth-child(5) p { left: 5vw; bottom: 14vh; }
 
-/* ANIMATIONS */
+/* 텍스트 span */
+.project .inner .con ul li span {
+  position: absolute;
+  text-decoration: underline;
+  left: 5vw;
+}
+.project .inner .con ul li:nth-child(1) span { left: 2vw; }
+.project .inner .con ul li:nth-child(2) span { top: -2vh; }
+.project .inner .con ul li:nth-child(3) span { top: 2vh; }
+.project .inner .con ul li:nth-child(4) span { top: -8vh; left: 15vw; }
+.project .inner .con ul li:nth-child(5) span { top: 3vh; }
+
+/* 호버 애니메이션 */
 .wiggle:hover {
   animation: wiggle 1s infinite ease-in-out;
 }
@@ -533,7 +584,6 @@ Profile Section Layout
   50% { transform: rotate(-5deg); }
   75% { transform: rotate(5deg); }
 }
-
 .project .inner .con ul li:nth-child(3):hover .bounce {
   animation: bounce 1s infinite ease-in-out;
 }
@@ -541,7 +591,6 @@ Profile Section Layout
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.2); }
 }
-
 .project .inner .con ul li:nth-child(4):hover .wiggle2 {
   animation: wiggle2 1s infinite ease-in-out;
 }
@@ -553,50 +602,84 @@ Profile Section Layout
 }
 
 /* =============================
-   SKILLS SECTION
+   SKILLS SECTION (Responsive)
 ============================= */
-
 .skills {
-  height: 1310px;
-  background: linear-gradient(#F2E4CB,#E8E5E0 50%,#F2E4CB);
-
+  background: linear-gradient(#F2E4CB, #E8E5E0 50%, #F2E4CB);
+  padding: 10vh 0;
 }
 
 .skills .inner {
-  height: 1250px;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .skills .inner h2 {
-  padding-bottom: 30px;
+  font-size: clamp(40px, 6vw, 120px);
+  padding-bottom: 5vh;
 }
 
-.skills .inner ul li {
-  position: relative;
-}
-
-/* Swiper Styles */
-.swiper {
+/* Swiper Layout */
+.skills .swiper_mySwiper {
   width: 100%;
-  height: auto;
+  overflow: hidden;
 }
 
-.swiper-wrapper,
 .skills .swiper_mySwiper .swiper-wrapper {
   display: flex;
 }
 
-.swiper-slide,
 .skills .swiper_mySwiper .swiper-slide {
-  width: 300px;
   flex-shrink: 0;
+  width: clamp(180px, 20vw, 300px);
+  padding: 0 1vw;
 }
 
-.skills .swiper_mySwiper {
+.skills .swiper_mySwiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Magnifier Effect */
+.magnifier {
+  position: absolute;
+  width: clamp(150px, 20vw, 300px);
+  height: clamp(150px, 20vw, 300px);
+  border-radius: 50%;
   overflow: hidden;
+  border: 2px solid rgba(150, 150, 150, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  display: none;
+  z-index: 9999;
+  background: white;
+}
+
+.zoomed-content {
+  transform-origin: top left;
+}
+
+/* Custom Scrollbar */
+.scroll-bar {
+  width: 20%;
+  height: 6px;
+  background: rgb(255, 242, 242);
+  border-radius: 3px;
+  margin-top: 6vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-thumb {
+  height: 100%;
+  background: #ca970a83;
+  border-radius: 3px;
+  transition: all 0.3s;
 }
 
 /* Magnifier Cursor */
