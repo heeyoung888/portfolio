@@ -721,23 +721,23 @@ Profile Section Layout
 
 
 /* =============================
-contact - Section Layout 
+contact - Section Layout (Responsive Consideration)
 ============================= */
 
-.contact.shrink {
-  height: 1000px; /* 원하는 초기 축소 높이 */
-  overflow: hidden;
-}
-
 .contact {
-  height: 1850px;
+  min-height: 150vh;
   background-image: url(../img/bg1.png);
-  background-size: 1730px 1900px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
   overflow: hidden;
+  padding: 15vh 5vw;
 }
 
 .contact .inner {
-  height: 2200px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -746,16 +746,21 @@ contact - Section Layout
 
 .contact .inner .con {
   width: 100%;
-  height: 2200px;
-}
-.contact .inner .con h2{
-  padding-top: 150px;
+  padding: 2rem 1rem;
 }
 
+.contact .inner .con h2 {
+  font-size: clamp(60px, 8vw, 150px);
+  text-align: center;
+  margin-bottom: -5vh;
+}
 
 /* contact - UL Base */
 .contact .inner .con ul {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact .inner .con ul li {
@@ -764,6 +769,9 @@ contact - Section Layout
   pointer-events: none;
   transition: opacity 0.5s ease;
   z-index: 1;
+  max-width: 200px;
+  flex: 1 1 auto;
+  padding-bottom: 10vh;
 }
 
 .contact .inner .con ul.active li {
@@ -779,6 +787,46 @@ contact - Section Layout
     transform: translate(0, 0);
   }
 }
+
+/* GIF Frame */
+.gif-frame {
+  position: relative;
+}
+
+.gif-frame .frame {
+  width: 100%;
+}
+
+.gif-frame .inner-gif {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+/* photo wrapper */
+.photo_wrapper .photo_container {
+  position: relative;
+  text-align: center;
+}
+
+.photo_wrapper .txt_box span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.camera-hover-effect img {
+  transition: transform 0.3s ease;
+}
+
+.camera-hover-effect img:hover {
+  transform: scale(1.05);
+}
+
 
 /* contact - Item Positioning */
 .contact .inner .con ul li:nth-child(1) img {
@@ -845,10 +893,11 @@ contact - Section Layout
 }
 .contact .inner .con ul li:nth-child(5) .txt_box{
   position: absolute;
-  left: 1100px;
+  left:70vh;
   top: 50px;
   animation: nod 1.2s infinite ease-in-out;
   transform-origin: center bottom;
+  white-space: nowrap;
 }
 @keyframes nod {
   0%, 100% { transform: rotate(0deg); }
@@ -865,7 +914,7 @@ contact - Section Layout
 }
 .contact .inner .con ul li:nth-child(5) img {
   position: absolute;
-  left: 50%;
+  left: 35vh;
   top: 120px;
   margin-left: -350px;
   z-index: 1000;
@@ -930,26 +979,3 @@ contact - Section Layout
   top: 1150px;
 }
 
-
-/* contact - GIF Frame Styling */
-.gif-frame {
-  position: relative;
-  width: 900px;
-  height: auto;
-}
-
-.gif-frame .frame {
-  width: 100%;
-  display: block;
-}
-
-.gif-frame .inner-gif {
-  position: absolute;
-  top: 15%;
-  left: 13%;
-  width: 70%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 4px;
-  transform: rotate(-2.7deg);
-}
