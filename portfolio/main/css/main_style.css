@@ -484,7 +484,7 @@ Profile Section Layout
 .project .inner .con ul li:nth-child(5) {
   position: absolute;
   top: 220vh;
-  left: 5vw;
+  left: 0vw;
 }
 
 /* hover */

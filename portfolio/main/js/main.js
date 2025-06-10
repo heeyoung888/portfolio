@@ -21,6 +21,7 @@ gsap.utils.toArray('.main_visual .fade_up').forEach((elem) => {
   });
 });
 
+
 /* 햄버거 */
 const hamburger = document.getElementById('hamburger');
 const dropdownMenu = document.getElementById('dropdownMenu');
