@@ -511,11 +511,11 @@ Profile Section Layout
 }
 .overlay .btn {
   background-color: transparent;                     /* 기본 배경 없음 */
-  color: #fff;                                       /* 기본 글씨 흰색 */
+  color: #EB5B25;                                       /* 기본 글씨 흰색 */
   font-size: 18px;
   font-weight: 500;
   padding: 10px 20px;
-  border: 2px solid rgba(255, 255, 255, 0.8);         /* 기본 흰 테두리 */
+  border: 2px solid #EB5B25;         /* 기본 흰 테두리 */
   border-radius: 999px;
   cursor: pointer;
   font-family: var(--main-font-family);
@@ -524,8 +524,9 @@ Profile Section Layout
 }
 
 .overlay .btn:hover {
-  background-color: rgba(255, 255, 255, 0.7);         /* 배경 70% 밝기 */
-  color: #111;                                       /* 글씨색: 검정 */                              /* 테두리색: 검정 */
+  background-color: #EB5B25;         /* 배경 70% 밝기 */
+  color: #fff;             
+  border: 2px solid #fff;                           /* 글씨색: 검정 */                              /* 테두리색: 검정 */
   /* transform 제거해서 떠오르지 않게 함 */
 }
 
@@ -553,7 +554,9 @@ Profile Section Layout
   padding: 1vh 2vw;
   border-radius: 30px;
   display: inline-block;
-
+}
+.project .inner .con ul li:hover p {
+   background-color: #000;
 }
 
 .project .inner .con ul li:nth-child(1) p { left: 5vw; bottom: 10vh; }
