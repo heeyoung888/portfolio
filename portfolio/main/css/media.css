@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+@media (max-width: 402px){
+
+   /* main_visual */
+   .main_visual {
+    height: 320px;
+   }
+   .main_visual .inner .face_img{
+    width: 200px;
+    left: 50%;
+    top: 7vh;
+   }
+   .main_visual h2 {
+    position: absolute;
+    font-size: 100px;
+    left: 70px;;
+    bottom: 30px;
+    margin-left: 0;
+  }
+    .main_visual h3{
+      font-size: 30px; 
+      position: absolute;
+      left: 130px;
+      bottom: 20px;
+      margin-left: 0;
+    }
+    .main_visual nav ul.menu li {
+      display: flex;
+      font-size: 20px;
+      transform: translateX(-50%);
+      }
+   .main_visual nav ul li:nth-child(1){
+      top: 70px;
+      left: 10%;
+   }
+   .main_visual nav ul li:nth-child(4){
+      top: 70px;
+      right: 15%;
+   }
+
+   /* profile */
+   .profile{
+      height: 620px;
+      padding-top: 5vh;
+   }
+   .title-animation{
+      width: 150px;
+      position: absolute;
+      left: 95px;
+   }
+   .profile .inner ul li:nth-child(1) img{
+      width: 280px;
+   }
+   .profile .inner ul li:nth-child(2) {
+      top: 130px; /* 원하는 만큼 위로 */
+}
+   .profile .inner ul li:nth-child(2) img {
+      width: 230px;
+   }
+   .profile .inner ul li:nth-child(3) {
+      top: 300px;
+      right: 60px;
+      z-index: 1;
+   }  
+   .profile .inner ul li:nth-child(4){
+      top: 175px;
+   }
+   .profile .inner ul li:nth-child(4) img{
+      width: 140px;
+   }
+   .profile .inner ul li:nth-child(3) img:nth-of-type(2){
+      position: absolute;
+      right: -40px;
+   }
+   .profile .inner ul li:nth-child(3) img:nth-of-type(3){
+      position: absolute;
+      top: 45px;
+   }
+    .profile .inner ul li:nth-child(3) img:nth-of-type(4){
+      position: absolute;
+      left: -30px;
+      top: 70px;
+    }
+    .profile .inner ul li:nth-child(3) img:nth-of-type(5){
+      position: absolute;
+    }
+   .line{
+         margin-bottom: 0px;
+      }
+   .fixed_txt {
+      display: block;
+      color: #424242;
+      margin-bottom: -20px;
+      font-size: 18px;
+   }
+
+   .typing_txt {
+      display: inline-block;
+      color: #424242;
+      font-size: 18px;
+      }
+
+   /* project */
+      .project{
+         height: 2100px;
+      }
+      .project .inner .con h2{
+         font-size: 40px;
+      }
+   }
