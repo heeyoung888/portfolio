@@ -334,63 +334,78 @@ skillsItems.forEach((item) => {
 
 
 // === CONTACT 인터랙션 ===
-const contactSection = document.querySelector('.contact');  // 👈 반드시 필요
+const contactSection = document.querySelector('.contact');
 contactSection.classList.add('shrink');
 
 const listItems = document.querySelectorAll('.contact .con ul li');
 const parentUl = document.querySelector('.contact .con ul');
-const triggerItem = listItems[4]; // 5번째 li (index 4)
+const triggerItem = listItems[4]; // 5번째 li
+const cameraImg = document.querySelector('.contact .inner .con ul li:nth-child(5) .camera');
 
 // 플래시 오버레이 생성
 const flashOverlay = document.createElement('div');
 flashOverlay.className = 'flash-overlay';
 document.body.appendChild(flashOverlay);
 
-// 처음에는 모든 li 숨김 + 5번만 보이게
-listItems.forEach((li, i) => {
-  li.style.opacity = i === 4 ? '1' : '0';
-  li.style.pointerEvents = i === 4 ? 'auto' : 'none';
-});
+// 모바일 여부 판단
+const isMobile = window.innerWidth <= 402;
 
-// 클릭 시 플래시 터지고 전체 모션
+if (isMobile) {
+  // 📱 모바일 - 자동 전개 상태
+  listItems.forEach((li) => {
+    li.style.opacity = '1';
+    li.style.pointerEvents = 'auto';
+  });
 
-const cameraImg = document.querySelector('.contact .inner .con ul li:nth-child(5) .camera');
+  const txtBox = triggerItem.querySelector('.txt_box');
+  if (txtBox) txtBox.style.display = 'none';
+  if (cameraImg) cameraImg.style.display = 'none';
 
-triggerItem.addEventListener('click', () => {
-  flashOverlay.style.opacity = '1'; //  플래시 ON
+  flashOverlay.style.display = 'none';
+  contactSection.classList.remove('shrink');
+  parentUl.classList.add('active');
+} else {
+  // 💻 PC - 카메라만 보이게 초기화
+  listItems.forEach((li, i) => {
+    li.style.opacity = i === 4 ? '1' : '0';
+    li.style.pointerEvents = i === 4 ? 'auto' : 'none';
+  });
 
-  setTimeout(() => {
-    flashOverlay.style.opacity = '0'; //  플래시 OFF
+  // 클릭 시 플래시 연출 + 요소 등장
+  triggerItem.addEventListener('click', () => {
+    flashOverlay.style.opacity = '1'; // 플래시 ON
 
-    cameraImg.style.display = 'none';
+    setTimeout(() => {
+      flashOverlay.style.opacity = '0'; // 플래시 OFF
+      if (cameraImg) cameraImg.style.display = 'none';
 
-    // 텍스트 박스 숨기기
-    const txtBox = triggerItem.querySelector('.txt_box');
-    if (txtBox) txtBox.style.display = 'none';
+      const txtBox = triggerItem.querySelector('.txt_box');
+      if (txtBox) txtBox.style.display = 'none';
 
-    listItems.forEach((li, index) => {
-      li.style.opacity = '1';
-      li.style.pointerEvents = 'auto';
+      listItems.forEach((li, index) => {
+        li.style.opacity = '1';
+        li.style.pointerEvents = 'auto';
 
-      if (index === 4) return;
+        if (index === 4) return;
 
-      const rect = li.getBoundingClientRect();
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
-      const dx = rect.left + rect.width / 2 - centerX;
-      const dy = rect.top + rect.height / 2 - centerY;
-      const offsetX = dx * 1.5;
-      const offsetY = dy * 1.5;
-      const delay = index * 80;
-      li.style.setProperty('--x', `${offsetX}px`);
-      li.style.setProperty('--y', `${offsetY}px`);
-      li.style.setProperty('--delay', `${delay}ms`);
-    });
+        const rect = li.getBoundingClientRect();
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        const dx = rect.left + rect.width / 2 - centerX;
+        const dy = rect.top + rect.height / 2 - centerY;
+        const offsetX = dx * 1.5;
+        const offsetY = dy * 1.5;
+        const delay = index * 80;
+        li.style.setProperty('--x', `${offsetX}px`);
+        li.style.setProperty('--y', `${offsetY}px`);
+        li.style.setProperty('--delay', `${delay}ms`);
+      });
 
-    contactSection.classList.remove('shrink');
-    parentUl.classList.add('active');
-  }, 150);
-});
+      contactSection.classList.remove('shrink');
+      parentUl.classList.add('active');
+    }, 150);
+  });
+}
 
 // contact 이미지 클릭 시 모달 열기
 document.querySelector('.contact .inner .con ul li:nth-child(4) img')
