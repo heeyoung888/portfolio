@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         breakpoints: {
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1.5,
           }
         }
       });

@@ -252,6 +252,18 @@
 
     /* event */
 
+
+    /* store*/
+    .store{
+        width: 1024px;
+    }
+    .store .container p{
+        right: 30px;
+    }
+
+    /* footer */
+    
+    
     }
 
     
