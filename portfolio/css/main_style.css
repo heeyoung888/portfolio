@@ -512,7 +512,7 @@ Profile Section Layout
 .overlay .btn {
   background-color: transparent;                     /* 기본 배경 없음 */
   color: #EB5B25;                                       /* 기본 글씨 흰색 */
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
   padding: 10px 20px;
   border: 2px solid #EB5B25;         /* 기본 흰 테두리 */
